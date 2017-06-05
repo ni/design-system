@@ -1,9 +1,3 @@
-# Heading 1
-
-design-system `app-layout` elements.
-
-### Quickstart
-
-### Setup
-
-##### Initialize project from template
+# NI Design System
+[![Waffle.io](https://img.shields.io/waffle/label/evancohen/smart-mirror/in%20progress.svg)]()
+This project is a work in progress
