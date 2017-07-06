@@ -1,0 +1,22 @@
+{
+  "name": "poly-jekyll",
+  "authors": [
+    "Nathan Mitchell <nathan.mitchell@ni.com>"
+  ],
+  "license": "MIT",
+  "homepage": "ni.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.9.1",
+    "iron-elements": "polymerelements/iron-elements#^1.0.8",
+    "paper-elements": "polymerelements/paper-elements#^1.0.7",
+    "app-layout": "^2.0.0",
+    "app-storage": "^2.0.2"
+  }
+}

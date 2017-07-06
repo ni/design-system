@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+- 2.3.3
+
+git:
+  depth: 2147483647
+
+install: 
+  - npm install -g bower
+  - bower install
+  - bundle install
+
+script: jekyll build ./_site 
+
+sudo: false # route your build to the container-based infrastructure for a faster build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token:
+    secure: "vfxHAG53vYxPXwigavDdbM8xkUiZUtY7vCtnSwXVGfMVne2FFyy0z0dpePTMIbrjodSnp28NPlmDHMnO7LnGYJwpH2iMbPaUAs9FO1G9+q+qE/2ob9tl++3NGn5m+9euvDFQsnYnv/ImB9C9WJbSXl2U/dq1hnLC+reaBQjbNqrRSh8KzflU8DrENDBrpf9KXqZWC5lIsZj8BZaxjtb/cA/c46smDx+2QyfSE8UOE7XF1GwNlG9oB0Sghsl4VIUOZt0oo/GzNdzozCTqjA2We0vwArAU2S79qmjx6FoSDB9l3ZTLDTl+VPi28LAJ4j3ixseGb3djU0Hw7dM9bKH7XnrU7E2d+RMW1/292WW9noTxeexOf4h5OMYihIZ8B/nPqe0+dfxqgwdupQMxCHL4vWOO+IAgHUROyv8jYbj/yL6HGUYeQEt4oBbZmwr4fqIWmSaSae54tcUuhGILso10kKPjqy8pAvlij+VXPyRM7GhuTQeho2FL6DbB5hqrk/R3P5sr7uCI9piFQb+kmfBznYMYJWYt9aY1ht6YnLyBq/CYwHRLIcUVw+r+4JTfCx5tBQFM+JHGkzQB8ZYIXWdFw89OG6OLJh7DmBiL2MCIQ6QBTu0cJT/MvVBDf0it/s1GEme9/2yqL4bHejlhXS8UDrNQBIR+y1BP5sw5LLSlrP0="
+  on:
+    branch: master
+  local_dir: app/_site  

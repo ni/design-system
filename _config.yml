@@ -1,0 +1,81 @@
+source: app
+destination: app/_site
+
+# Site settings
+title: NIDS
+subtitle: NIDS (NI Design System) is a placeholder name
+description: > # this means to ignore newlines until "baseurl:"
+  This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
+author: National Instruments
+author_website: www.ni.com
+email: ni@ni.com
+
+baseurl: "/poly-jekyll"  # Subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
+                            # Currently `gulp serve:dist` does not work with a baseurl specified. For this purpose,
+                            # temporarily comment out this parameter
+url: ""  # Base hostname & protocol for your site
+
+
+
+google_analytics: UA-100964937-1
+
+# Pagination
+paginate: 5
+paginate_path: "page:num"
+excerpt_separator: <!--more-->
+
+# Gems
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-last-modified-at
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+
+# Archive settings
+jekyll-archives:
+  enabled: ['tags']
+
+exclude: [vendor]
+
+# Site Collections
+collections:
+  elements:
+    output: true
+    values:
+      layout: page
+  style:
+    output: true
+    values:
+      layout: page
+  resources:
+    output: true
+    values:
+      layout: page
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "elements" # a collection in your site, in plural form
+    values:
+      status: queued
+  -
+    scope:
+      path: ""
+      type: "style" # a collection in your site, in plural form
+    values:
+      status: queued
+  -
+    scope:
+      path: ""
+      type: "resoures" # a collection in your site, in plural form
+    values:
+      status: queued
+
+#Lunr Search
+lunr_search:
+  excludes: [bower_components, search, content-status]
