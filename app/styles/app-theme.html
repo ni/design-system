@@ -40,7 +40,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     /* CUSTOM */
     --code-text-color: #4386B9;
-
+    --good: #6aa239;
+    --bad: #f04e23;
 
 
     /* Components */
@@ -366,6 +367,8 @@ footer{
   .content {
     height: 900px;    
   }
+  
+  
 
   /* Breakpoints */
 
@@ -517,6 +520,32 @@ footer{
   .nav-header .subtitle{
     font-weight: 300;
     color: var(--secondary-text-color);
+  }
+  .do{
+    margin-bottom: 8px;
+  }
+  .do p, .dont p{
+    font-weight: 700;
+    margin-bottom: 0px;
+    line-height: 14px;
+  }
+
+  .do p{
+    color: var(--good);
+  }
+  .dont p{
+    color: var(--bad);
+  }
+  
+  .do img{
+    padding-bottom:4px;
+    border-bottom:8px solid var(--good);
+    color: var(--good);
+  }
+  .dont img{
+    padding-bottom:4px;
+    border-bottom:8px solid var(--bad);
+    
   }
 
 

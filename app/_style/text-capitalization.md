@@ -36,17 +36,19 @@ sentence-style capitalization.
 
 ### Context menu
 All items in the context menu should follow sentence-style
-capitalization.
+capitalization.  
 
-![ontextMenu\_Example\_Correct.png](media/image2.png){width="5.0in"
-height="2.7118055555555554in"}
+<div class="do" markdown="1">
+![Alt text](../../images/style/capitalization/capitalization-context-menu-do.svg)  
 
-Do.
-
-![ontextMenu\_Example\_Incorrect.png](media/image3.png){width="5.0in"
-height="2.7118055555555554in"}
+Do
+</div>
+<div class="dont" markdown="1">
+![Alt text](../../images/style/capitalization/capitalization-context-menu-dont.svg)  
 
 Don't
+</div>
+
 
 ### Configuration pane
 All items in the configuration pane should follow sentence-style
