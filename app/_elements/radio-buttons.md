@@ -10,7 +10,7 @@ status: ready
 ---
 Use radio buttons to choose one option from a set of mutually exclusive choices.
 
-**Codename:** `ShellRadioButton` - NationalInstruments.Controls.Shell
+**Codename:** `ShellRadioButton` - NationalInstruments.Controls.Shell  
 **Codename:** `ShellRadioButtonGroup` - NationalInstruments.Controls.Shell
 
 ## When to use
