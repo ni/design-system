@@ -10,9 +10,11 @@ status: WIP
 
 ---
 ## Tooltips
+
 ![Alt text](../../images/elements/tips/tips-tooltip.svg)
 
-## Infotips 
+## Infotips
+
 ![Alt text](../../images/elements/tips/tips-infotip.svg)
 
 ![Alt text](../../images/elements/tips/tips-infotip-with-footer.svg)

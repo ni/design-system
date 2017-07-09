@@ -9,7 +9,7 @@ status: WIP
 
 **Codename:** `ShellHyperlinkButton` - NationalInstruments.Controls.Shell
 
-| State              | Image         | 
-| ------------------ |:-------------:| 
-| Normal             | ![Alt text](../../images/elements/hyperlink/hyperlink-normal.svg)        | 
-| Hover              | ![Alt text](../../images/elements/hyperlink/hyperlink-hover.svg)         |  
+| State              | Image         |
+| ------------------ |:-------------:|
+| Normal             | ![Alt text](../../images/elements/hyperlink/hyperlink-normal.svg)  |
+| Hover              | ![Alt text](../../images/elements/hyperlink/hyperlink-hover.svg)   |

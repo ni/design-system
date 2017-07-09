@@ -9,3 +9,4 @@ tags:
 
 **Codename:** `ShellTreeView` - NationalInstruments.Controls.Shell  
 **Codename:** `ShellTreeViewItem` - NationalInstruments.Controls.Shell
+**Codename:** `FilteredTreeView` - NationalInstruments.Controls.Shell

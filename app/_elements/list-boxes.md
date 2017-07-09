@@ -7,6 +7,20 @@ tags:
 
 ---
 
+List views allow the user to select from a list of options.
+
+**Codename:** `ListView` - NationalInstruments.Controls.Shell
+Currently, there is not a shared control for creating a List box. However, you can use a simplified version of the `ListView' to accomplish the same effect.
+
+**XAML Code Snippet**
+{% highlight xml %}
+<shell:ListView x:Name="listView" Width="200" Height="100">
+  <ListViewItem Content="ListViewItem 1"/>
+  <ListViewItem Content="ListViewItem 2"/>
+  <ListViewItem Content="ListViewItem 3"/>
+</shell:ListView>
+{% endhighlight %}
+
 ![NIDS\_images/List%20boxes/Controls\_List\_box\_Regular\_No\_Zebra.png](media/image81.png){width="3.5694444444444446in"
 height="1.75in"}
 

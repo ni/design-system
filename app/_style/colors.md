@@ -9,9 +9,10 @@ tags:
   - IDE
 status: WIP
 ---
-To use these colors, you will need to make sure that your XAML file has a direct or indirect references to **Colors.xaml**. 
+To use these colors, you will need to make sure that your XAML file has a direct or indirect references to **Colors.xaml**.
 
 ## Editor colors
+
 This list contains the primary colors used throughout NI software interfaces.
 <table>
   <thead>
@@ -22,9 +23,9 @@ This list contains the primary colors used throughout NI software interfaces.
     </tr>
   </thead>
   <tbody>
-     {% for color in site.data.colors-editor %}  
-        <tr>      
-            <td>{{ color.name }}</td>            
+     {% for color in site.data.colors-editor %}
+        <tr>
+            <td>{{ color.name }}</td>
             {% if color.type == nil %}
               <td style="background-color:{{ color.value }}"></td> 
               <td>{{ color.value }}</td> 
@@ -41,7 +42,6 @@ This list contains the primary colors used throughout NI software interfaces.
               "></td> 
               <td>{{ stop1val }} (Offset: {{stop1offset}}%)<br/>{{ stop2val }} (Offset: {{stop2offset}}%)</td>  
             {% endif %}
-                    
         </tr>
     {% endfor %}
   </tbody>
@@ -61,41 +61,36 @@ To use the colors in a XAML file, reference the resource dictionary and use the 
 {% endhighlight %}
 
 ## Data type colors
-Data type colors are referenced in **PlatformFramework\\SourceModel\\Designer\\StockDiagramUIResources.cs** as part of the public static class `StockTypeAssets`. 
+Data type colors are defined in **PlatformFramework\\SourceModel\\StockTypeAssets.cs** as part of the public static class `StockTypeAssets`.
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Variation</th>
+      <th>Name</th>      
       <th>Example</th>
       <th>Value</th>
     </tr>
   </thead>
   <tbody>
-     {% for color in site.data.colors-data-type %}  
-        <tr>      
+     {% for color in site.data.colors-data-type %}
+        <th colspan="3">{{ color.type }}</th>
+        <tr>            
             <td>{{ color.name }}</td>
-            <td>{{ color.type }}</td>
-            <td>Primary</td>
             <td style="background-color: {{ color.primary }}"></td>
             <td>{{ color.primary }}</td>
         </tr>
-         <tr>      
-            <td></td>
-            <td></td>
-            <td>Secondary</td>
+         <tr>
+            <td>{{ color.name }}Secondary</td>
             <td style="background-color: {{ color.secondary }}"></td>
             <td>{{ color.secondary }}</td>
         </tr>
-         <tr>      
-            <td></td>
-            <td></td>
-            <td>Tertiary</td>
+         {% if color.tertiary %}
+         <tr>
+            <td>{{ color.name }}Tertiary</td>
             <td style="background-color: {{ color.tertiary }}"></td>
             <td>{{ color.tertiary }}</td>
         </tr>
+        {% endif %}
         <!--Blank row added to help spacing-->
         <tr>
             <td style="border:0px"></td>
@@ -107,3 +102,16 @@ Data type colors are referenced in **PlatformFramework\\SourceModel\\Designer\\S
     {% endfor %}
   </tbody>
 </table>
+
+**Code Example**  
+To use the data type colors for an element that utilizes a `Brush`, like a rectangle, you can create a new brush and assign the color property of that brush to the data type color.  
+**C#**  
+{% highlight c# %}
+// Create a new SolidColorBrush
+SolidColorBrush FloatAndDoubleNumericTypeColorBrush = new SolidColorBrush(StockTypeAssets.FloatAndDoubleNumericTypeColor);
+{% endhighlight %}
+
+**XAML**  
+{% highlight xml %}
+<Rectangle Fill="{Binding FloatAndDoubleNumericTypeColorBrush}" />
+{% endhighlight %}

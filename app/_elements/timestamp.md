@@ -7,7 +7,8 @@ tags:
 
 ---
 
-**Codename:** `ShellTimeStampTextBoxPrecisionDateTime` - NationalInstruments.Shell.Controls  
+**Codename:** `ShellTimeStampTextBoxPrecisionDateTime` - NationalInstruments.Shell.Controls
+
 Sometimes shown with button, sometimes shown with spinner. Need details on which property changes that appearance.
 
 ![NIDS\_images/Textboxes/Controls\_Text\_boxes\_Timestamp\_Disabled.png](media/image150.png){width="1.125in"

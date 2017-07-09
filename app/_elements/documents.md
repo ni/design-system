@@ -45,7 +45,7 @@ status: WIP
 
 A menu for a small set of related commands. The text on the button doesn't change based on the dropdown selection.
 
-**Codename:** `ShellDropDownButton`
+**Codename:** `ShellDropDownButton` - NationalInstruments.Controls.Shell
 
 | State         | Image         | 
 | ------------- |:--------------| 

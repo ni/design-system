@@ -114,12 +114,11 @@
           <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect" id="menu">            
           <a class="heading" tabindex="-1" onclick="toggle('#collapse0')">                  
               <paper-item-body><span>Overview</span></paper-item-body>
-                <paper-icon-button noink icon="arrow-drop-down" alt="favourite this!">
+                <paper-icon-button noink icon="arrow-drop-down">
                 </paper-icon-button>
               </a>   
             {% raw %}
             <iron-collapse class="headeriron" id="collapse0" tabindex="0" opened="{{opened0}}">               
-              <!--<app-localstorage-document key="collapse0" data="{{opened0}}"></app-localstorage-document>              -->
               {% endraw %} 
               <div class="collapse-content">
                     <ul>
@@ -132,12 +131,11 @@
             </iron-collapse>
             <a class="heading" tabindex="-1" onclick="toggle('#collapse1')">                  
               <paper-item-body><span>Style</span></paper-item-body>
-                <paper-icon-button noink icon="arrow-drop-down" alt="favourite this!">
+                <paper-icon-button noink icon="arrow-drop-down">
                 </paper-icon-button>
               </a>
             {% raw %}
             <iron-collapse class="headeriron" id="collapse1" tabindex="0" opened="{{opened1}}">               
-            <!--<app-localstorage-document key="collapse1" data="{{opened1}}"></app-localstorage-document>              -->
             {% endraw %} 
               <div class="collapse-content">
                     <ul>
@@ -150,12 +148,11 @@
           
           <a class="heading" tabindex="-1" onclick="toggle('#collapse2')">                  
               <paper-item-body><span>Elements</span></paper-item-body>
-                <paper-icon-button noink icon="arrow-drop-down" alt="favourite this!">
+                <paper-icon-button noink icon="arrow-drop-down">
                 </paper-icon-button>
               </a>
             {% raw %}
               <iron-collapse class="headeriron" id="collapse2" tabindex="0" opened={{opened2}} >
-                <!--<app-localstorage-document key="collapse2" data="{{opened2}}"></app-localstorage-document>              -->
             {% endraw %}                   
                 <div class="collapse-content">
                     <ul>
@@ -164,15 +161,14 @@
                     {% endfor %}
                     </ul>  
                 </div>
-              </iron-collapse> 
+              </iron-collapse>  
           <a class="heading" tabindex="-1" onclick="toggle('#collapse3')">                  
             <paper-item-body><span>Resources</span></paper-item-body>
-              <paper-icon-button noink icon="arrow-drop-down" alt="favourite this!">
+              <paper-icon-button noink icon="arrow-drop-down">
               </paper-icon-button>
             </a>
             {% raw %}
             <iron-collapse class="headeriron" id="collapse3" tabindex="0" opened="{{opened3}}">
-              <!--<app-localstorage-document key="collapse3" data="{{opened3}}"></app-localstorage-document>              -->
             {% endraw %}   
               <div class="collapse-content">
                   <ul>
@@ -181,6 +177,8 @@
                   </ul>  
               </div>
             </iron-collapse>
+
+          
           </paper-menu>
         </template>
         <footer><div id="copyright-info">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</footer>

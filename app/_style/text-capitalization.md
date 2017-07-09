@@ -55,10 +55,10 @@ Don't
 ## Exceptions
 
 1. Use title capitalization for Panes that can also be floating panes. For example, the panes along the bottom rail of LabVIEW.
-  * Also use the same capitalization when referencing those panes such as in the tools pane for the left rail and the application menu.
-2. When referencing a node/palette category name (or anything in the palette, really) follow the capitalization of the item being referenced.
- * Ex: If you are talking about the “Add” node, use Add. If you are talking about adding things, use add.
-3. When referencing a terminal name, follow the capitalization of that terminal.
-4. When referencing a Dialog Title, follow the capitalization of that dialog (Title case).
-  * For example, referencing "Context Help" in the application menu (Help > Context Help) should use Title Case as it is the name of the dialog.
-5.	File types are proper nouns and should be Title Case (Web VI, Resource Collection, Shared Library Interface, etc.)
+* Also use the same capitalization when referencing those panes such as in the tools pane for the left rail and the application menu.
+1. When referencing a node/palette category name (or anything in the palette, really) follow the capitalization of the item being referenced.
+* Ex: If you are talking about the “Add” node, use Add. If you are talking about adding things, use add.
+1. When referencing a terminal name, follow the capitalization of that terminal.
+1. When referencing a Dialog Title, follow the capitalization of that dialog (Title case).
+* For example, referencing "Context Help" in the application menu (Help > Context Help) should use Title Case as it is the name of the dialog.
+1.File types are proper nouns and should be Title Case (Web VI, Resource Collection, Shared Library Interface, etc.)

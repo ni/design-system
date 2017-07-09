@@ -9,9 +9,9 @@ tags:
 status: WIP
 ---
 
-**Codename:** `ShellColorBox`
+**Codename:** `ShellColorBox` - NationalInstruments.Controls.Shell
 
-| State              | Image         | 
-| ------------------ |:--------------| 
-| Normal             | ![Alt text](../../images/elements/color-picker/color-picker-normal.svg)        | 
-| Active             | ![Alt text](../../images/elements/color-picker/color-picker-active.svg)         |  
+| State              | Image         |
+| ------------------ |:--------------|
+| Normal             | ![Alt text](../../images/elements/color-picker/color-picker-normal.svg) |
+| Active             | ![Alt text](../../images/elements/color-picker/color-picker-active.svg) |

@@ -4,58 +4,58 @@
     type: Number Double
     primary: '#F59433'
     secondary: '#FBE4CF'
-    tertiary: '#72492D'
+    #tertiary: '#72492D'
 -
     name: IntegerNumericTypeColor
     type: Number Integer
     primary: '#4192F6'
     secondary: '#D0E3FB'
-    tertiary: '#274E6B'
+    #tertiary: '#274E6B'
 -
     name: FixedPointNumericTypeColor
     type: Number Fixed Point
     primary: '#614CCB'
     secondary: '#D7D3F1'
-    tertiary: '#2E2E5E'
+    #tertiary: '#2E2E5E'
 -
     name: ErrorClusterTypeColor
     type: Error
     primary: '#A0A017'
     secondary: '#D0D094'
-    tertiary: '#4C460F'
+    #tertiary: '#4C460F'
 -
     name: BuiltInClusterTypeColor
     type: Timestamp, Waveform, Numeric Cluster
     primary: '#77381A'
     secondary: '#DDCDC5'
-    tertiary: '#441C13'
+    #tertiary: '#441C13'
 -
     name: BooleanTypeColor
     type: Boolean
     primary: '#0D770D'
     secondary: '#C4DCC5'
-    tertiary: '#0B4F0B'
+    #tertiary: '#0B4F0B'
 -
     name: ReferenceAndPathTypeColor
     type: Reference, Path
     primary: '#0EC0C2'
     secondary: '#C8EFEF'
-    tertiary: '#145B4F'
+    #tertiary: '#145B4F'
 -
     name: IONameControlTypeColor
     type: IO Name Control
     primary: '#AD1CB6'
     secondary: '#E9C9EB'
-    tertiary: '#592266'
+    #tertiary: '#592266'
 -
     name: ClusterAndStringTypeColor
     type: String, Cluster
     primary: '#F017F0'
     secondary: '#FACBFA'
-    tertiary: '#712184'
+    #tertiary: '#712184'
 -
     name: LabVIEWObjectTypeColor
     type: LabVIEW Object
     primary: '#E33067'
     secondary: '#F097B2'
-    tertiary: '#722B59'
+    #tertiary: '#722B59'

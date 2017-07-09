@@ -10,6 +10,8 @@ tags:
   - group
 ---
 
+Tabs are used to switch the view of content within the same area. They are comprised of a parent tab control that contains individual children elements, or "tabs".
+
 ## Basic tab controls  
 **Codename:** `NITabControl` - NationalInstruments.Controls  
 This is the control for a collection of NITabItems

@@ -16,21 +16,15 @@ status: WIP
 **Verdana** is the typeface used on diagrams and other canvas-style documnents.
 
 ## Text Styles
- 
+
 | Name           | Details                   |
-| -------------- | ------------------------- | 
-| IdeFonts       | Segoe UI 12px             | 
-|                | Segoe UI 12px - Semibold  | 
-|                | Segoe UI 10px - Regular   | 
-|                | Segoe UI 16px             | 
-| DiagramFonts   | Verdana 11px              | 
+| -------------- | ------------------------- |
+| IdeFonts       | Segoe UI 12px             |
+|                | Segoe UI 12px - Semibold  |
+|                | Segoe UI 10px - Regular   |
+|                | Segoe UI 16px             |
+| DiagramFonts   | Verdana 11px              |
 | MonospaceFont  | Courier New               |
-|                | SimHei 12px               |                                                                                          
+|                | SimHei 12px               |
 | ChineseIDE     | Yahei 12px                |
-| ChineseDiagram | Yahei 11px                | 
-
-  
-
-  
-
-
+| ChineseDiagram | Yahei 11px                |

@@ -10,5 +10,6 @@ tags:
 
 ---
 
-## Document notifications  
+## Document notifications
+
 **Codename:** `ExpandableContentControl` - NationalInstruments.Control.Shell
