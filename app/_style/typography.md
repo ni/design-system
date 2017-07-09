@@ -6,7 +6,7 @@ tags:
   - fonts
   - language
   - text
-status: WIP
+status: ready
 ---
 
 #### The primary typefaces used in NI Software for Windows are Segoe UI and Verdana.
