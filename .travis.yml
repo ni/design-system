@@ -17,8 +17,7 @@ sudo: false # route your build to the container-based infrastructure for a faste
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token:
-    secure: "gHaeQM3uooEk2fSYQ5AO2iCH7adIHwt52bB/gsn3/74zVNRQhH7S6IwzLOcnUXk3sKQ30Tnxkpvx+vaSZERh28cNvGVitajRGWWjHx/jt4BVGuYrbyaGWfF+N9EN8mqPl8ZTtC7KB6vaeeaWdYb0jdLp8/cfFG3jKMVZXOWqFOrU3FeroHEh24tBhrXXgcWpmuBY6foq/KC3p8P2IACxN/e+/C9O+tyiwcfNAWj2dsraJz+iD7YuVbshwiajJg2onG40+kAakgMt+W55zEo/kZe0fRPzAxk/UkrVk19rBe04TMjBn/lvY9QZt+wm+dmKUrzOJWhQC5WozN6A/xTWOAXfCPfbtaMuguQ3bIO8C83gU5QkEhMOmjCMq1uwOflpAy2jMXo5/FtE1KcW03dPecRGiXATvXYXPZ4IM/nZ3N4HbmTVXlMhr3cvijHypbwuAdK9T/dL/eK9xg3/d6puJhZVi6IgY6OLekJ+X3YkrwcBSiRjFwE9DiSaTKSSuMde00UqLZEO2a1PnsDba2tu+y+gZPYbZG9ggtna9l/cBQxWmISgoOM4eokWOCIz93Bq2b7wW55jJKjHSN3mQgaDgFSv57s9mZcvKmUiMO69IX5uIAmGH1NeeptwIaWlrgLgDROyhDzjE4E3qHnNgz1Fr9ZimFltmq+PFBNvl9eeJ3E="
+  github_token: $GH_TOKEN
   on:
     branch: master
   local_dir: app/_site  
