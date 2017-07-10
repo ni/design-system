@@ -22,7 +22,6 @@ groups:
     - icon: ExternalDocument_16x16.png
     - icon: FavoriteStar_HoverOff.png
     - icon: FavoriteStar_HoverOn.png
-    - icon: FavoriteStar_MouseDown.png
     - icon: FavoriteStar_Normal.png
     - icon: FavoriteStar_Selected.png
     - icon: FilesPane_16x16.png
