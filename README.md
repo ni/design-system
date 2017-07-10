@@ -1,10 +1,18 @@
-## README
+# GitHub Repo Template
 
-A [Jekyll](https://jekyllrb.com/) theme built with [Google's Polymer library](https://www.polymer-project.org/1.0/) and following the material design specifications. (Currently, this uses Polymer 1.x, but I have plans to update to 2.x.)
+GitHub Repo Template is a template for creation of open source projects made
+available on GitHub. It includes a permissive open source license, a developer
+certificate of origin, and a pull request template. This provides everything
+necessary to have a properly licensed open source project.
 
-There are a few custom web components included designed to match Material design.
+## Using GitHub Repo Template
 
-I created this theme because I couldn't figure out how to set up a Jekyll project to play nicely with Polymer, and because I didn't find any Jekyll blog themes available that used Polymer or followed Google's material design specifications.
+1. Clone or download this repository.
+2. Copy its contents into your project (including the hidden .github directory). 
+3. Customize each file to suit your project's needs (including the README). Look through the files for "TODO" and \<reponame\>, and replace with content appropriate to your project.
+4. (Optional) Check out [GitHub Template Guidelines](https://github.com/cezaraugusto/github-template-guidelines) for ideas about how to customize your project.
+
+TODO: describe a project in detail, what it does, how to use it, etc.
 
 
 

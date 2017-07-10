@@ -50,7 +50,7 @@ Use `DiagramFontFamily` to reference the correct typeface per language.
 | ------------------------------ | -------------------------------- |
 | English and English-like       | Verdana                          |
 | Japanese                       | Meiryo UI, Verdana               |
-| Chinese                        | Microsoft YaHei,Segoe UI,Tahoma  |
+| Chinese                        | Microsoft YaHei,Verdana          |
 
 **Diagram font specifics**  
 In addition to the typeface, other font attributes are provided as resources.
