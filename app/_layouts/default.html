@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+
+{% include head.html %}
+  <custom-style>
+    <style is="custom-style">
+    body {
+      margin: 0;      
+    }
+
+    app-header{
+      background-color: var(--light-accent-color);
+      border-bottom: 1px var(--primary-color) solid;
+    }
+
+    app-header paper-icon-button {
+      --paper-icon-button-ink-color: #fff;
+    }
+
+    app-drawer {
+      --app-drawer-content-container: {
+      }
+    }
+
+    app-drawer-layout:not([narrow]) [drawer-toggle] {
+    display: none;
+    }
+
+    .nav-header{
+      overflow: hidden;
+    }
+
+    
+    #searchButton:hover,#closeSearchButton:hover{
+      color: var(--primary-background-color); 
+      background-color: var(--primary-color);
+    }
+
+    iron-collapse{
+      --iron-collapse-transition-duration: 300ms;
+    }
+
+    #input{
+        top:0;
+        right:0;
+        border:0;
+        outline:0;
+        width:100%;
+        margin:0;
+        height:40px;
+        padding-left:16px;
+        padding-top:0px;
+        @apply(--paper-font-body1);
+        font-size: 16px;
+        
+    }
+
+    .searchbox.active{
+        width:100%;
+        border: 1px var(--primary-color) solid;
+    }
+
+    .searchbox{
+        position:relative;
+        min-width:40px;
+        height:40px;
+        padding: 0px;
+        width:0%;
+        float:right;
+        overflow:hidden;
+        -webkit-transition: width 0.3s;
+        -moz-transition: width 0.3s;
+        -ms-transition: width 0.3s;
+        -o-transition: width 0.3s;
+        transition: width 0.3s;
+    }
+
+    .searchbox-submit{
+      display:block;
+      height:40px;
+      width:40px;
+      position:absolute;
+      top:0;
+      right:0;
+      border-radius: 0px;
+      background-color: var(--light-accent-color);
+    }
+
+    .search-form{
+      width: 40px;
+    }
+
+    .search-form .active{
+      width: 300px;
+    }
+    </style>
+  </custom-style>
+<body unresolved class="fullbleed layout vertical">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPWCVV2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">  
+  <app-drawer-layout fullbleed>      
+    <app-drawer id="drawer" slot="drawer">            
+      <app-header-layout has-scrolling-region>          
+        <app-header class="nav-header" slot="header" fixed>
+          <div class="title">NI</div>
+          <div class="subtitle">Design System for LabVIEW NXG</div>          
+        </app-header>            
+        <!-- Drawer Content -->       
+        <template is="dom-bind">
+          <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect" id="menu">            
+          <a class="heading" tabindex="-1" onclick="toggle('#collapse0')">                  
+              <paper-item-body><span>Overview</span></paper-item-body>
+                <paper-icon-button noink icon="arrow-drop-down">
+                </paper-icon-button>
+              </a>   
+            {% raw %}
+            <iron-collapse class="headeriron" id="collapse0" tabindex="0" opened="{{opened0}}">               
+              {% endraw %} 
+              <div class="collapse-content">
+                    <ul>
+                    <li><a class="{% if page.url == '/' %}active{% endif %}"href="{{ site.baseurl }}/">Introduction</a></li>
+                    <li><a class="{% if page.url == '/design-tenets/' %}active{% endif %}"href="{{ site.baseurl }}/design-tenets/">Design tenets</a></li>
+                    <li><a class="{% if page.url == '/whats-new/' %}active{% endif %}"href="{{ site.baseurl }}/whats-new/">What's new</a></li>
+                    <li><a class="{% if page.url == '/content-status/' %}active{% endif %}"href="{{ site.baseurl }}/content-status/">Content status</a></li>   
+                  </ul>  
+              </div>
+            </iron-collapse>
+            <a class="heading" tabindex="-1" onclick="toggle('#collapse1')">                  
+              <paper-item-body><span>Style</span></paper-item-body>
+                <paper-icon-button noink icon="arrow-drop-down">
+                </paper-icon-button>
+              </a>
+            {% raw %}
+            <iron-collapse class="headeriron" id="collapse1" tabindex="0" opened="{{opened1}}">               
+            {% endraw %} 
+              <div class="collapse-content">
+                    <ul>
+                    {% for item in site.style %}
+                    <li><a href="{{ item.url | prepend:site.baseurl }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a></li>
+                    {% endfor %}
+                  </ul>  
+              </div>
+            </iron-collapse>
+          
+          <a class="heading" tabindex="-1" onclick="toggle('#collapse2')">                  
+              <paper-item-body><span>Elements</span></paper-item-body>
+                <paper-icon-button noink icon="arrow-drop-down">
+                </paper-icon-button>
+              </a>
+            {% raw %}
+              <iron-collapse class="headeriron" id="collapse2" tabindex="0" opened={{opened2}} >
+            {% endraw %}                   
+                <div class="collapse-content">
+                    <ul>
+                    {% for item in site.elements %}  
+                    <li><a href="{{ item.url | prepend:site.baseurl }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a></li>
+                    {% endfor %}
+                    </ul>  
+                </div>
+              </iron-collapse>  
+          <a class="heading" tabindex="-1" onclick="toggle('#collapse3')">                  
+            <paper-item-body><span>Resources</span></paper-item-body>
+              <paper-icon-button noink icon="arrow-drop-down">
+              </paper-icon-button>
+            </a>
+            {% raw %}
+            <iron-collapse class="headeriron" id="collapse3" tabindex="0" opened="{{opened3}}">
+            {% endraw %}   
+              <div class="collapse-content">
+                  <ul>
+                    {% for item in site.resources %}
+                    <li><a href="{{ item.url | prepend:site.baseurl }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a></li>{% endfor %}
+                  </ul>  
+              </div>
+            </iron-collapse>
+
+          
+          </paper-menu>
+        </template>
+        <footer><div id="copyright-info">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</footer>
+      </app-header-layout>
+    </app-drawer>
+
+    <!-- Main Area -->  
+    <app-header-layout>  
+      <app-header slot="header" fixed>
+        <!-- Main Toolbar -->
+        <app-toolbar style="height:71px">
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <div main-title>{{ page.title }}</div> 
+          <div id="search" class="search-form">            
+              <form action="{{ site.baseurl }}/search/" method="get" class="searchbox" id="search-box">              
+                <input type="text" placeholder="Search" id="input" name="q">
+                <paper-icon-button icon="search" id="searchButton" onclick="toggleSearch()" class="searchbox-submit" noink></paper-icon-button>                
+              </form>
+            </div>          
+        </app-toolbar>
+      </app-header>
+      <!-- Main Content -->
+      <div class="content">{{ content }}</div>
+    </app-header-layout>
+  </app-drawer-layout>
+</template>
+<!-- build:js scripts/app.js -->
+<script src="{{ site.baseurl }}/scripts/app.js"></script>
+<!-- endbuild-->
+
+{% include analytics.html %}
+
+<script>
+  function toggle(selector) {
+    var item =  document.querySelector(selector);
+    // if it is open, hide it. If not, open it.
+    if (item.opened){
+      hide(item);
+    }else{
+      show(item);
+    }
+  }
+  function show(item){
+    item.show();
+    icon = item.previousElementSibling.getElementsByTagName('paper-icon-button')[0];
+    icon.setAttribute("icon", "arrow-drop-up");
+    
+  }
+  function hide(item){
+    item.hide();
+    icon = item.previousElementSibling.getElementsByTagName('paper-icon-button')[0];
+    icon.setAttribute("icon", "arrow-drop-down");
+  }
+
+  function toggleSearch() {
+    var searchContainer = document.getElementById("search");
+    var form = document.getElementById("search-box");
+    var input = document.getElementById("input");
+
+    if (form.classList.contains('active')){
+      if(input.value.trim() ==''){
+        form.classList.remove('active');
+        searchContainer.classList.remove('active');
+      }else{
+        form.submit();
+      }
+    }else{
+      searchContainer.className += " active";
+      form.className += " active";
+      input.focus();
+    }
+  }
+
+  document.querySelector('template[is=dom-bind]').isExpanded = function(opened) {
+    return String(opened);
+  };
+  //Make sure the parent categoy of the 'active' page is opened.
+  window.addEventListener('WebComponentsReady', function(e){
+    
+    //tries to find the "active" page in the left nav. 
+    var activeElements = document.querySelectorAll('app-drawer .active');
+    
+    // There should only be 1 or 0 (for the search page or other pages not shown in left nav....which for now is only search).
+    // As long as it isn't 0, find the iron-collapse parent, which has a class of 'headeriron' and make it perform the 'show' method.
+    // If it is 0, hide all the sections.
+    if (activeElements.length > 0){
+      var currentElement = activeElements[0].parentElement;
+      while (currentElement.classList.contains('headeriron') === false){
+        currentElement=currentElement.parentElement;
+      } 
+      show(currentElement);     
+    }else{
+      var sections = document.querySelectorAll('iron-collapse');
+      for (i=0; i< sections.length; i++){
+        hide(sections[i]);
+      }
+    }
+  });
+  </script>
+</body>
+</html>

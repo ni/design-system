@@ -1,0 +1,97 @@
+-
+    name: NIBlueBrush
+    value: '#065FA3'
+-
+    name: NIHighlightBrush
+    value: '#4386B9'
+-
+    name: NIBlueMediumAccentBrush
+    value: '#4386B9'
+-
+    name: NIBlueAccentBrush
+    value: '#82A3D1'
+-
+    name: NIHighlightTextBrush
+    value: '#B3CDE2'
+-
+    name: NIHighlightSelectedBrush
+    value: '#DCE5EC'
+-
+    name: NITrueBlackBrush
+    value: '#000000'
+-
+    name: NIBlackBrush
+    value: '#2B3033'
+-
+    name: NIGrayCool36Brush
+    value: '#4D5359'
+-
+    name: NIMediumGrayBrush
+    value: '#575757'
+-
+    name: NIIconGrayBrush
+    value: '#696E73'
+-
+    name: NIGrayBrush
+    value: '#777B80'
+-
+    name: NIDropDownGrayBrush
+    value: '#82878C'
+-
+    name: NIGrayNeutral68Brush
+    value: '#A9ACAF'
+-
+    name: NIBackDropGrayBrush
+    value: '#B1B4B6'
+-
+    name: NIGrayCool81Brush
+    value: '#C7CCD0'
+-
+    name: NIGrayCool88Brush
+    value: '#D9DEE1'
+-
+    name: NIGrayCool90Brush
+    value: '#DDE2E6'
+-
+    name: NIBackgroundBrush
+    value: '#E0E0E0'
+-
+    name: NIWhiteBrush
+    value: '#EBEBEB'
+-
+    name: NIGrayCool92Brush
+    value: '#E9EBEC'
+-
+    name: NIWhiteBlueBrush
+    value: '#EBF0F5'
+-
+    name: NICoolWhiteBrush
+    value: '#F7F7F7'
+-
+    name: NICoolBlue98Brush
+    value: '#F9FAFC'
+-
+    name: NITrueWhiteBrush
+    value: '#FFFFFF'
+-
+    name: NIErrorBrush
+    value: '#C42126'
+-
+    name: NIWarningBrush
+    value: '#FF8900'
+-
+    name: NISuccessBrush
+    value: '#20B25B'
+-
+    name: NIProbeBrush
+    value: '#006A93'
+-
+    name: NIGuidelineBrush
+    value: '#FC9500'
+-   
+    name: NIButtonFillBrush
+    type: gradient
+    stop1value: '#E9EBEC'
+    stop1offset: '0'
+    stop2value: '#D9DEE1'
+    stop2offset: '40' 

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+ 
+<div id="post">
+  <!--<paper-tabs selected="0" noink>
+      <paper-tab link><a href="#design" tabindex="-1">Design guidelines</a></paper-tab>
+      <paper-tab link><a href="#implement" tabindex="-1">Implementation guidelines</a></paper-tab>
+  </paper-tabs>-->
+  <div id="post-content">
+    {{ content }}
+    <p>Last updated on <span id="dateModified">{{ page.last_modified_at | date: '%B %d, %Y' }}</span></p>
+    <paper-tooltip for="dateModified">{{ page.last_modified_at | date: '%B %d, %Y, %l:%M:%S %p %Z' }}</paper-tooltip>
+  </div>
+</div>

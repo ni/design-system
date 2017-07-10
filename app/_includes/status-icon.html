@@ -1,0 +1,22 @@
+
+{% assign wipIcon = '"image:adjust" class="wip"' %}
+{% assign qIcon = '"radio-button-unchecked" class="queued"' %}
+{% assign readyIcon = '"check-circle" class="ready"' %}
+
+
+{% case include.status %}
+    {% when 'WIP' %}
+        {{ wipIcon }}
+    {% when 'queued' %}
+        {{ qIcon }}
+    {% when 'ready' %}
+        {{ readyIcon }}
+    {% when 'all' %}
+        <div id="legend"> 
+            <span><iron-icon icon={{ qIcon }} ></iron-icon>Queued</span>
+            <span><iron-icon icon={{ wipIcon }}></iron-icon>In Progress</span>            
+            <span><iron-icon icon={{ readyIcon }}></iron-icon>Ready</span>
+        </div>
+    {% else %}
+     This is not a cake nor a cookie
+{% endcase %}
