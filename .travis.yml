@@ -17,6 +17,7 @@ sudo: false # route your build to the container-based infrastructure for a faste
 deploy:
   provider: pages
   skip_cleanup: true
+  github_token: $GH_TOKEN
   on:
     branch: master
   local_dir: app/_site  
