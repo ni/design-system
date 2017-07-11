@@ -93,6 +93,12 @@
     .search-form .active{
       width: 300px;
     }
+    .collapse-content iron-icon {
+      width:8px;
+      height:8px;
+      margin-right: 0px;
+      margin-left: 5px;
+    }
     </style>
   </custom-style>
 <body unresolved class="fullbleed layout vertical">
@@ -157,7 +163,18 @@
                 <div class="collapse-content">
                     <ul>
                     {% for item in site.elements %}  
-                    <li><a href="{{ item.url | prepend:site.baseurl }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a></li>
+                    <li>
+                      {% capture status %}{{ item.status }}{% endcapture %}
+                      <a 
+                      href="{{ item.url | prepend:site.baseurl }}"  
+                      title="{% if item.status == nil or item.status == 'queued' %}Topic is queued for production{% endif %}"                          
+                          {% if page.url == item.url %}class="active"{% endif %}>                          
+                          {{ item.title }}
+                          {% if item.status == nil or item.status == 'queued' %}
+                            <iron-icon icon={% include status-icon.html status=status %}></iron-icon>
+                          {% endif %}
+                        </a>
+                    </li>
                     {% endfor %}
                     </ul>  
                 </div>

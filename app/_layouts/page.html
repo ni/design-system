@@ -8,7 +8,11 @@ layout: default
       <paper-tab link><a href="#implement" tabindex="-1">Implementation guidelines</a></paper-tab>
   </paper-tabs>-->
   <div id="post-content">
-    {{ content }}
+    {% if page.status == nil or page.status == 'queued' %}
+      <h2>Content for this page is not created yet but is in our queue for production.</h2>
+    {% else %}
+      {{ content }}
+    {% endif %}
     <p>Last updated on <span id="dateModified">{{ page.last_modified_at | date: '%B %d, %Y' }}</span></p>
     <paper-tooltip for="dateModified">{{ page.last_modified_at | date: '%B %d, %Y, %l:%M:%S %p %Z' }}</paper-tooltip>
   </div>
