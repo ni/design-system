@@ -1,38 +1,4 @@
 groups:
-  - path: ContextHelp/Images
-    icons:
-    - icon: ContextHelp_32x32.png
-    - icon: Manual_32x32.png
-    - icon: Pinout_32x32.png
-    - icon: ReferenceHelp_32x32.png
-    - icon: Specifications_32x32.png
-  - path: HelpCommon/Images
-    icons:
-    - icon: OverlayHelpButtonOff_16x16.png
-    - icon: OverlayHelpButtonOn_16x16.png
-  - path: ProjectExplorer/Images
-    icons:
-    - icon: AddLinkToFile_16x16.png
-    - icon: AddPullDown_16x16.png
-    - icon: CollapseAll_16x16.png
-    - icon: Delete_16x16.png
-    - icon: ErrorGlyph16X16.png
-    - icon: Exclude_16x16.png
-    - icon: ExpandAll_16x16.png
-    - icon: ExternalDocument_16x16.png
-    - icon: FavoriteStar_HoverOff.png
-    - icon: FavoriteStar_HoverOn.png
-    - icon: FavoriteStar_Normal.png
-    - icon: FavoriteStar_Selected.png
-    - icon: FilesPane_16x16.png
-    - icon: Filter_16x16.png
-    - icon: FilterOption_Favorite_16x16.png
-    - icon: FindInFileExplorer_16x16.png
-    - icon: Folder_16x16.png
-    - icon: FolderExpanded_16x16.png
-    - icon: NewFolder_16x16.png
-    - icon: ProjectRoot_16x16.png
-    - icon: Sort_16x16.png
   - path: Resources
     icons:
     - icon: AddFolder_16x16.png
@@ -99,6 +65,33 @@ groups:
     - icon: Print_16x16.png
     - icon: SplitHorzontal_16x16.png
     - icon: ToolsLauncher_16x16.png
+  - path: HelpCommon/Images
+    icons:
+    - icon: OverlayHelpButtonOff_16x16.png
+    - icon: OverlayHelpButtonOn_16x16.png
+  - path: ProjectExplorer/Images
+    icons:
+    - icon: AddLinkToFile_16x16.png
+    - icon: AddPullDown_16x16.png
+    - icon: CollapseAll_16x16.png
+    - icon: Delete_16x16.png
+    - icon: ErrorGlyph16X16.png
+    - icon: Exclude_16x16.png
+    - icon: ExpandAll_16x16.png
+    - icon: ExternalDocument_16x16.png
+    - icon: FavoriteStar_HoverOff.png
+    - icon: FavoriteStar_HoverOn.png
+    - icon: FavoriteStar_Normal.png
+    - icon: FavoriteStar_Selected.png
+    - icon: FilesPane_16x16.png
+    - icon: Filter_16x16.png
+    - icon: FilterOption_Favorite_16x16.png
+    - icon: FindInFileExplorer_16x16.png
+    - icon: Folder_16x16.png
+    - icon: FolderExpanded_16x16.png
+    - icon: NewFolder_16x16.png
+    - icon: ProjectRoot_16x16.png
+    - icon: Sort_16x16.png
   - path: SourceModel/Design/Resources
     icons:
     - icon: AlignBottomEdges_16x16.png
@@ -188,3 +181,10 @@ groups:
     - icon: warning_16x16.png
     - icon: warning_orange_16x16.png
     - icon: ZoomToFit_16x16.png
+  - path: ContextHelp/Images
+    icons:
+    - icon: ContextHelp_32x32.png
+    - icon: Manual_32x32.png
+    - icon: Pinout_32x32.png
+    - icon: ReferenceHelp_32x32.png
+    - icon: Specifications_32x32.png
