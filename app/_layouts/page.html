@@ -8,11 +8,20 @@ layout: default
       <paper-tab link><a href="#implement" tabindex="-1">Implementation guidelines</a></paper-tab>
   </paper-tabs>-->
   <div id="post-content">
-    {% if page.status == nil or page.status == 'queued' %}
-      <h2>Content for this page is not created yet but is in our queue for production.</h2>
+    {% case page.status %}
+    {% when 'WIP' %}
+    <div id="status">
+         <h2 style="margin-bottom:0px">Content for this page is currently in progress.</h2>
+         <p >What you see below is still applicable, we are just continuing to work on it.</p>
+    </div>
+         {{ content }}
+    {% when 'queued'or nil%}
+    <div id="status">
+        <h2>Content for this topic is not created yet but is in our queue for production.</h2>
+    </div>
     {% else %}
-      {{ content }}
-    {% endif %}
+        {{ content }}
+    {% endcase %} 
     <p>Last updated on <span id="dateModified">{{ page.last_modified_at | date: '%B %d, %Y' }}</span></p>
     <paper-tooltip for="dateModified">{{ page.last_modified_at | date: '%B %d, %Y, %l:%M:%S %p %Z' }}</paper-tooltip>
   </div>
