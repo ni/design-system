@@ -7,10 +7,8 @@ tags:
   - hex
   - rgb
   - IDE
-  - color
-status: ready
+status: WIP
 ---
-
 To use these colors, you will need to make sure that your XAML file has a direct or indirect references to **Colors.xaml**.
 
 ## Editor colors

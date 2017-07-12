@@ -12,13 +12,8 @@ tags:
 status: WIP
 ---
 
-| State              | Image         |
-| ------------------ |:-------------:|
-| Normal             | ![Alt text](../../images/elements/hyperlink/hyperlink-normal.svg)  |
-| Hover              | ![Alt text](../../images/elements/hyperlink/hyperlink-hover.svg)   |
-
 ## Application menu
-**Codename:** `ApplicationMenu` - NationalInstruments.Controls	
+**Codename:** `ApplicationMenu` - NationalInstruments.Controls  
 **Codename:** `ApplicationMenuItem` - NationalInstruments.Controls
 
 ## Context menus

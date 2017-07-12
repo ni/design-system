@@ -5,14 +5,12 @@ category: elements
 tags:
 status: WIP
 
-
 ---
+Checkboxes are used to turn an option on or off to select or deselect an item.  
 
-**Codename:** `ShellCheckBox` - NationalInstruments.Controls.Shell
+**Codename:** `ShellCheckBox` - NationalInstruments.Controls.Shell  
 
-Checkboxes are used to turn an option on or off to select or deselect an item. 
-
-Use radio buttons if the meaning of the cleared checkbox isn’t completely obvious.
+If the meaning of the cleared checkbox isn’t completely obvious, use radio buttons instead.
 
 - Align checkboxes vertically, not horizontally. Horizontal alignment is more difficult to read.
 - For disabled checkboxes, show the correct selection state. The disabled checkbox is still conveying information to the user even though they can’t change them.

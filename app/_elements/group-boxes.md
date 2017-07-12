@@ -10,7 +10,7 @@ status: WIP
 
 While group boxes can be a way to visually create relationships between controls, they can cause a simple interface to look overly complex.
 
-**Pro:** Strong way to indicate relationships.
+**Pro:** Strong way to indicate relationships.  
 **Con:** Overusing them adds visual clutter.
 
 ### Alternatives

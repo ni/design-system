@@ -16,9 +16,8 @@ status: WIP
 ---
 ## Configuration pane
 
-Section
-**Codename:** `ConfigurationPaneControl` - NationalInstruments.Design
-**Codename:** `ShellExpander` - NationalInstruments.Controls.Shell
+**Codename:** `ConfigurationPaneControl` - NationalInstruments.Design  
+**Codename:** `ShellExpander` - NationalInstruments.Controls.Shell  
 **Codename:** `DocumentHeaderControl` - NationalInstruments.Design
 
 ## Navigation pane

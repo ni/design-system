@@ -3,7 +3,10 @@ layout: page
 title: Icons
 category: style
 tags:
-status: WIP
+  - images
+  - iconography
+  - image
+status: ready
 ---
 
 <custom-style>
@@ -74,6 +77,15 @@ img{
   </custom-style>
 
 <body>
+    <p>The {{ site.title }} provides a consolidated set of iconongraphy for use throughout NI software products.</p>
+
+   <p><strong>XAML Code Snippet</strong></p>
+   <p>To reference an icon from this library in XAML, use the pack URI scheme of the icon.</p>
+    {% highlight xml %}
+    <Image Source="pack://application:,,,/NationalInstruments.PlatformFramework;component/ProjectExplorer/Images/AddPullDown_16x16.png"/>
+    {% endhighlight %}
+
+
     {% for group in site.data.icons.groups %}  
     <h2>{{ group.path }}</h2>
     <div class="set">    

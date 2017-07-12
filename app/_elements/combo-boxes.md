@@ -13,7 +13,7 @@ status: WIP
 
 ---
 
-**Codename:** `ShellComboBox`   - NationalInstruments.Controls.Shell
+**Codename:** `ShellComboBox`   - NationalInstruments.Controls.Shell  
 **Codename:** `ShellComboBoxItem` - NationalInstruments.Controls.Shell
 
 A combo box is a combination of a standard list box or a dropdown list and an editable text box, thus allowing users to enter a value that isn't in the list. Arbitrary values means the user can enter any value. Fixed values means the user cannot enter values not in the list.  The control will coerce or revert to the previously entered value.
