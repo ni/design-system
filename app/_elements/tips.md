@@ -24,16 +24,12 @@ Tooltips and infotips, collectively called tips, are used to provide additional 
 - If you need to provide the name **and** description of an element, use an infotip.
 - Don't rely solely on consistency. Just because other elements are using an tooltip or tooltip it isn't required that your tip use the same implementation. The part to keep consistent is providing the appropriate amount of information for the user.  
 
-
-
-
 ## Tooltips
 Tooltips provide name or basic description of an element. 
 
 ![Alt text](../../images/elements/tips/tips-tooltip.svg)
 
 ## Infotips
-- 
 - Do not include elements in an infotip that require the user to click.
 - Due to their extra content, infotips do not timeout so the user has time to read the information.
   - Techically, it is not possible to turn off the timout value. However, you can set the `ShowDuration` propoerty to a very large value, like 360000000, to achieve this effect.

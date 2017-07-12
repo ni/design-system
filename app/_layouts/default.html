@@ -166,14 +166,16 @@
                     <li>
                       {% capture status %}{{ item.status }}{% endcapture %}
                       <a 
-                      href="{{ item.url | prepend:site.baseurl }}"  
-                      title="{% if item.status == nil or item.status == 'queued' %}Topic is queued for production{% endif %}"                          
+                      id="{{item.title | remove: " "}}"
+                      href="{{ item.url | prepend:site.baseurl }}"                        
                           {% if page.url == item.url %}class="active"{% endif %}>                          
                           {{ item.title }}
                           {% if item.status == nil or item.status == 'queued' %}
                             <iron-icon icon={% include status-icon.html status=status %}></iron-icon>
+                            <paper-tooltip for="{{item.title | remove: " "}}">Topic is queued for production</paper-tooltip>                            
                           {% endif %}
                         </a>
+                        
                     </li>
                     {% endfor %}
                     </ul>  
