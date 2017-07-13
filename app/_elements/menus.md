@@ -11,13 +11,33 @@ tags:
   - bar
 status: WIP
 ---
-
 ## Application menu
+
 **Codename:** `ApplicationMenu` - NationalInstruments.Controls  
 **Codename:** `ApplicationMenuItem` - NationalInstruments.Controls
 
+
 ## Context menus
 **Codename:** `ShellContextMenu` - NationalInstruments.Controls.Shell
+
+## Using icons in menus
+In general, we do not use icons in context or application menus but there are a few exceptions.
+ 
+#### Exceptions  
+1. We do provide icons for file types and folders in the "New" menus
+1. Run, Pause, Abort in LabVIEW.
+The NI product you are working may have similar types of commands where it is also appropriate to use icons.
+1. We do provide icons for items that are standard and well known in general computing. The specific items that meet that criteria are as follows:
+  - Cut
+  - Copy
+  - Paste
+  - Save
+  - Save all
+  - Print
+  - Undo 
+  - Redo
+ 
+**Note:** We have excluded "Close" due to multiple versions of Close that exists in LabVIEW (Close, Close all, Close project, etc.) However, if your product has a simpler Close command, you may want to consider including that one, as well.
 
 ## Access keys for menus
 Note: These guidelines do not cover access keys for dialog boxes or configuration panes.
