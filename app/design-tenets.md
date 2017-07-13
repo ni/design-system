@@ -31,12 +31,15 @@ clear:both;
 
 .tenet{
     padding: 1em 0;
-    border-top: 1px solid var(--divider-color);
+    border-top: 4px solid var(--primary-color);
     min-height:275px;
 }
 .tenet:first-of-type {
     border-top: none;
     padding: 0 0 1em 0;
+}
+#post{
+  max-width:900px;
 }
 
 
