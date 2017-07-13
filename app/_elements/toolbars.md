@@ -7,7 +7,7 @@ tags:
   - commands
   - container
 
-status: WIP
+status: ready
 ---
 
 A toolbar provides a set of commands and controls for a context. These are commonly seen along the top of documents and tabs within a pane.
@@ -15,7 +15,7 @@ A toolbar provides a set of commands and controls for a context. These are commo
 **Codename:** `ShellToolbar` - NationalInstruments.Shell
 
 ## Use the factory to create toolbars
-In general, you will populate a toolbar via our commanding and factory system. To get the toolbar look, most factories have a `ForToolBar` static factory to get this different style. In some cases we actually have a different factory, like `ShellToolBarButtonVisualFactory` which creates a `ShellToolBarButton` (rather than just a different style for `ShellButton`). 
+You will populate a toolbar via our commanding and factory system. To get the toolbar look, most factories have a `ForToolBar` static factory to get this different style. In some cases we actually have a different factory, like `ShellToolBarButtonVisualFactory` which creates a `ShellToolBarButton` (rather than just a different style for `ShellButton`). 
 
 ## Examples
 #### Left side
@@ -26,7 +26,6 @@ In general, you will populate a toolbar via our commanding and factory system. T
 ![Alt text](../../images/elements/toolbars/toolbar-right.svg)
 
 ## Use separators between text controls
-
 
 {% highlight c# %}
 using (context.AddDocumentToolBarContent())
