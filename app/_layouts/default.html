@@ -94,8 +94,8 @@
       width: 300px;
     }
     .collapse-content iron-icon {
-      width:8px;
-      height:8px;
+      width:12px;
+      height:12px;
       margin-right: 0px;
       margin-left: 5px;
     }
@@ -112,8 +112,10 @@
     <app-drawer id="drawer" slot="drawer">            
       <app-header-layout has-scrolling-region>          
         <app-header class="nav-header" slot="header" fixed>
+          <a href="{{ site.baseurl }}/">
           <div class="title">NI</div>
-          <div class="subtitle">Design System for LabVIEW NXG</div>          
+          <div class="subtitle">Design System for LabVIEW NXG</div> 
+          </a>         
         </app-header>            
         <!-- Drawer Content -->       
         <template is="dom-bind">
@@ -129,7 +131,7 @@
               <div class="collapse-content">
                     <ul>
                     <li><a class="{% if page.url == '/' %}active{% endif %}"href="{{ site.baseurl }}/">Introduction</a></li>
-                    <li><a class="{% if page.url == '/design-tenets/' %}active{% endif %}"href="{{ site.baseurl }}/design-tenets/">Design tenets</a></li>
+                    <!-- <li><a class="{% if page.url == '/design-tenets/' %}active{% endif %}"href="{{ site.baseurl }}/design-tenets/">Design tenets</a></li> -->
                     <li><a class="{% if page.url == '/whats-new/' %}active{% endif %}"href="{{ site.baseurl }}/whats-new/">What's new</a></li>
                     <li><a class="{% if page.url == '/content-status/' %}active{% endif %}"href="{{ site.baseurl }}/content-status/">Content status</a></li>   
                   </ul>  
@@ -200,7 +202,11 @@
           
           </paper-menu>
         </template>
-        <footer><div id="copyright-info">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</footer>
+        <footer>
+          <div id="copyright-info">
+          <p style="font-size: 14px; margin-bottom: 0px; font-weight:500">See an issue?</p>
+          <a style="font-size: 14px; font-weight:500;" href="https://github.com/ni/design-system/issues" target="_blank">Let us know</a><br /><br />
+          &copy; {{ site.time | date: '%Y' }} {{ site.author }}</div></footer>
       </app-header-layout>
     </app-drawer>
 
