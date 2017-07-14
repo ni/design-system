@@ -31,7 +31,7 @@ clear:both;
 
 .tenet{
     padding: 1em 0;
-    border-top: 4px solid var(--primary-color);
+    border-top: 1px solid var(--divider-color);
     min-height:275px;
 }
 .tenet:first-of-type {
@@ -47,9 +47,9 @@ clear:both;
 
 <div id="tenets">
 <div class="left tenet">
-
-  <h2>Efficient</h2>
   <img src="../images/overview/tenets-fpo.svg"/>
+  <h2>Efficient</h2>
+  
   <p>Let users do their thing with efficiency (get out of the way)</p>
   
   <p>
@@ -61,19 +61,20 @@ clear:both;
   
 </div>
 <div class="right tenet"> 
+  <img src="../images/overview/design-tenets-modern.svg"/>
   <h2>Modern</h2>
-  <img src="../images/overview/tenets-fpo.svg"/>
+  
   <p>Modernize without losing the goodness of what came before</p>
   <p>
-    use common, famibrar interaction and visual patterns<br />  
-    strive for migration of functionabrty, not parity of interactions<br />  
-    balance between famibrarity and innovation<br />
+    use common, familiar interaction and visual patterns<br />  
+    strive for migration of functionality, not parity of interactions<br />  
+    balance between familiarity and innovation<br />
   </p>
 </div>
 
 <div class="left tenet">
-  <h2>Learnable</h2>
   <img src="../images/overview/tenets-fpo.svg"/>
+  <h2>Learnable</h2>  
   <p>Help users create a foundation of knowledge that can be built upon</p>
   <p>
     guide users to understanding without distracting them from their goal<br />  
@@ -84,19 +85,19 @@ clear:both;
 </div>
 
 <div class="right tenet"> 
-  <h2>Trustworthy</h2>
-  <img src="../images/overview/tenets-fpo.svg"/>
+  <img src="../images/overview/design-tenets-trustworthy.svg"/>
+  <h2>Trustworthy</h2>  
   <p>Work as a trusted partner to inspire confidence</p>
   <p>
-    complexity isn’t always bad; don’t strictly strive for simpbrcity<br />  
+    complexity isn’t always bad; don’t strictly strive for simplicity<br />  
     give appropriate feedback and actionable error messaging to inform users of the system’s status<br />  
     encourage and allow exploration with minimal consequences<br />
   </p>
 </div>
 
 <div class="left tenet">
-  <h2>Unobtrusive</h2>
   <img src="../images/overview/tenets-fpo.svg"/>
+  <h2>Unobtrusive</h2>
   <p>Allow users to focus on creating meaningful content</p>
   <p>
     user content should be clear and readable<br />
