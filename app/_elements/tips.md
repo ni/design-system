@@ -6,7 +6,7 @@ tags:
   - tooltip
   - tipstrip
   - infotip
-status: WIP
+status: ready
 
 ---
 Tooltips and infotips, collectively called tips, are used to provide additional context to a UI element.
@@ -41,5 +41,5 @@ Tooltips provide name or basic description of an element.
 **Including an optional footer**  
 ![Alt text](../../images/elements/tips/tips-infotip-with-footer.svg)  
 
-
+**Example of minimum size infotip**  
 ![Alt text](../../images/elements/tips/tips-infotip-minimum.svg)
