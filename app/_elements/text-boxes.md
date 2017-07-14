@@ -13,14 +13,14 @@ tags:
   - numeric
   - path
   - URL
-status: WIP
+status: ready
 ---
 
 ## Single line
 
 **Codename:** `ShellTextBox` - NationalInstruments.Controls.Shell  
 
-Simple user control entering strings data.
+Simple user control entering alphanumeric data.
 
 | State         | Image         |
 | ------------- |:-------------:|
@@ -30,6 +30,8 @@ Simple user control entering strings data.
 
 ## Single line with spin controls  
 **Codename:** `ShellNumericTextBox` - NationalInstruments.Controls.Shell
+
+Similar to a single line text box but only used for numeric data; this adds spin controls that allow the user to increment and decrement the value
 
 | State                    | Image         |
 | ------------------------ |:-------------:|
@@ -41,7 +43,7 @@ Simple user control entering strings data.
 
 ## Multi-line text boxes
 
-Multi-line text box (plain text)   Multi-line text box that allows for plain text with carriage returns and tabs. Spans the width of the rail (like the HTML Editor).
+Multi-line text box the user to provide plain text with carriage returns and tabs. When used in a configuration pane, it spans the width of the area.
 
 ## Read-only text boxes
 
@@ -52,6 +54,8 @@ Multi-line text box (plain text)   Multi-line text box that allows for plain tex
 ## Path text box
 
 **Codename:** `ShellPathSelector` - NationalInstruments.Controls.Shell
+
+This controls allows the user to specify a path to folder or other relative content. Extra controls are provided to allow the user to browse to a location or set the value to "Not a path."
 
 | State                | Image         |
 | -------------------- |:-------------:|

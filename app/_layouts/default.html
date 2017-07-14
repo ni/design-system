@@ -174,7 +174,7 @@
                           {{ item.title }}
                           {% if item.status == nil or item.status == 'queued' %}
                             <iron-icon icon={% include status-icon.html status=status %}></iron-icon>
-                            <paper-tooltip for="{{item.title | remove: " "}}">Topic is queued for production</paper-tooltip>                            
+                            <paper-tooltip for="{{item.title | remove: " "}}">This topic is queued for production</paper-tooltip>                            
                           {% endif %}
                         </a>
                         
