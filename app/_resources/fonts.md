@@ -5,7 +5,7 @@ category: resources
 tags:
     - fonts
     - typography
-
+status: WIP
 ---
 
 This page includes links and resources to provide access and downloads for using the typography styles in NI software.

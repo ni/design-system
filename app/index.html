@@ -2,7 +2,108 @@
 layout: default
 title: Introduction
 ---
+
+<custom-style>
+    <style is="custom-style">
+        #post{
+            max-width:1250px;
+        }
+        #hero{
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--divider-color);
+        }
+        #hero h1{
+            font-weight: 700;
+            font-size: 56px;
+            margin-bottom: 5px;
+            margin-top:0px;
+        }
+        #hero h2{
+            font-weight: 300;
+            margin-top: 0px;
+            font-size: 34px;
+        }
+        #hero p{
+            font-size:18px;
+        }
+        .set {
+            margin: auto;
+            padding: 1em 0;
+            @apply(--layout-horizontal);
+            @apply(--layout-wrap);
+            border-bottom: 1px solid var(--divider-color);
+        }
+
+        .container {
+            min-width: 250px;
+            padding: 10px 15px;
+            text-align: center;
+            border-right: 1px solid var(--divider-color);
+            @apply(--layout-vertical);
+            @apply(--layout-center);
+            @apply(--layout-flex);
+
+        }
+        .container:last-child{
+            border-right: none;
+        }
+
+        .container > div {
+
+        }
+        .icon-card{
+            height:160px;
+            width: 160px;  
+            text-align: center; 
+            margin: 1em 0;
+        }
+        img{
+            vertical-align: middle;
+            max-height: 160px;
+            max-width: 160px;
+        }
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }      
+    </style>
+</custom-style>
 <div id="post">
-<h1>NI Design System for LabVIEW NXG</h1>
-<p>Design and Development guidance for creating consistent and intuitive designs.</p>    
+    <div id="hero">
+        <h1>NI</h1>
+        <h2>Design System for LabVIEW NXG</h2>
+        <p>The {{ site.title }} is a living design system that provides information and resources to create compelling, intuitive experiences.</p> 
+    </div>
+  <div class="custom set">    
+        <div class="container">
+            <div class="icon-card">
+                <img src="images/overview/home-elements.svg"/>
+            </div>
+            <p><strong>Elements</strong></p>
+            <p>Lorem ipsum dolor sit amet consecuteur ialkfesoief aeifa e faeiifasdkjf.</p>
+        </div>
+        <div class="container">
+            <div class="icon-card">
+                <img src="images/overview/home-guidelines.svg"/>
+            </div>
+            <p><strong>Style</strong></p>
+            <p>Lorem ipsum dolor sit amet consecuteur ialkfesoief aeifa e faeiifasdkjf.</p>
+        </div>
+        <div class="container">
+            <div class="icon-card">
+                <img src="images/overview/home-tools.svg"/>
+            </div>
+            <p><strong>Tools</strong></p>
+            <p>Lorem ipsum dolor sit amet consecuteur ialkfesoief aeifa e faeiifasdkjf.</p>
+        </div>
+        <div class="container">
+            <div class="icon-card">
+                <img src="images/overview/home-product.svg"/>
+            </div>
+            <p><strong>Products</strong></p>
+            <p>Lorem ipsum dolor sit amet consecuteur ialkfesoief aeifa e faeiifasdkjf.</p>
+        </div>
+  </div>
+    <p style="text-align:right">View the source on <a href="https://github.com/ni/design-system" target="_blank">GitHub</a>.</p>
 </div>
