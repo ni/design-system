@@ -22,16 +22,26 @@ status: ready
 
 Simple user control entering alphanumeric data.
 
+To present a read-only text boxes set the `.isReadOnly` property to `true`. Read-only text boxes are not directly editable but allow the user to see the current value.  The user is still able to select the text for copying purposes.
+
 | State         | Image         |
 | ------------- |:-------------:|
 | Normal        | ![Alt text](../../images/elements/text-boxes/text-boxes-single-line-normal.svg)   | 
 | Hover         | ![Alt text](../../images/elements/text-boxes/text-boxes-single-line-hover.svg)    |  
 | Disabled      | ![Alt text](../../images/elements/text-boxes/text-boxes-single-line-disabled.svg)    |
+| Read-only     | ![Alt text](../../images/elements/text-boxes/text-boxes-read-only-normal.svg) |
+
+## Multi-line text boxes
+**Codename:** `ShellTextBox` - NationalInstruments.Controls.Shell  
+
+Use a multi-line text box to provide plain text with carriage returns and tabs. When used in a configuration pane, it spans the width of the area. 
+
+
 
 ## Single line with spin controls  
 **Codename:** `ShellNumericTextBox` - NationalInstruments.Controls.Shell
 
-Similar to a single line text box but only used for numeric data; this adds spin controls that allow the user to increment and decrement the value
+Similar to a single line text box but only used for numeric data. The spin controls allow the user to increment and decrement the value.
 
 | State                    | Image         |
 | ------------------------ |:-------------:|
@@ -41,15 +51,7 @@ Similar to a single line text box but only used for numeric data; this adds spin
 | Spin control (Mousedown) | ![Alt text](../../images/elements/text-boxes/text-boxes-single-spinner-mouse-down-increment.svg) |
 | Disabled                 | ![Alt text](../../images/elements/text-boxes/text-boxes-single-spinner-disabled.svg)             |
 
-## Multi-line text boxes
 
-Multi-line text box the user to provide plain text with carriage returns and tabs. When used in a configuration pane, it spans the width of the area.
-
-## Read-only text boxes
-
-| State               | Image         |
-| ------------------- |:-------------:|
-| Normal              | ![Alt text](../../images/elements/text-boxes/text-boxes-read-only-normal.svg)   |
 
 ## Path text box
 

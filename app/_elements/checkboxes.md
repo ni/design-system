@@ -38,4 +38,15 @@ A mixed state is available if state of child or selected objects is not the same
 | Mixed state (hover) | ![Alt text](../../images/elements/checkboxes/checkboxes-hover-mixed-state.svg)  |
 | Disabled            | ![Alt text](../../images/elements/checkboxes/checkboxes-disabled.svg)           |
 
+** C# code snippets
+
+{% highlight c# %}
+//Set UI type in your ShellSelectionRelayCommand
+UIType = UITypeForCommand.Toggle 
+
+//For showing element in configuration pane
+context.Add(yourClass.yourCommand, CheckBoxFactory.ForConfigurationPane);
+
+{% endhighlight %}
+
 
