@@ -8,6 +8,7 @@ title: Design tenets
 #tenets h2{
 font-size:48px;
 margin-bottom:8px;
+
 }
 
 .left{
@@ -17,7 +18,7 @@ margin-bottom:8px;
 .left img{
   -webkit-order: 2;
   order: 2;
-  margin-left:15px;
+  margin-left:25px;
   height:260px;
 }
 .left .words{
@@ -32,7 +33,7 @@ justify-content: flex-start;
 }
 
 .right img{
-  margin-right:15px;
+  margin-right:25px;
   height:260px;
   -webkit-order: 1;
   order: 1;
@@ -46,7 +47,7 @@ justify-content: flex-start;
     margin: 1em 0;
     border-top: 1px solid var(--divider-color);
     min-height:275px;
-    padding: 0;
+    padding: 20px 0 0 0;
     margin: 0;
     list-style: none;
     
