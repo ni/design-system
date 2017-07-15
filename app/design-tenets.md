@@ -7,35 +7,57 @@ title: Design tenets
 
 #tenets h2{
 font-size:48px;
+margin-bottom:8px;
 }
 
 .left{
   text-align:right;
-  clear:both;
-
+   justify-content: flex-end;
 }
 .left img{
-  float:right;
+  -webkit-order: 2;
+  order: 2;
   margin-left:15px;
   height:260px;
 }
+.left .words{
+  -webkit-order: 1;
+  order: 1;
+}
+
 .right{
 text-align:left;
-clear:both;
+justify-content: flex-start;
 
 }
 
 .right img{
-  float:left;
   margin-right:15px;
   height:260px;
+  -webkit-order: 1;
+  order: 1;
+}
+.right .words{
+  -webkit-order: 2;
+  order: 2;
 }
 
 .tenet{
-    padding: 1em 0;
+    margin: 1em 0;
     border-top: 1px solid var(--divider-color);
     min-height:275px;
-}
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row
+    -webkit-flex-flow: row wrap;
+  }
 .tenet:first-of-type {
     border-top: none;
     padding: 0 0 1em 0;
@@ -50,61 +72,69 @@ clear:both;
 <div id="tenets">
 <div class="right tenet">
   <img src="../images/overview/design-tenets-efficient.svg"/>
-  <h2>Efficient</h2>
-  
-  <p>Let users do their thing with efficiency (get out of the way)</p>
-  
-  <p>
-    allow direct manipulation for common actions<br />
-    provide a means to apply settings across multiple objects (batch operations)<br />
-    different stages of the workflow may call for different levels of “scrappiness”<br />
-    be cautious when making assumptions about what users want<br />
-  </p>
-  
+  <div class="words">
+    <h2>Efficient</h2>  
+    <p><strong>Let users do their thing with efficiency.</strong></p>  
+    <p>
+      Allow direct manipulation for common actions.<br />
+      Provide a means to apply settings across multiple objects.<br />
+      Different stages of the workflow may call for different levels of “scrappiness.”<br />
+      Be cautious when making assumptions about what users want.<br />
+    </p>
+  </div>  
 </div>
+
 <div class="left tenet"> 
   <img src="../images/overview/design-tenets-modern.svg"/>
+  <div class="words">
   <h2>Modern</h2>
   
-  <p>Modernize without losing the goodness of what came before</p>
+  <p><strong>Modernize without losing the goodness of what came before.</strong></p>
   <p>
-    use common, familiar interaction and visual patterns<br />  
-    strive for migration of functionality, not parity of interactions<br />  
-    balance between familiarity and innovation<br />
+    Use common, familiar interaction and visual patterns.<br />  
+    Strive for migration of functionality, not parity of interactions.<br />  
+    Balance between familiarity and innovation.<br />
   </p>
+  </div>
 </div>
 
 <div class="right tenet">
   <img src="../images/overview/design-tenets-learnable.svg"/>
+  <div class="words">
   <h2>Learnable</h2>  
-  <p>Help users create a foundation of knowledge that can be built upon</p>
+  <p><strong>Help users create a foundation of knowledge that can be built upon.</strong></p>
   <p>
-    guide users to understanding without distracting them from their goal<br />  
-    encourage and allow exploration with minimal consequences<br />  
-    maintain consistent interaction and visual patterns between basic and advanced workflows<br />  
-    use progressive disclosure to promote good decision-making and reduce cognitive load<br />
+    Guide users to understanding without distracting them from their goal.<br />  
+    Encourage and allow exploration with minimal consequences.<br />  
+    Maintain consistent interaction and visual patterns between basic and advanced workflows.<br />  
+    Use progressive disclosure to promote good decision-making and reduce cognitive load.<br />
   </p>
+  </div>
 </div>
 
 <div class="left tenet"> 
   <img src="../images/overview/design-tenets-trustworthy.svg"/>
+  <div class="words">
   <h2>Trustworthy</h2>  
-  <p>Work as a trusted partner to inspire confidence</p>
+  <p><strong>Work as a trusted partner to inspire confidence.</strong></p>
   <p>
-    complexity isn’t always bad; don’t strictly strive for simplicity<br />  
-    give appropriate feedback and actionable error messaging to inform users of the system’s status<br />  
-    encourage and allow exploration with minimal consequences<br />
+    Complexity isn’t always bad; don’t strictly strive for simplicity.<br />  
+    Give appropriate feedback and actionable messaging to inform users of the system’s status.<br />  
+    Encourage and allow exploration with minimal consequences.<br />
   </p>
+  </div>
 </div>
 
 <div class="right tenet">
   <img src="../images/overview/design-tenets-unobtrusive.svg"/>
+  <div class="words">
   <h2>Unobtrusive</h2>
-  <p>Allow users to focus on creating meaningful content</p>
+  <p><strong>Allow users to focus on creating meaningful content.</strong></p>
   <p>
-    user content should be clear and readable<br />
-    avoid obscuring the workspace<br />
-    reduce the need to focus on chrome or pixel pushing<br />
+    User content should be clear and readable.<br />
+    Avoid obscuring the workspace<br />
+    Reduce the need to focus on chrome or pixel pushing<br />
   </p>
+  </div>
 </div>
 </div>
