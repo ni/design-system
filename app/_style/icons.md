@@ -81,9 +81,10 @@ img{
 
    <p><strong>XAML Code Snippet</strong></p>
    <p>To reference an icon from this library in XAML, use the pack URI scheme of the icon.</p>
-    {% highlight xml %}
-    <Image Source="pack://application:,,,/NationalInstruments.PlatformFramework;component/ProjectExplorer/Images/AddPullDown_16x16.png"/>
-    {% endhighlight %}
+
+{% highlight xml%}
+<Image Source="pack://application:,,,/NationalInstruments.PlatformFramework;component/ProjectExplorer/Images/AddPullDown_16x16.png"/>
+{% endhighlight %}
 
 
     {% for group in site.data.icons.groups %}  

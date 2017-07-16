@@ -39,7 +39,8 @@ Use radio buttons to choose one option from a set of mutually exclusive choices.
 ## Grouping
 
 * Keep the number of options in a radio button group between two and seven. If you have more than eight options, use a [dropdown](../dropdowns/).
-* List radio button options in a logical order. Common ways to logically order radio buttons are from most likely to be selected to least, simplest operation to most complex, least to most risky, or some other progression. Alphabetical ordering is not recommended because of localization.
+* List radio button options in a logical order. Common ways to logically order radio buttons are from most likely to be selected to least, simplest operation to most complex, least to most risky, or some other progression. Avoid alphabetical ordering because of localization.
+* Don't hide subordinate content based on the radio button selection. This causes the radio buttons to move. If the subordinate content is not available, disable it.
 * In radio button groups, only the selected radio button is accessible using the Tab key. Users cycle through the radio buttons in the group using the arrow keys.
 
 

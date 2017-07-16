@@ -33,6 +33,7 @@ plugins:
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title/
 
 # Archive settings
