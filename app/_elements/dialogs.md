@@ -63,7 +63,9 @@ Text is measured from the baseline of one line to the top of the capital letter 
 
 ![Alt text](../../images/elements/dialogs/dialogs-footer-control-spacing.svg)
 
-**XAML Code Snippet**
+**XAML code snippet**
+This is a snippet of code for creating a footer in a dialog.
+
 {% highlight xml %}
 <Grid Background="{StaticResource NIWhiteBlueBrush}">
     <Grid.RowDefinitions>
@@ -75,7 +77,7 @@ Text is measured from the baseline of one line to the top of the capital letter 
     <!—End main content section—>
 
     <!--This is the footer section-->
-    <Border Background="{StaticResource NIBackgroundBrush}"  BorderBrush="{StaticResource NIGrayNeutral68Brush}" BorderThickness="0,1,0,0" Height="46" VerticalAlignment="Bottom" Grid.Row="1">
+    <Border Background="{StaticResource NIBackgroundBrush}"  BorderBrush="{StaticResource NIGrayNeutral68Brush}" BorderThickness="0,1,0,0" Height="45" VerticalAlignment="Bottom" Grid.Row="1">
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Margin="20,0,10,0" HorizontalAlignment="Right">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type shell:ShellButton}">
