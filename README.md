@@ -2,7 +2,7 @@
 
 THe NI Design System for LabVIEW NXG living design system that provides information and resources to create compelling, intuitive experiences.
 
-[NI Design System for LabVIEW NXG[https://ni.github.io/design-system/]
+[NI Design System for LabVIEW NXG](https://ni.github.io/design-system/)
 
 ## Installation instructions
 
@@ -13,6 +13,7 @@ THe NI Design System for LabVIEW NXG living design system that provides informat
 - From the project root folder, run `npm install -g gulp bower && npm install && bower install`. (See the old [Polymer Starter Kit installation instructions](https://github.com/PolymerElements/polymer-starter-kit/blob/5602f0d3352540335eae413ff35d90cbeab9ee72/README.md) for more details or troubleshooting.)
 
 ## Structure
+This documentation is generated with [Jekyll](https://jekyllrb.com/), a static site generator.
 
 - `app/`: All Jekyll content is here. (This is where all the editing happens)
   - `bower_components`: Content installed via bower ends up here
