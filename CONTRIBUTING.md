@@ -6,8 +6,7 @@ Design-system is managed via [git](https://git-scm.com), with the canonical upst
 repository hosted on [GitHub](http://developercertificate.org/).
 
 Design-system follows a pull-request model for development.  If you wish to
-contribute, you will need to create a GitHub account, fork this project, push a
-branch with your changes to your project, and then submit a pull request.
+contribute, you will need to create a GitHub account, fork this project, and then submit a pull request with any changes.
 
 See [GitHub's official documentation](https://help.github.com/articles/using-pull-requests/) for more details.
 
