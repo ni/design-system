@@ -64,6 +64,7 @@ Text is measured from the baseline of one line to the top of the capital letter 
 ![Alt text](../../images/elements/dialogs/dialogs-footer-control-spacing.svg)
 
 **XAML code snippet**
+
 This is a snippet of code for creating a footer in a dialog.
 
 {% highlight xml %}
