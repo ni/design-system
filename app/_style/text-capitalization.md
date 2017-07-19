@@ -54,7 +54,7 @@ Don't
 
 ## Exceptions
 
-1. Use title capitalization for Panes that can also be floating panes. For example, the panes along the bottom rail of LabVIEW.
+1. Use title capitalization for tabs in panes throughout the IDE. For example, the tabs in the navigation pane (on the left), configuration pane (on the right) or the tools pane (along the bottom) along the bottom rail of LabVIEW.
 * Also use the same capitalization when referencing those panes such as in the tools pane for the left rail and the application menu.
 1. When referencing a node/palette category name (or anything in the palette, really) follow the capitalization of the item being referenced.
 * Ex: If you are talking about the “Add” node, use Add. If you are talking about adding things, use add.
