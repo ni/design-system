@@ -1,6 +1,6 @@
 # NI Design System for LabVIEW NXG
 
-THe NI Design System for LabVIEW NXG living design system that provides information and resources to create compelling, intuitive experiences.
+The NI Design System for LabVIEW NXG living design system that provides information and resources to create compelling, intuitive experiences.
 
 [NI Design System for LabVIEW NXG](https://ni.github.io/design-system/)
 

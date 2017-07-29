@@ -77,10 +77,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     @apply(--paper-font-body1);
   }
 
-  p, ul, ol {
-    line-height: 24px;
-    margin: 0 0 20px 0;
-  }
+
+
   li ol, li ul {
     margin: 0;
   }
@@ -526,14 +524,18 @@ footer{
   .nav-header .subtitle{
     font-weight: 300;
     color: var(--secondary-text-color);
+    
   }
-  .do{
+  .do, .dont{
     margin-bottom: 8px;
   }
   .do p, .dont p{
     font-weight: 700;
     margin-bottom: 0px;
+    margin-top: 0px;
     line-height: 14px;
+    border-radius: 3px;
+
   }
 
   /* DO/DO NOT image exmamples */
@@ -549,10 +551,14 @@ footer{
     padding-bottom:4px;
     border-bottom:8px solid var(--good);
     color: var(--good);
+    background-color: rgba(106, 162, 57, 0.18);
+    padding: 8px;
   }
   .dont img{
     padding-bottom:4px;
     border-bottom:8px solid var(--bad);
+    background-color: rgba(240, 78, 35, .18);
+    padding: 8px;
     
   }
 
