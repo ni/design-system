@@ -44,7 +44,7 @@ Don't
 </div>
 
 ## Choosing between a tooltip and an infotip
-- Tooltips provide a concise label to help identify a UI element. If the user only needs to understand what a command is, use a tooltip.
+- Tooltips provide a concise label to help identify a UI element. If the user only needs the command name to understand what it is, then use a tooltip.
 - Infotips are used to provide additional context to an item when helpful. If a command is seldom used or complex, an infotip can provide more information than a tooltip. 
 
 If the extra information provided by an infotip would be redundant, use a tooltip instead.
@@ -66,7 +66,7 @@ If you need to provide the name **and** description of an element, use an infoti
   
 ![Alt text](../../images/elements/tips/tips-highlight-execution.svg)
 
-Don't rely solely on what other controls are using. Just because other elements are using an tooltip or infotip it isn't required that your tip use the same implementation. The part to keep consistent is providing the appropriate amount of information for the user.
+Don't rely solely on what other controls are using. Just because other elements are using a tooltip or infotip it isn't required that your tip use the same implementation. The part to keep consistent is providing the appropriate amount of information for the user.
 
 
 
