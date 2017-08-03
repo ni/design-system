@@ -41,8 +41,6 @@ The command button is one of the most well known and ubiquitous types of buttons
 
 A split button provide a primary command and access to secondary commands via a dropdown. The left or top side should function like a command and the right or bottom side will open a dropdown list where a variation of the command is listed. This type button is appropriate when there is a dominant command but you need to provide related, but less-often-used additional commands.
 
-If it is possible for the primary action to be disabled but the secondary commands are still available, consider a different control. With a split button, disabling the primary command disables the entire control making the secondary commands unavailable.
-
 
 | State                 | Image        |
 | --------------------- |:-------------|

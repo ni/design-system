@@ -12,11 +12,11 @@ status: ready
 Tooltips and infotips, collectively called tips, are used to provide additional context to a UI element.
 
 ## General usage
-Use tips to provide the name of a control which doesn't contain text. For example, a control that only has an icon in it.  
+Use tips to provide the name of a control which doesn't contain text in the element, itself. For example, a control that only has an icon in it.  
 ![Alt text](../../images/elements/tips/tips-example-tooltip.svg)
 
 
-If the element has a shortcut, provide the shortcut in the tip surrounded by parentheses.
+If the element has a shortcut, provide the shortcut in the tip.
 <div class="do" markdown="1">
 ![Alt text](../../images/elements/tips/tips-shortcut-example-do.svg)  
 
@@ -30,31 +30,50 @@ It isn’t necessary to provide a tip for every control. Consider how useful a t
 Don't
 </div>
 
+## Placement
+Place tips in an area that avoids covering related content.  
+<div class="do" markdown="1">
+![Alt text](../../images/elements/tips/tips-placement-do.svg)  
+
+Do
+</div>
+<div class="dont" markdown="1">
+![Alt text](../../images/elements/tips/tips-placement-dont.svg)  
+
+Don't
+</div>
+
 ## Choosing between a tooltip and an infotip
 - Tooltips provide a concise label to help identify a UI element. If the user only needs the command name to understand what it is, then use a tooltip.
 - Infotips are used to provide additional context to an item when helpful. If a command is seldom used or complex, an infotip can provide more information than a tooltip.
 
 If the extra information provided by an infotip would be redundant, use a tooltip instead.
 
+<div class="do" markdown="1">
+![Alt text](../../images/elements/tips/tips-hide-palette-do.svg)  
+
+Do
+</div>
 <div class="dont" markdown="1">
 ![Alt text](../../images/elements/tips/tips-hide-palette-dont.svg)  
 
 Don't
 </div>
-In the example above, the extra content is redundant and unnecessary. A tooltip the describes either the control name or the description can be used to define what the control does but it doesn't need both.
+In the example above, the extra content is redundant and unnecessary. A tooltip can be used to define what the control does.
 
 
 If you need to provide the name **and** description of an element, use an infotip.
   
 ![Alt text](../../images/elements/tips/tips-highlight-execution.svg)
 
-Don't rely solely on what other controls are using. Just because other elements are using a tooltip or infotip it isn't required that your tip use the same implementation. The part to keep consistent is providing the appropriate amount of information for the user. Make sure the information provided by a tip is useful and necessary.
+Don't rely solely on what other controls are using. Just because other elements are using a tooltip or infotip it isn't required that your tip use the same implementation. The part to keep consistent is providing the appropriate amount of information for the user.
+
 
 
 ## Tooltips
 Tooltips provide the name or basic description of an element in a single line of text.
 
-![Alt text](../../images/elements/tips/tips-example-tooltip.svg)
+![Alt text](../../images/elements/tips/tips-hide-palette-do.svg)  
 
 
 For truncated text, use tooltips to provide the full name.  
@@ -83,12 +102,12 @@ Do
 
 
 ## Infotips
-Do not include elements in an infotip that require the user to click. However, you can provide commands via key input to execute commands in the footer. This is typically used to provide a path to online help for a command.
+Do not include elements in an infotip that require the user to click. However, you can provide commands via key input to execute commands in the footer.
 
 ![Alt text](../../images/elements/tips/tips-highlight-execution.svg)
 
 Due to their extra content, infotips do not timeout so the user has time to read the information.
-  - Technically, it is not possible to turn off the timeout value. However, you can set the `ShowDuration` property to a very large value, like `360000000`, to achieve this effect.
+  - Technically, it is not possible to turn off the timout value. However, you can set the `ShowDuration` property to a very large value, like `360000000`, to achieve this effect.
 
 It isn't necessary to use a header in an infotip if it is simply repeating the text in the element. 
 <div class="do" markdown="1">
