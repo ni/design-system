@@ -24,12 +24,12 @@ The toggle group control is used to present multiple options that can be toggled
 If the user has selected objects with different values, this control will have all options shown as off to indicate a mixed state.
 
 ## Independent options
-If the options provided in the toggle group can be applied indepently, allow multiple choices. An example of this is with text formatting controls.
+If the options provided in the toggle group can be applied independently, allow multiple choices. An example of this is with text formatting controls.
 
 ![Alt text](../../images/elements/toggle-groups/toggle-groups-independent-selected.svg)
 
 ## Exclusive options
-If the options provided are excluive, do not provide multiple choices. An example of this is text alignment options.  
+If the options provided are exclusive, do not provide multiple choices. An example of this is text alignment options.  
 
 ![Alt text](../../images/elements/toggle-groups/toggle-groups-exclusive-selected.svg)
 
