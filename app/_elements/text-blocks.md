@@ -14,7 +14,7 @@ Text blocks are used for to describe controls in the UI. They are used for label
 **Codename:** `ShellTextBlock` - NationalInstruments.Controls.Shell
 
 ## Control labels
-In this example, the  is being used to provide a label for a control.
+In this example, the text block is being used to provide a label for a control.
 
 ![Alt text](../../images/elements/text-blocks/text-blocks-label-example.svg)
 
