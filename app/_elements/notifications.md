@@ -6,10 +6,8 @@ tags:
   - alert
   - toast
   - notify
-
-
 ---
 
 ## Document notifications
 
-**Codename:** `ExpandableContentControl` - NationalInstruments.Control.Shell
+**Codename:** `DocumentHeaderControl` - NationalInstruments.Design

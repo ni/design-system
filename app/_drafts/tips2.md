@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tips
+title: Tips2
 category: elements
 tags:
   - tooltip
