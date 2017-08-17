@@ -88,7 +88,7 @@ Do not include elements in an infotip that require the user to click. However, y
 ![Alt text](../../images/elements/tips/tips-highlight-execution.svg)
 
 Due to their extra content, infotips do not timeout so the user has time to read the information.
-  - Technically, it is not possible to turn off the timeout value. However, you can set the `ShowDuration` property to a very large value, like `360000000`, to achieve this effect.
+  - To accomplish this, set the `ShowDuration` property to a very large value, like `360000000`.
 
 It isn't necessary to use a header in an infotip if it is simply repeating the text in the element. 
 <div class="do" markdown="1">
