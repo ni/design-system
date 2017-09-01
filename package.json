@@ -29,7 +29,6 @@
     "run-sequence": "^1.0.2",
     "vulcanize": ">= 1.4.2",
     "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.24",
     "yamljs": "^0.2.5",
     "yargs": "^4.1.0"
   },
