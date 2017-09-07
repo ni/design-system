@@ -26,6 +26,9 @@ You will populate a toolbar via our commanding and factory system. To get the to
 ![Alt text](../../images/elements/toolbars/toolbar-right.svg)
 
 ## Use separators between text controls
+Because dropdowns and buttons only have text, they need some sort of containment. Use a separator on both sides of controls that have text but don't have borders. In the example below, the zoom drop-down and Edit icon controls have toolbar separators on both sides of them.
+
+![Alt text](../../images/elements/toolbars/toolbar-right.svg)
 
 {% highlight c# %}
 using (context.AddDocumentToolBarContent())
