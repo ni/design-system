@@ -14,11 +14,11 @@ tags:
 ## Layout
 
 This section provides information on layout specifications for dialogs.
-Dialogs typically contain the following pieces of areas:
+Dialogs typically contain the following areas:
 
 - Title
-- Content Area for instructional text
-- Footer for providing Commit Buttons
+- Content area for instructional text
+- Footer for providing commit buttons
 
  ![Alt text](../../images/elements/dialogs/dialogs-layout-overview.svg)
 
@@ -29,6 +29,10 @@ Dialogs typically contain the following pieces of areas:
 The content area of a single page dialog should have uniform padding of 20px.
 
 ![Alt text](../../images/elements/dialogs/dialogs-single-page.svg)
+
+**Single page dialog example**
+
+![Alt text](../../images/elements/dialogs/dialogs-single-page-example-1.svg)
 
 #### Multiple page dialog
 
@@ -41,7 +45,7 @@ The dialog should not change size between pages.
 
 The tabs within a tabbed dialog will be flush against the window frame but the content of each tab should use the standard padding. The dialog should be as large as the tab with the most content. The dialog should not change size between tabs.
 
-![Alt text](../../images/elements/dialogs/dialogs-tabbed-dialog.svg)
+![Alt text](../../images/elements/dialogs/dialogs-tabbed-dialog-implemented.svg)
 
 ## Content controls & text
 
@@ -121,9 +125,9 @@ For Windows OS, the order of the commit buttons are:
 1. [Don't Do it]⁄No
 1. Cancel⁄Close
 1. Apply (if present)
-- Some right rails might use an Apply and Cancel in the configuration pane because of some functionality that can't be an immediate commit. This elevates Apply in this context to the OK⁄[Do it]⁄Yes button order.
-1. Help (if present)
-- Do not use generic Help buttons, if possible. Strive to give user contextual content when/where they need it instead of using a generic Help button.
+
+#### Using Help commit buttons
+Do not use generic Help buttons, if possible. Strive to give user contextual content when/where they need it instead of using a generic Help button. Put the Help butotn last if it is unavoidable.
 
 #### When to confirm commit buttons
 
