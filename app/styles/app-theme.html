@@ -68,6 +68,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   html,
   body {
     height: 100%;
+    overflow: hidden;
+
   }
 
   body {
@@ -162,7 +164,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   #post {
     padding: 24px;
     transition: padding 0.2s linear;
-    overflow-y: scroll;
+    overflow: auto;
+    height: auto;
+    margin-bottom: 72px;
   }
 
   #post img {
@@ -197,20 +201,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   .content {
     display: grid;
     grid-template-columns: 1fr 300px;
-    overflow-y: scroll;
-    height: 900px;
-    position: fixed;
-    top: 72px;
+    overflow:hidden;
+    height: 100vh;
+    /* position: fixed; */
+    
+  }
+
+  .content.notoc{
+    grid-template-columns: 1fr;
   }
 
   #statusContent{
     padding:24px;
+    overflow: scroll;
+    height: auto;
+    margin-bottom: 72px;
   }
 
   @media only screen and (max-width: 850px) {
     #post {
       padding-left: 16px;
       padding-right: 16px;
+      
     }
     #toc {
       width: 0px;
@@ -839,6 +851,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   /* Tenets page */
 
+  #tenets{
+    max-width: 900px;
+  }
   #tenets h2 {
     font-size: 2em;
     margin-bottom: 20px;
