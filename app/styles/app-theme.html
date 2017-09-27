@@ -157,13 +157,47 @@ footer{
   }
 
   #post {
-    padding: 24px   ;
-    max-width: 700px;
+    padding: 24px;
     transition: padding 0.2s linear;
+    overflow-y: scroll;
   }
 
   #post img {
     max-width: 100%;
+  }
+  #toc{
+    border-left: 1px solid var(--divider-color);
+    font-family: 'Roboto', 'Noto', sans-serif;
+    padding-left:16px;  
+    padding-right:6px;
+  }
+
+  #tocTitle{
+    
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--menu-link-color);
+    margin-top: 19px;
+  }
+
+  #tocList{
+    list-style: none;
+    padding-left:0px;
+  }
+
+  #tocList a{
+       font-weight: 300; 
+
+  }
+
+   /* Height of the scroll area */
+   .content {
+    display:grid;
+    grid-template-columns: 1fr 300px;
+    overflow-y:scroll;
+    height: 900px;
+    position: fixed;
+    top:72px;
   }
 
   @media only screen and (max-width: 850px) {
@@ -171,7 +205,24 @@ footer{
       padding-left: 16px;
       padding-right: 16px;
     }
+    #toc{
+    width:0px;
   }
+  .content {
+    display:block;
+    position:relative;
+    top:0;
+  }
+
+  }
+  @media only screen and (max-width: 1403px) {
+    #post {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  
 
   /** Content of posts **/
 
@@ -367,10 +418,7 @@ footer{
     margin-left: 48px;
   }
 
-  /* Height of the scroll area */
-  .content {
-    height: 900px;    
-  }
+ 
   
   
 
@@ -570,9 +618,10 @@ footer{
     padding: 5px;
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
   }
 
-
+ 
 
 
 
@@ -667,10 +716,7 @@ footer{
     transform-origin: left center;
   }
 
-  /* Height of the scroll area */
-  .content {
-    height: 900px;
-  }
+ 
 
   section[data-route="home"] paper-material {
   @apply(--paper-font-body2);
@@ -728,9 +774,9 @@ footer{
 
   }
 /* Intro page */
-        #post{
+        /* #post{
             max-width:1250px;
-        }
+        } */
         #hero{
             margin-bottom: 20px;
             border-bottom: 1px solid var(--divider-color);
@@ -757,23 +803,15 @@ footer{
             border-bottom: 1px solid var(--divider-color);
         }
 
-        .container {
-            min-width: 250px;
+        .custom .container {
             padding: 10px 15px;
-            text-align: center;
             border-right: 1px solid var(--divider-color);
-            @apply(--layout-vertical);
-            @apply(--layout-center);
-            @apply(--layout-flex);
 
         }
         .container:last-child{
             border-right: none;
         }
 
-        .container > div {
-
-        }
         .icon-card{
             height:160px;
             width: 160px;  
@@ -905,19 +943,14 @@ justify-content: flex-start;
 
 }
 
-
 .container > div {
     margin-top: 0.5em;
     color: black;
     font-size: 10px;
 }
-.icon-card{
-    height:160px;
-    width: 160px;
+.iconset .icon-card{
     background-color: var(--light-accent-color);
     white-space: nowrap;    
-    text-align: center; 
-    margin: 1em 0;
 }
 .helper {
     display: inline-block;
