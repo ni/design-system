@@ -1,5 +1,5 @@
 ---
-layout: page_notoc
+layout: status
 title: Icons
 category: style
 tags:
