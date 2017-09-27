@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: status
 title: Icons
 category: style
 tags:

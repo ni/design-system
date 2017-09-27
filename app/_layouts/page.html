@@ -1,28 +1,34 @@
+--- 
+layout: default 
 ---
-layout: default
----
- 
+<div class="content">
 <div id="post">
-  <!--<paper-tabs selected="0" noink>
-      <paper-tab link><a href="#design" tabindex="-1">Design guidelines</a></paper-tab>
-      <paper-tab link><a href="#implement" tabindex="-1">Implementation guidelines</a></paper-tab>
-  </paper-tabs>-->
-  <div id="post-content">
-    {% case page.status %}
-    {% when 'WIP' %}
+    {% case page.status %} {% when 'WIP' %}
     <div id="status">
-         <h2 style="margin-bottom:0px">Content for this page is currently in progress.</h2>
-         <p >What you see below is still trustworthy and we are actively working to make it better.</p>
+        <h4 style="margin-bottom:0px">Content for this page is currently in progress.</h4>
+        <p>What you see below is still trustworthy and we are actively working to make it better.</p>
     </div>
-         {{ content }}
+    <div id="post-content">{{ content }}</div>
     {% when 'queued'or nil%}
     <div id="status">
-        <h2>Content for this topic is not created yet but is in our queue for production.</h2>
+        <h4>Content for this topic is not created yet but is in our queue for production.</h4>
     </div>
     {% else %}
-        {{ content }}
-    {% endcase %} 
+    <div id="post-content">{{ content }}</div>
+    {% endcase %}
     <p>Last updated on <span id="dateModified">{{ page.last_modified_at | date: '%B %d, %Y' }}</span></p>
     <paper-tooltip for="dateModified">{{ page.last_modified_at | date: '%B %d, %Y, %l:%M:%S %p %Z' }}</paper-tooltip>
-  </div>
+</div>
+
+<!-- Add TOC for ready or WIP pages -->
+{% case page.status %} {% when 'WIP' or "ready" %}
+<div id="toc">
+        <div id="tocTitle">Contents</div>
+        <ul id="tocList">                     
+        </ul>
+</div>    
+<script>
+    buildTOC();
+</script>
+ {% endcase %}
 </div>
