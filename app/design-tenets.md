@@ -2,7 +2,6 @@
 layout: page_notoc
 title: Design tenets
 ---
-
 <div id="tenets">
   <div class="right tenet">
     <div class="words">
@@ -47,3 +46,4 @@ title: Design tenets
 </div>
 
 </div>
+
