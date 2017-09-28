@@ -68,7 +68,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   html,
   body {
     height: 100%;
-    overflow: hidden;
 
   }
 
@@ -166,7 +165,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     transition: padding 0.2s linear;
     overflow: auto;
     height: auto;
-    margin-bottom: 72px;
+    /* margin-bottom: 72px; */
   }
 
   #post img {
@@ -182,10 +181,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   #tocTitle {
 
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--menu-link-color);
-    margin-top: 19px;
+    @apply(--paper-font-headline);
   }
 
   #tocList {
@@ -199,10 +195,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   /* Height of the scroll area */
 
   .content {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    overflow:hidden;
+    /* display: grid;
+    grid-template-columns: 1fr 300px; */
     height: 100vh;
+    
     /* position: fixed; */
     
   }
@@ -223,9 +219,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       padding-left: 16px;
       padding-right: 16px;
       
-    }
-    #toc {
-      width: 0px;
     }
     .content {
       display: block;
