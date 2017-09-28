@@ -6,7 +6,7 @@ tags:
   - alert
   - toast
   - notify
-status: Ready
+status: ready
 ---
 
 Notifications are used to provide feedback brief system messages to the users from the system. They can be used to communicate explicit actions from the user or implicit things that have happened due to a change in the system.
