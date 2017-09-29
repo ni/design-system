@@ -9,7 +9,7 @@ function buildTOC(){
             var li = document.createElement("li");
             var link = document.createElement("a");
 
-            link.name = h2s[i].id;
+            // link.name = h2s[i].id;
             link.href = "#" + h2s[i].id;
             
             link.innerHTML = h2s[i].innerHTML;
