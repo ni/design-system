@@ -6,14 +6,22 @@ function buildTOC(){
         element.parentNode.removeChild(element);
     }else{    
         for (var i = 0; i < h2s.length; i++) {
-                var li = document.createElement("li");
-                var link = document.createElement("a");
+            var li = document.createElement("li");
+            var link = document.createElement("a");
 
-                link.href = "#" + h2s[i].id;;
-                link.innerHTML = h2s[i].innerHTML;
+            link.href = "#" + h2s[i].id;
+            
+            link.innerHTML = h2s[i].innerHTML;
 
-                li.appendChild(link);
-                ul.appendChild(li);            
+            li.appendChild(link);
+            ul.appendChild(li);            
+            }
         }
     }
+
+
+function scrollToAnchor(anchor){
+    alert("click");
+    
+
 }

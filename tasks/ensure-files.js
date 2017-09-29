@@ -1,4 +1,5 @@
 var fs = require('fs');
+var ss = require('smoothscroll-polyfill').polyfill();
 
 /**
  * @param {Array<string>} files

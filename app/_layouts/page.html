@@ -14,19 +14,17 @@ layout: default
         <h4>Content for this topic is not created yet but is in our queue for production.</h4>
     </div>
     {% else %}
-    <div id="post-content">{{ content }}</div>
-    {% endcase %}
+    <div id="post-content">
+        <div id="tocTitle">Contents</div>
+        <div id="toc">
+        
+        <ul id="tocList"></ul>
+        </div>{{ content }}</div>
     <p>Last updated on <span id="dateModified">{{ page.last_modified_at | date: '%B %d, %Y' }}</span></p>
     <paper-tooltip for="dateModified">{{ page.last_modified_at | date: '%B %d, %Y, %l:%M:%S %p %Z' }}</paper-tooltip>
 </div>
 
-<!-- Add TOC for ready or WIP pages -->
-{% case page.status %} {% when 'WIP' or "ready" %}
-<div id="toc">
-        <div id="tocTitle">Contents</div>
-        <ul id="tocList">                     
-        </ul>
-</div>    
+   
 <script>
     buildTOC();
 </script>
