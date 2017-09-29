@@ -282,6 +282,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   #post h2 {
     @apply(--paper-font-headline);
   }
+  #post h2:before {
+    display: block; 
+    content: " "; 
+    margin-top: -75px; 
+    height: 75px; 
+    visibility: hidden;
+  }
 
   #post h3 {
     @apply(--paper-font-title);

@@ -9,20 +9,21 @@ function buildTOC(){
             var li = document.createElement("li");
             var link = document.createElement("a");
 
-            link.name = h2s[i].id
+            link.name = h2s[i].id;
+            link.href = "#" + h2s[i].id;
             
             link.innerHTML = h2s[i].innerHTML;
-            link.addEventListener(
-                "click", 
-                function scrollToAnchor(e) {
-                        e.preventDefault();
-                        var elements = document.getElementsByClassName('content');
-                        var contentElement = elements[0];
+            // link.addEventListener(
+            //     "click", 
+            //     function scrollToAnchor(e) {
+            //             e.preventDefault();
+            //             var elements = document.getElementsByClassName('content');
+            //             var contentElement = elements[0];
 
-                        var element = document.getElementById(e.target.name);
-                        var scrollPos = element.offsetTop - 72;
-                        window.scroll({ top: scrollPos, left: 0, behavior: 'smooth' });
-                })
+            //             var element = document.getElementById(e.target.name);
+            //             var scrollPos = element.offsetTop - 72;
+            //             window.scroll({ top: scrollPos, left: 0, behavior: 'smooth' });
+            //     })
             li.appendChild(link);
             ul.appendChild(li);            
             }
