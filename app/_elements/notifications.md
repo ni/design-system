@@ -23,16 +23,16 @@ Document notification are displayed within the space of a document. Only one not
 ## Examples
 #### Error notification
 
-![Alt text](../../images/elements/notifications/nofications-document-error.svg)
+![Alt text](../../images/elements/notifications/notifications-document-error.svg)
 
 #### Warning
 
-![Alt text](../../images/elements/notifications/nofications-document-warning.svg)
+![Alt text](../../images/elements/notifications/notifications-document-warning.svg)
 
 #### Mode
 
-![Alt text](../../images/elements/notifications/nofications-document-mode.svg)
+![Alt text](../../images/elements/notifications/notifications-document-mode.svg)
 
 #### Multiline
 
-![Alt text](../../images/elements/notifications/nofications-document-multiline.svg) 
+![Alt text](../../images/elements/notifications/notifications-document-multiline.svg) 
