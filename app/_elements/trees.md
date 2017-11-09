@@ -25,6 +25,8 @@ This example is created with the XAML and C# snippets below. It shows a hierarch
 
 ![Alt text](../../images/elements/trees/trees-list-no-icon.svg) 
 
+**XAML snippet**
+
 {% highlight xml %}
 <shellControls:ShellTreeView x:Name="shellTreeView" ItemsSource="{Binding TreeItems}">
     <shellControls:ShellTreeView.ItemTemplate>
@@ -37,56 +39,58 @@ This example is created with the XAML and C# snippets below. It shows a hierarch
 </shellControls:ShellTreeView>
 {% endhighlight %}
 
+**C# snippet**
+
 {% highlight c# %}
 public class Node
-        {
-            public IEnumerable<Node> Children { get; set; }
-            public string Name { get; set; }
-            public Node(IEnumerable<Node> children, string name)
-            {
-                Children = children;
-                Name = name;
-            }
-        }
+{
+    public IEnumerable<Node> Children { get; set; }
+    public string Name { get; set; }
+    public Node(IEnumerable<Node> children, string name)
+    {
+        Children = children;
+        Name = name;
+    }
+}
 
-        private IEnumerable<Node> _fruits = new List<Node>
+private IEnumerable<Node> _fruits = new List<Node>
+{
+    new Node(null, "Apple"),
+    new Node(null, "Banana"),
+    new Node(null, "Orange"),
+};
+
+private static IEnumerable<Node> _primaryColors = new List<Node>
+{
+    new Node(null, "Red"),
+    new Node(null, "Yellow"),
+    new Node(null, "Blue"),
+};
+
+private static IEnumerable<Node> _secondaryColors = new List<Node>
+{
+    new Node(null, "Green"),
+    new Node(null, "Purple"),
+    new Node(null, "Orange"),
+};
+
+private IEnumerable<Node> _colors = new List<Node>
+{
+    new Node(_primaryColors, "Primary"),
+    new Node(_secondaryColors, "Secondary"),
+};
+
+public IEnumerable<Node> TreeItems
+{
+    get
+    {
+        return new List<Node>()
         {
-            new Node(null, "Apple"),
-            new Node(null, "Banana"),
-            new Node(null, "Orange"),
+            new Node(_fruits, "Fruit"),
+            new Node(_colors, "Color"),
         };
-
-        private static IEnumerable<Node> _primaryColors = new List<Node>
-        {
-            new Node(null, "Red"),
-            new Node(null, "Yellow"),
-            new Node(null, "Blue"),
-        };
-
-        private static IEnumerable<Node> _secondaryColors = new List<Node>
-        {
-            new Node(null, "Green"),
-            new Node(null, "Purple"),
-            new Node(null, "Orange"),
-        };
-
-        private IEnumerable<Node> _colors = new List<Node>
-        {
-            new Node(_primaryColors, "Primary"),
-            new Node(_secondaryColors, "Secondary"),
-        };
-
-        public IEnumerable<Node> TreeItems
-        {
-            get
-            {
-                return new List<Node>()
-                {
-                    new Node(_fruits, "Fruit"),
-                    new Node(_colors, "Color"),
-                };
-            }
-        }
+    }
+}
 
 {% endhighlight %}
 
