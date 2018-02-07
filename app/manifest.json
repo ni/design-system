@@ -1,6 +1,6 @@
 {
-  "name": "NIDS",
-  "short_name": "NIDS",
+  "name": "Fuse",
+  "short_name": "Fuse",
   "icons": [{
         "src": "images/touch/icon-128x128.png",
         "sizes": "128x128"
