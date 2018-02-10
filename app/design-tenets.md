@@ -9,7 +9,7 @@ title: Design tenets
       <h3>Respect the History</h3>  
       <p>More than parity; we desire migration. Therefore, while the design should feel contemporary, we choose to change patterns, and workflows familiar to our existing users only when doing so is a clear improvement.</p>
       <h3>Stay Trustworthy</h3>  
-      <p>NI users have a high capacities for processing information. We build and maintain trust through accuracy and providing the appropriate level of complexity so a user can take action, complete tasks, and be successful. We only show that which provides value, and we avoid over simplification which may cause frustration.</p>
+      <p>NI users have a high capacity for processing information. We build and maintain trust through accuracy and providing the appropriate level of complexity so a user can take action, complete tasks, and be successful. We only show that which provides value, and we avoid over simplification which may cause frustration.</p>
     </div>  
   </div>
 
