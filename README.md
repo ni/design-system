@@ -1,8 +1,8 @@
-# NI Design System for LabVIEW NXG
+# Fuse
 
-The NI Design System for LabVIEW NXG living design system that provides information and resources to create compelling, intuitive experiences.
+Fuse is a living design system that unites a robust set of UI elements with a flexible technology platform creating cohesive, intuitive experiences for National Instruments software users.
 
-[NI Design System for LabVIEW NXG](https://ni.github.io/design-system/)
+[Fuse](https://ni.github.io/design-system/)
 
 ## Installation instructions
 
