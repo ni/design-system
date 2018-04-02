@@ -5,7 +5,6 @@ category: elements
 tags:
     - buttons
     - action
-    - widget
 status: ready
 
 ---
