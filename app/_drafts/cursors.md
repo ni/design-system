@@ -9,7 +9,7 @@ tags:
 status: ready
 ---
 <body>
-    <p>The {{ site.title }} provides a consolidated set of cursors for use throughout NI software products.</p>
+    <p>The {{ site.title }} provides a consolidated set of cursors for use throughout NI desktop software products.</p>
 
  <!--   <p><strong>XAML Code Snippet</strong></p>
    <p>To reference an icon from this library in XAML, use the pack URI scheme of the icon.</p> -->
