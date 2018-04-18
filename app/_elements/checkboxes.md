@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Checkboxes
+title: Dr. C's Checkboxes
 category: elements
 tags:
 status: ready

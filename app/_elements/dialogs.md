@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dialogs
+title: Dr. C's Dialogs
 category: elements
 status: ready
 tags:
