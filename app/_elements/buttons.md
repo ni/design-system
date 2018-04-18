@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Buttons
+title: My buttons
 category: elements
 tags:
     - buttons
     - action
-status: ready
+    - widget
+status: WIP
 
 ---
 Buttons are used for executing action in the product. They should convey what will happen when the user clicks on them.
