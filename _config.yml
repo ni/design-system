@@ -10,11 +10,10 @@ author: National Instruments
 author_website: www.ni.com
 email: ni@ni.com
 
-baseurl: "/design-system"  # Subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
+baseurl: ""  # Subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
                             # Currently `gulp serve:dist` does not work with a baseurl specified. For this purpose,
                             # temporarily comment out this parameter
 url: ""  # Base hostname & protocol for your site
-
 
 
 google_analytics: UA-100964937-1
