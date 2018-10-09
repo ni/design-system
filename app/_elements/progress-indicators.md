@@ -9,7 +9,7 @@ tags:
     - spin
     - spinner
     - fill
-status: ready
+status: queued
 
 ---
 **Codename:** `ShellProgressBar` - NationalInstruments.Controls.Shell  
