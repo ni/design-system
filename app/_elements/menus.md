@@ -108,7 +108,7 @@ Ellipses are used to inform the user there is more info required to perform the 
 
 Use an ellipsis in a command name if the user is **required** to provide more information **before** the command executes.
 
-It is not necessary to provide ellipses to a command just because another window is displayed. For example, if the command is to open a window such Preferences then ellipsis are not necessary as the command has been executed. Also, for simple confirmation windows that ask the user if they are sure they want to proceed it is also unnecessary to provide ellipses. Focus on situations where the application needs more information such as options or other properties prior to executing the command.
+It is not necessary to provide ellipses to a command just because another window is displayed. For example, if the command is to open a window, like Preferences, then an ellipsis is not necessary as the command has been executed. Also, for simple confirmation windows that ask the user if they are sure they want to proceed it is unnecessary to provide an ellipsis. Focus on situations where the application needs more information prior to executing the command.
 
 #### Example use cases
 
