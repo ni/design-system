@@ -101,8 +101,6 @@ Make access keys be easy to find by applying the following:
   - Has a descender (g, j, p, q, and y) .
   - Are next to a character with a descender.
 
-# BEGIN NEW - This tag will be removed if the content published to the live site
-
 ## Using an ellipsis (...) in commands
 Ellipses are used to inform the user there is more info required to perform the action. Basically, it means the command won't immediately execute after clicking the menu item or button. 
 
@@ -119,6 +117,5 @@ It is not necessary to provide ellipses to a command just because another window
 | Clicking a command opens a window.                                      | "Preferences" command in menu. "Data capture settings" in the menu.| **No**. The command is to open the dialog. That is performed immediately and does not require further information from the user. |
 | Command requires confirmation                                           | Deleting a file from the Project Files         | **No**. Since this is just a simple confirmation to ensure the user wants to proceed, an ellipsis is unneccessary. |
 
-# END NEW
 
  
