@@ -40,7 +40,7 @@ In addition to the typeface, other font attributes are provided as resources.
 
 ## Diagram typography
 
-**Verdana** is the typeface used on diagrams and other canvas-style documnents.
+**Verdana** is the typeface used on diagrams and other canvas-style documents.
 
 **Diagram typefaces** (with fallbacks)  
 These are dynamically assigned based on the user's language setting.  
