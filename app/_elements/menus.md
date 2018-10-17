@@ -10,6 +10,8 @@ tags:
   - application
   - bar
   - right-click
+  - ellipsis
+  - ellipses
 status: ready
 ---
 
@@ -98,3 +100,25 @@ Make access keys be easy to find by applying the following:
   - Are only one pixel wide, such as I, i, L.
   - Has a descender (g, j, p, q, and y) .
   - Are next to a character with a descender.
+
+# BEGIN NEW - This tag will be removed if the content published to the live site
+
+## Using an ellipsis (...) in commands
+Ellipses are used to inform the user there is more info required to perform the action. Basically, it means the command won't immediately execute after clicking the menu item or button. 
+
+Use an ellipsis in a command name if the user is **required** to provide more information **before** the command executes.
+
+It is not necessary to provide ellipses to a command just because another window is displayed. For example, if the command is to open a window, like Preferences, then an ellipsis is not necessary as the command has been executed. Also, for simple confirmation windows that ask the user if they are sure they want to proceed it is unnecessary to provide an ellipsis. Focus on situations where the application needs more information prior to executing the command.
+
+#### Example use cases
+
+| Case         | Example         | Ellipsis      |
+| -------------| --------------- | ------------- |
+| Clicking a command requires some other action/information from the user | The "Save as..." command or a command that opens a wizard.   | **Yes** |
+| Clicking a command shows a dialog but doesn't require interaction.      | "Calculate dependencies" in the project dependencies document. Once the user clicks on this command, dependencies begin calculating but the user can cancel the operation.        | **No**. The command immediately executes. While the user can perform another operation in the dialog that is displayed (Cancel), they are not required to in order for the command to execute....the command has already begun. |
+| Clicking a command opens a window.                                      | "Preferences" command in menu. "Data capture settings" in the menu.| **No**. The command is to open the dialog. That is performed immediately and does not require further information from the user. |
+| Command requires confirmation                                           | Deleting a file from the Project Files         | **No**. Since this is just a simple confirmation to ensure the user wants to proceed, an ellipsis is unneccessary. |
+
+# END NEW
+
+ 
