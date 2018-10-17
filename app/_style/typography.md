@@ -24,10 +24,10 @@ Use `IdeFont` to reference the correct typeface per language.
 
 | Language                       | Typeface                         |
 | ------------------------------ | -------------------------------- |
-| English and English-like       | Segoe UI,Tahoma                  |
-| Japanese                       | Meiryo UI,Segoe UI,Tahoma        |
-| Chinese                        | Microsoft YaHei,Segoe UI,Tahoma  |
-| Korean                         | Malgun Gothic,Segoe UI,Tahoma    |
+| English and English-like       | Segoe UI, Tahoma                  |
+| Japanese                       | Meiryo UI, Segoe UI, Tahoma        |
+| Chinese                        | Microsoft YaHei, Segoe UI, Tahoma  |
+| Korean                         | Malgun Gothic, Segoe UI, Tahoma    |
 
 **IDE font specifics**  
 In addition to the typeface, other font attributes are provided as resources.
@@ -50,7 +50,7 @@ Use `DiagramFontFamily` to reference the correct typeface per language.
 | ------------------------------ | -------------------------------- |
 | English and English-like       | Verdana                          |
 | Japanese                       | Meiryo UI, Verdana               |
-| Chinese                        | Microsoft YaHei,Verdana          |
+| Chinese                        | Microsoft YaHei, Verdana          |
 
 **Diagram font specifics**  
 In addition to the typeface, other font attributes are provided as resources.
@@ -70,7 +70,7 @@ Use `MonospaceFont` to reference the monospace typeface.
 
 | Language               | Typeface                              |
 | -----------------------| ------------------------------------- |
-| All                    | Droid Sans Mono,SimHei,Courier New    |
+| All                    | Droid Sans Mono, SimHei, Courier New    |
 
 **Monospace font specifics**  
 In addition to the typeface, other font attributes are provided as resources.
