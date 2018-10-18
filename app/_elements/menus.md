@@ -27,7 +27,7 @@ The application menu is a collection of menu items contained within a menu bar a
 Menus are a collection of menu items 
 Menu items provide a single line of text to communicate the action that will be taken if selected. Other items like checkmarks, shortcuts and icons (rarely used) are also presented in a menu item.
 
-In general, limit the menu hierarchy to two levels, the main level and one submenu level. Creating more levels makes the menu difficult to navigate. While in some cases, it is necessary to add an addtional level it should be a rarity throughout the application.
+In general, limit the menu hierarchy to two levels, the main level and one submenu level. Creating more levels makes the menu difficult to navigate. While in some cases, it is necessary to add an additional level it should be a rarity throughout the application.
 
 If the menu item isn't applicable disable the menu item instead of hiding the item.
 

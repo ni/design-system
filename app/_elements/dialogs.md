@@ -127,7 +127,7 @@ For Windows OS, the order of the commit buttons are:
 1. Apply (if present)
 
 #### Using Help commit buttons
-Do not use generic Help buttons, if possible. Strive to give user contextual content when/where they need it instead of using a generic Help button. Put the Help butotn last if it is unavoidable.
+Do not use generic Help buttons, if possible. Strive to give user contextual content when/where they need it instead of using a generic Help button. Put the Help button last if it is unavoidable.
 
 #### When to confirm commit buttons
 

@@ -66,7 +66,7 @@ This is used in the same way as the normal command button but is used in a toolb
 
 **Codename:** `ShellToggleButton` - NationalInstruments.Controls.Shell
 
-Toogle buttons are used to turn something on or off. The current state is communicated through the button.
+Toggle buttons are used to turn something on or off. The current state is communicated through the button.
 
 | State       | Image         |
 | ----------- |:-------------:|
