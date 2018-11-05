@@ -109,10 +109,10 @@ Set the value to `false` by default.
 
 | Label                 | When to use        | 
 | --------------------- |-------------| 
-| OK                    | Applies the changes or commits the task and closes the dialog.<br>Don't use for error messages (errors are never OK). Instead, use Close.<br>If a dialog performs a specific task, use a specific label convention [Do it/Don't do it] instead.<br>Don't use to respond to questions.    | 
+| OK                    | Applies the changes or commits the task and closes the dialog.<br>Don't use for error messages (errors are never OK). Instead, use Close.<br>If a dialog performs a specific task, use a specific label convention [Do it / Don't do it] instead.<br>Don't use to respond to questions.    | 
 | Apply                 | Applies the pending changes but leaves the dialog open.<br>         |  
-| Yes/No                | Response to Yes⁄No questions.<br>Must always be in a pair.<br>If phrasing a specific response is long or awkward.<br>Don't use if the meaning of No is unclear.    |
-| [Do it]⁄[Don't Do it] |  When you can provide specific button labels. |
+| Yes / No                | Response to Yes⁄No questions.<br>Must always be in a pair.<br>If phrasing a specific response is long or awkward.<br>Don't use if the meaning of No is unclear.    |
+| [Do it] ⁄ [Don't do it] |  When you can provide specific button labels. |
 | Cancel                |  Discards all changes, reverts to the previous state with no side effect, and closes the window.<br>When all pending changes or actions can be discarded and side effects undone.<br>Don't use if the meaning on Cancel is unclear. |
 | Close                 |  Closes the window without discarding changes and side effects.<br>When users can’t make changes, such as informational dialogs. |
 | Stop                  | Stops a currently running task and closes the window.<br>When work in progress can't be discarded. Typically used with progress bars.  |
@@ -121,13 +121,13 @@ Set the value to `false` by default.
 
 For Windows OS, the order of the commit buttons are:
 
-1. OK⁄[Do it]⁄Yes
-1. [Don't Do it]⁄No
-1. Cancel⁄Close
+1. OK ⁄ [Do it] ⁄ Yes
+1. [Don't do it] ⁄ No
+1. Cancel ⁄ Close
 1. Apply (if present)
 
 #### Using Help commit buttons
-Do not use generic Help buttons, if possible. Strive to give user contextual content when/where they need it instead of using a generic Help button. Put the Help butotn last if it is unavoidable.
+Do not use generic Help buttons, if possible. Strive to give user contextual content when/where they need it instead of using a generic Help button. Put the Help button last if it is unavoidable.
 
 #### When to confirm commit buttons
 
@@ -135,4 +135,4 @@ Generally, commit confirmations are unnecessary and annoying. But confirming a c
 
 #### Miscellaneous
 
-Close button on the title bar must have the same effect as clicking Cancel or Close.Don't include instructions in the text, such as “Press OK to continue”, or “Cancel to stay on the current page”. Instead, use specific commit button labels or change the text.
+Close button on the title bar must have the same effect as clicking Cancel or Close. Don't include instructions in the text, such as “Press OK to continue”, or “Cancel to stay on the current page”. Instead, use specific commit button labels or change the text.
