@@ -8,7 +8,7 @@ tags:
 status: ready
 
 ---
-These rad buttons are used for executing action in the product. They should convey what will happen when the user clicks on them.
+Buttons are used for executing action in the product. They should convey what will happen when the user clicks on them.
 
 ## Command buttons
 **Codename:** `ShellButton` - NationalInstruments.Controls.Shell 
