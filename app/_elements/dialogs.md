@@ -97,8 +97,8 @@ This is a snippet of code for creating a footer in a dialog.
 </Grid>
 {% endhighlight %}
 
-**Don't show this (item) again**
-Provide this option to allow the user to ignore a recurring dialog box only when it is the only option. Try to eliminate the need for the dialog, if possible.
+**Don't show this (item) again**  
+Provide this option to allow the user to ignore a recurring dialog box when it is the only option. Try to eliminate the need for the dialog, if possible.
 Set the value to `false` by default.
 
 ![Alt text](../../images/elements/dialogs/dialogs-dont-show-this-again.svg)

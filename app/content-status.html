@@ -33,6 +33,7 @@ title: Content status
   </style>
 </custom-style>
 {% include status-icon.html status='all' %}
+<H1>Style</H1>
 <table>
   <thead>
     <tr>
@@ -50,8 +51,39 @@ title: Content status
             <td>{{ item.last_modified_at | date: '%B %d, %Y' }}</td>
         </tr>
     {% endfor %}
-
+  </tbody>
+</table>
+<H1>Elements</H1>
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Status</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
     {% for item in site.elements %}  
+    <tr is="s-tr">      
+      <td><a href="{{ item.url | prepend:site.baseurl }}">{{ item.title }}</a></td>
+      {% capture status %}{{ item.status }}{% endcapture %}
+      <td><iron-icon icon={% include status-icon.html status=status %}></iron-icon></td>
+      <td>{{ item.last_modified_at | date: '%B %d, %Y' }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<H1>Patterns</H1>
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Status</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.patterns %}  
     <tr is="s-tr">      
       <td><a href="{{ item.url | prepend:site.baseurl }}">{{ item.title }}</a></td>
       {% capture status %}{{ item.status }}{% endcapture %}
