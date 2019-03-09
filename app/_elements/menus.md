@@ -98,7 +98,7 @@ Make access keys be easy to find by applying the following:
 - For less frequently used menu items, choose letters that are distinctive when speaking the word(s).
 - Avoid characters that make the underline difficult to see, such as characters that:
   - Are only one pixel wide, such as I, i, L.
-  - Has a descender (g, j, p, q, and y) .
+  - Have a descender (g, j, p, q, and y) .
   - Are next to a character with a descender.
 
 ## Using an ellipsis (...) in commands

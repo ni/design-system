@@ -14,7 +14,9 @@ Buttons are used for executing action in the product. They should convey what wi
 ## Command buttons
 **Codename:** `ShellButton` - NationalInstruments.Controls.Shell 
 
-The command button is one of the most well-known and ubiquitous types of buttons. They are used in dialogs, the configuration pane, and other general areas of the UI.
+The command button is one of the most common and ubiquitous types of buttons. They are used in dialogs, the configuration pane, and other general areas of the UI.
+
+![Alt text](../../images/elements/buttons/button-normal.svg)   
 
 #### State examples
 
