@@ -10,7 +10,7 @@ tags:
 List views allow the user to select from a list of options.
 
 **Codename:** `ListView` - NationalInstruments.Controls.Shell
-Currently, there is not a shared control for creating a List box. However, you can use a simplified version of the `ListView' to accomplish the same effect.
+
 
 **XAML Code Snippet**
 {% highlight xml %}
