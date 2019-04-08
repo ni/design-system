@@ -19,7 +19,7 @@ Unlike radio buttons and checkboxes, each control in the toggle group should tak
 | State                 | Image         |
 | --------------------- |:-------------:|
 | Normal                | ![Alt text](../../images/elements/toggle-groups/toggle-groups-exclusive-none.svg) |
-| Hover                | **[NEED IMAGE]** |
+| Hover                | ![Alt text](../../images/elements/toggle-groups/toggle-groups-hover-state.svg) |
 | Selected              | ![Alt text](../../images/elements/toggle-groups/toggle-groups-exclusive-selected.svg)   |
 
 ### Mixed state
@@ -30,8 +30,10 @@ If the user has selected objects with different values, this control will have a
 If the options provided are exclusive, do not allow user to select multiple choices at once. In the example below, the user can only choose one of the 3 visual styling
 options in the PXI Chassis visual styling toggle group. If the options are mutually exclusive and require the user to click a ‘submit’ control, it is more appropriate to
 use [radio buttons](../radio-buttons/).
- 
-**[NEED IMAGE]**
+
+
+![Alt text](../../images/elements/toggle-groups/toggle-groups-exclusive-visual-styling.svg)
+
 ### Independent options
 If the options provided in the toggle group can be applied independently, allow the user to select multiple choices at once. In the example below, italics and
 underline are both selected in the text formatting toggle group. If the options are independent and require the user to click a ‘submit’ control, it is more
