@@ -38,6 +38,12 @@ The command button is one of the most common and ubiquitous types of buttons. Th
     Padding="10,0,10,1" />
 {% endhighlight %}
 
+#### Layout and Sizing
+**General layout**  
+![Alt text](../../images/elements/buttons/button-layout.svg)  
+**Minimum width**  
+![Alt text](../../images/elements/buttons/button-layout-minimum.svg)  
+
 ## Split buttons
 
 **Codename:** `ShellSplitButton` - NationalInstruments.Controls.Shell
