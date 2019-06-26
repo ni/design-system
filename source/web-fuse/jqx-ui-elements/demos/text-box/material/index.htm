@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Text Box Material</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcomplex.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcombobox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmultilinetextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../../../source/jqxpasswordtextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmaskedtextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumerictextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcalendar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtimepicker.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdate.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdatetimepicker.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="container">
+        <section>
+            <h1>jqxTextBox</h1>
+            <div>
+                <h1>Text fields allow users to input, edit, and select text.</h1>
+                <div class="module">
+                    <p>Text fields typically reside in forms but can appear in other places, like dialog boxes and search.</p>
+                </div>
+                <div class="module">
+                    <h3>Usage</h3><p>
+                        Text fields validate input, help users fix errors, autocomplete words, and provide suggestions.
+                    </p><h3>Field types</h3><p>
+                        Single-line<br>
+                        Multi-line<br>
+                        Text area
+                    </p><h3>Input types</h3><p>
+                        Formatted inputs<br>
+                        Nested menus & pickers
+                    </p>
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../../images/components-text-fields.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#text-box-principles">Principles</a></li>
+                <li><a href="#text-box-layout">Layout</a></li>
+                <li><a href="#text-box-states">States</a></li>
+                <li><a href="#text-box-field-types">Field types</a></li>
+                <li><a href="#text-box-input-types">Input types</a></li>
+                <li><a href="#text-box-field-variations">Field variations</a></li>
+                <li><a href="#text-box-text-field-boxes">Text field boxes</a></li>
+            </ul>
+        </nav>
+        <section id="text-box-principles">
+            <h1>Principles</h1>
+
+            <div class="module">
+                <p>Text fields should have the following characteristics:</p>
+            </div>
+            <div class="module module-wide">
+                <h1>Identifiable</h1>
+                <p>Using a tappable touch target, text fields should indicate that users can enter information.</p>
+                <h1>Findable</h1>
+                <p>It should be easy to find a text field among other elements.</p>
+                <h1>Legible</h1>
+                <p>Text fields should indicate their state – whether enabled or disabled, empty or filled, valid or invalid – with clear label, input, and assistive text.</p>
+            </div>
+        </section>
+
+        <section id="text-box-layout">
+            <h1>Layout</h1>
+            <p>Text fields contain the following elements:</p>
+
+            <div>
+                <div class="module">
+                    <h1>Label</h1>
+                    <p>
+                        Text field labels display the type of input a field requires. Every text field should have a label.<br />
+                        Labels are aligned with the input line and always visible. They can be resting (when a field is inactive and empty) or floating.
+                    </p>
+
+                    <h1>Input line</h1>
+                    <p>
+                        The input line indicates where to enter text, displayed below the label.<br />
+                        When a field is active or contains an error, the line’s color and thickness vary.
+                    </p>
+
+                    <h1>Cursor</h1>
+                    <p>The cursor indicates the user’s current input position. <br /><br /><br /></p>
+                </div>
+                <div class="module">
+                    <div class="light-theme">
+                        <jqx-text-box class="material" label="Label"></jqx-text-box>
+                    </div>
+                    <p>
+                        <b>Resting label text</b><br />
+                        Top padding: 16dp<br />
+                        Bottom padding: 8dp
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="light-theme">
+                        <jqx-text-box class="material" value="Input" label="Label"></jqx-text-box>
+                    </div>
+                    <p>
+                        <b>Floating label text </b><br />
+                        Top padding above label: 16dp<br />
+                        Bottom padding below label: 8dp<br />
+                        Bottom padding below input: 8dp
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="module">
+                    <p>In forms with some required fields, indicate all of the required ones. However, if there are fewer optional fields, indicate those instead.</p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="requiredExample">
+                        <jqx-text-box id="layoutName" class="material" label="Name *"></jqx-text-box>
+                        <jqx-text-box id="layoutAddress" class="material" label="Address"></jqx-text-box>
+                        <jqx-text-box id="layoutCity" class="material" label="City"></jqx-text-box>
+                        <jqx-combo-box id="layoutState" class="material animation" label="State">
+                            <jqx-list-item>NY</jqx-list-item>
+                            <jqx-list-item>NC</jqx-list-item>
+                            <jqx-list-item>ND</jqx-list-item>
+                            <jqx-list-item>OH</jqx-list-item>
+                        </jqx-combo-box>
+                        <jqx-text-box id="layoutZip" class="material" label="Zip code"></jqx-text-box>
+                        <jqx-text-box id="layoutPhone" class="material" label="Phone number" hint="* Required fields"></jqx-text-box>
+                    </div>
+                    <p>
+                        Name and zip code are the only required fields in the form.
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="optionalExample">
+                        <jqx-text-box id="layoutProductName" class="material" label="Product name"></jqx-text-box>
+                        <jqx-text-box id="layoutPrice" class="material" label="Price"></jqx-text-box>
+                        <jqx-combo-box id="layoutProductCategory" class="material animation" label="Product category">
+                            <jqx-list-item>Alabama</jqx-list-item>
+                            <jqx-list-item>California</jqx-list-item>
+                            <jqx-list-item>Delaware</jqx-list-item>
+                        </jqx-combo-box>
+                        <jqx-text-box id="layoutLocation" class="material" label="Location"></jqx-text-box>
+                        <jqx-text-box id="layoutDescription" class="material" label="Description (optional)"></jqx-text-box>
+                    </div>
+                    <p>
+                        Description is the only optional field in the form.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="text-box-layout">
+            <h1>States</h1>
+
+            <div>
+                <div class="module">
+                    <p>Text fields have two major states: enabled or disabled.</p>
+                    <p>In the enabled state, these user interactions are available:</p>
+                </div>
+                <div class="module">
+                    <div class="light-theme">
+                        <jqx-text-box class="material" label="Label" hint="Idle & empty"></jqx-text-box><br /><br /><br />
+                        <jqx-text-box class="material" label="Label" hint="Press" placeholder="Placeholder"></jqx-text-box><br /><br /><br />
+                        <jqx-text-box class="material" label="Label" hint="Focus" value="Input" placeholder="Placeholder"></jqx-text-box><br /><br /><br />
+                        <jqx-text-box class="material" label="Label" hint="Error" id="validateMaterial"></jqx-text-box><br /><br /><br />
+                        <jqx-text-box class="material" label="Label" hint="Disabled" value="Input" disabled></jqx-text-box>
+                    </div>
+                    <p>
+                        Text field states in light and dark themes.
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="dark-theme">
+                        <jqx-text-box class="material-dark" label="Label" hint="Idle & empty"></jqx-text-box><br /><br /><br />
+                        <jqx-text-box class="material-dark" label="Label" hint="Press" placeholder="Placeholder"></jqx-text-box><br /><br /><br />
+                        <jqx-text-box class="material-dark" label="Label" hint="Focus" value="Input" placeholder="Placeholder"></jqx-text-box><br /><br /><br />
+                        <jqx-text-box class="material-dark" label="Label" hint="Error" id="validateMaterialDark"></jqx-text-box><br /><br /><br />
+                        <jqx-text-box class="material-dark" label="Label" hint="Disabled" value="Input" disabled></jqx-text-box>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="password-text-box-layout">
+            <h1>Password Text Box</h1>
+
+            <div>
+                <div class="module">
+                    <p>Password Text Box material demos</p>
+                    <p>In the enabled state, these user interactions are available:</p>
+                </div>
+                <div class="module">
+                    <div class="light-theme">
+                        <jqx-password-text-box class="material" label="Label" hint="Idle & empty"></jqx-password-text-box><br /><br /><br />
+                        <jqx-password-text-box class="material" label="Label" hint="Press" placeholder="Placeholder"></jqx-password-text-box><br /><br /><br />
+                        <jqx-password-text-box class="material" label="Label" hint="Focus" value="Input" placeholder="Placeholder"></jqx-password-text-box><br /><br /><br />
+                        <jqx-password-text-box class="material" label="Label" id="validateMaterialPassword"></jqx-password-text-box><br /><br /><br />
+                        <jqx-password-text-box class="material" label="Label" hint="Disabled" value="Input" disabled></jqx-password-text-box>
+                    </div>
+                    <p>
+                        Text field states in light and dark themes.
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="dark-theme">
+                        <jqx-password-text-box class="material-dark" label="Label" hint="Idle & empty"></jqx-password-text-box><br /><br /><br />
+                        <jqx-password-text-box class="material-dark" label="Label" hint="Press" placeholder="Placeholder"></jqx-password-text-box><br /><br /><br />
+                        <jqx-password-text-box class="material-dark" label="Label" hint="Focus" value="Input" placeholder="Placeholder"></jqx-password-text-box><br /><br /><br />
+                        <jqx-password-text-box class="material-dark" label="Label" id="validateMaterialDarkPassword"></jqx-password-text-box><br /><br /><br />
+                        <jqx-password-text-box class="material-dark" label="Label" hint="Disabled" value="Input" disabled></jqx-password-text-box>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="masked-text-box-layout">
+            <h1>Masked Text Box</h1>
+
+            <div>
+                <div class="module">
+                    <p></p>
+                </div>
+                <div class="module">
+                    <div class="light-theme">
+                        <jqx-masked-text-box class="material" label="Label" hint="Idle & empty" mask="###-###-##-##"></jqx-masked-text-box><br /><br /><br />
+                        <jqx-masked-text-box class="material" label="Label" hint="Press" mask="###-###-##-##" placeholder="Placeholder"></jqx-masked-text-box><br /><br /><br />
+                        <jqx-masked-text-box class="material" label="Label" hint="Focus" mask="###-###-##-##" auto-show-mask></jqx-masked-text-box><br /><br /><br />
+                        <jqx-masked-text-box class="material" label="Label" hint="Disabled" mask="###-###-##-##" disabled></jqx-masked-text-box>
+                    </div>
+                    <p>
+                        Text field states in light and dark themes.
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="dark-theme">
+                        <jqx-masked-text-box class="material-dark" label="Label" hint="Idle & empty" mask="###-###-##-##"></jqx-masked-text-box><br /><br /><br />
+                        <jqx-masked-text-box class="material-dark" label="Label" hint="Press" mask="###-###-##-##" placeholder="Placeholder"></jqx-masked-text-box><br /><br /><br />
+                        <jqx-masked-text-box class="material-dark" label="Label" hint="Focus" mask="###-###-##-##" auto-show-mask></jqx-masked-text-box><br /><br /><br />
+                        <jqx-masked-text-box class="material-dark" label="Label" hint="Disabled" mask="###-###-##-##" disabled></jqx-masked-text-box>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="module">
+                    <p>
+                        Input text can be grouped in different ways, with special characters added in appropriate places,
+                        such as hyphens added to a phone number. Once the first special character is reached,
+                        the cursor automatically jumps to the next group.
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="light-theme">
+                        <jqx-masked-text-box class="material" label="Phone number" hint="" value="6503036565" mask="(###) ### - ####"></jqx-masked-text-box>
+                    </div>
+                    <p>
+                        Input text grouped and formatted for a phone number
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="light-theme">
+                        <jqx-masked-text-box class="material" label="Credit card number" hint="" value="4147968713856921" mask="#### - #### - #### - ####"></jqx-masked-text-box>
+                    </div>
+                    <p>
+                        Input text grouped and formatted for a credit card number
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="masked-text-box-layout">
+            <h1>Numeric Text Box</h1>
+
+            <div>
+                <div class="module">
+                    <p></p>
+                </div>
+                <div class="module">
+                    <div class="light-theme">
+                        <jqx-numeric-text-box class="material" label="Label" placeholder="Enter a number..." input-type="integer" spin-buttons hint="Idle & empty" nullable value="null"></jqx-numeric-text-box><br /><br /><br />
+                        <jqx-numeric-text-box class="material" label="Label" placeholder="Enter" show-unit hint="Press" nullable value="null"></jqx-numeric-text-box><br /><br /><br />
+                        <jqx-numeric-text-box class="material" label="Label" hint="Focus" radix-display value="123" nullable></jqx-numeric-text-box><br /><br /><br />
+                        <jqx-numeric-text-box class="material" label="Label" hint="Disabled" disabled nullable></jqx-numeric-text-box>
+                    </div>
+                    <p>
+                        Text field states in light and dark themes.
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="dark-theme">
+                        <jqx-numeric-text-box class="material-dark" label="Label" placeholder="Enter a number..." input-type="integer" spin-buttons hint="Idle & empty" nullable value="null"></jqx-numeric-text-box><br /><br /><br />
+                        <jqx-numeric-text-box class="material-dark" label="Label" placeholder="Enter" input-type="integer" show-unit hint="Press" nullable value="null"></jqx-numeric-text-box><br /><br /><br />
+                        <jqx-numeric-text-box class="material-dark" label="Label" hint="Focus" radix-display value="123" nullable></jqx-numeric-text-box><br /><br /><br />
+                        <jqx-numeric-text-box class="material-dark" label="Label" hint="Disabled" disabled nullable></jqx-numeric-text-box>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="text-box-layout">
+            <h1>Field types</h1>
+
+            <div class="module">
+                <p>There are several types of text fields:</p>
+                <ul>
+                    <li>Single-line</li>
+                    <li>Multi-line</li>
+                    <li>Text area</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="module">
+                    <h1>Single-line fields</h1>
+                    <p>When the text entered is longer than the input line, it automatically scrolls left as the cursor reaches the right edge of the field.</p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="singleFieldDemo1">
+                        <jqx-text-box id="singleLineEvent" class="material" label="Event name"></jqx-text-box><br />
+                        <jqx-text-box id="singleLineLocation" class="material" label="Location"></jqx-text-box>
+                        <jqx-check-box id="singleLineCheckbox" class="material">All day event</jqx-check-box>
+                        <jqx-date-time-picker id="singleLineStartDate" class="material animation" format-string="ddd, MMM dd yyyy" value="new Date(2018, 3, 22)" calendar-button enable-mouse-wheel-action drop-down-position="overlay-center" label="Start date" placeholder="" display-mode-view="list" hide-other-month-days></jqx-date-time-picker>
+                        <jqx-date-time-picker id="singleLineEndDate" class="material animation" format-string="ddd, MMM dd yyyy" value="new Date(2018, 3, 23)" calendar-button enable-mouse-wheel-action drop-down-position="overlay-center" label="End date" placeholder="" display-mode-view="list" hide-other-month-days></jqx-date-time-picker>
+                        <jqx-date-time-picker id="singleLineStartTime" format-string="hh:mm tt" value="new Date(2018, 3, 22)" drop-down-display-mode="timePicker" class="material animation" label="Start time" drop-down-position="overlay-center" calendar-button></jqx-date-time-picker>
+                        <jqx-date-time-picker id="singleLineEndTime" format-string="hh:mm tt" value="new Date(2018, 3, 22)" drop-down-display-mode="timePicker" class="material animation" label="End time" drop-down-position="overlay-center" calendar-button></jqx-date-time-picker>
+                    </div>
+                    <p>
+                        Single-line text fields
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="singleFieldDemo2">
+                        <jqx-text-box id="singleLineName" class="material" label="Name" value="Ali Connors"></jqx-text-box><br />
+                        <jqx-text-box id="singleLinePhoneNumber" class="material" label="Phone number" value="65"></jqx-text-box><br />
+                        <jqx-text-box id="singleLineEmail" class="material" label="Email"></jqx-text-box>
+
+                        <jqx-combo-box id="singleLinePhone" class="material animation" drop-down-position="overlay-center" label="Phone type">
+                            <jqx-list-item selected>Mobile</jqx-list-item>
+                            <jqx-list-item>Home</jqx-list-item>
+                            <jqx-list-item>Work</jqx-list-item>
+                        </jqx-combo-box>
+
+
+                        <jqx-combo-box id="singleLineEmailType" class="material animation" drop-down-position="overlay-center" label="Email type">
+                            <jqx-list-item selected>Personal</jqx-list-item>
+                            <jqx-list-item>Work</jqx-list-item>
+                        </jqx-combo-box>
+                    </div>
+                    <p>
+                        Single-line text fields
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="module">
+                    <h1>Multi-line fields</h1>
+                    <p>Multi-line text fields wrap text onto a new line by expanding the bottom of the field, shifting screen elements downward.</p>
+                    <p>Multi-line text fields allow users to see everything they input at once.</p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="multiLineFieldDemo1">
+                        <jqx-text-box id="multilinePrice1" class="material" label="Price" value="10.00"></jqx-text-box>
+                        <jqx-text-box id="multilineLocation1" class="material" label="Location(optional)" value="Hanover"></jqx-text-box>
+                        <jqx-multiline-text-box id="multilineDescription1" class="material" auto-expand label="Description"></jqx-multiline-text-box>
+                    </div>
+                    <p>
+                        Multi-line text field
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="multiLineFieldDemo2">
+                        <jqx-text-box id="multilineTitle2" class="material" label="Title" value="Vintage 50's Dress"></jqx-text-box>
+                        <jqx-text-box id="multilinePrice2" class="material" label="Price" value="10.00"></jqx-text-box>
+                        <jqx-text-box id="multilineLocation2" class="material" label="Location(optional)" value="Hanover"></jqx-text-box>
+                        <jqx-multiline-text-box id="multilineDescription2" class="material" auto-expand label="Description">Unique and rare dress from 1952. Made out of washed cotton with front pockets. Sleeveless with both closures.</jqx-multiline-text-box><br />
+                    </div>
+                    <p>
+                        Multi-line text field
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="module">
+                    <p>Multi line </p>
+                </div>
+                <div class="module multiline">
+                    <div class="light-theme">
+                        <jqx-multiline-text-box auto-expand class="material" rows="1" label="Label" hint="Idle & empty"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material" rows="1" label="Label" hint="Press" placeholder="Placeholder"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material" rows="1" label="Label" hint="Focus" value="Input"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material" rows="1" label="Label" hint="" value="Input" id="validateMaterialMultiline"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material" rows="1" label="Label" hint="Disabled" value="Input" disabled></jqx-multiline-text-box>
+                    </div>
+                    <p>
+                        Light and dark states for text areas
+                    </p>
+                </div>
+                <div class="module multiline">
+                    <div class="dark-theme">
+                        <jqx-multiline-text-box auto-expand class="material-dark" rows="1" label="Label" hint="Idle & empty"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material-dark" rows="1" label="Label" hint="Press" placeholder="Placeholder"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material-dark" rows="1" label="Label" hint="Focus" value="Input"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material-dark" rows="1" label="Label" hint="" value="Input" id="validateMaterialMultilineDark"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material-dark" rows="1" label="Label" hint="Disabled" value="Input" disabled></jqx-multiline-text-box>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="module">
+                    <h1>Text area</h1>
+                    <p>Text areas are taller than text fields and wrap overflow text onto a new line. They scroll vertically when the cursor reaches the bottom of the field.</p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="textAreaDemo1">
+                        <jqx-text-box id="textareaName" class="material-dark" label="Name"></jqx-text-box>
+                        <jqx-multiline-text-box id="textareaMessage1" class="material" label="Message"></jqx-multiline-text-box>
+                        <jqx-text-box id="textareaPhone" class="material-dark" label="Phone number"></jqx-text-box>
+                        <jqx-text-box id="textareaEmail" class="material-dark" label="Email address"></jqx-text-box>
+                    </div>
+                    <p>
+                        The message box is the text area
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="textAreaDemo2">
+                        <jqx-multiline-text-box id="textareaMessage2" class="material-dark" label="Message">Just wanted to let you kn</jqx-multiline-text-box><br />
+                    </div>
+                    <p>
+                        The message box is the text area
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="module">
+                    <p>Text areas should have a visible border, using the same color and thickness as the input line.</p>
+                </div>
+                <div class="module multiline">
+                    <div class="light-theme">
+                        <jqx-multiline-text-box class="material" label="Label" hint="Helper text"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box class="material" label="Label" hint="Helper text" value="Input"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box class="material" label="Label" hint="Helper text" value="Input" id="validateMaterialMultiline"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box class="material" label="Label" hint="Helper text" value="Input" disabled></jqx-multiline-text-box>
+                    </div>
+                    <p>
+                        Light and dark states for text areas
+                    </p>
+                </div>
+                <div class="module multiline">
+                    <div class="dark-theme">
+                        <jqx-multiline-text-box class="material-dark" label="Label" hint="Helper text"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box class="material-dark" label="Label" hint="Helper text" value="Input"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box class="material-dark" label="Label" hint="Helper text" value="Input" id="validateMaterialMultilineDark"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box class="material-dark" label="Label" hint="Helper text" value="Input" disabled></jqx-multiline-text-box>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="module">
+                    <p>Single line .</p>
+                </div>
+                <div class="module multiline">
+                    <div class="light-theme">
+                        <jqx-multiline-text-box auto-expand class="material" wrap="off" rows="1" label="Label" hint="Helper text"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material" wrap="off" rows="1" label="Label" hint="Helper text" value="Input"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material" wrap="off" rows="1" label="Label" hint="Helper text" value="Input" id="validateMaterialMultiline"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material" wrap="off" rows="1" label="Label" hint="Helper text" value="Input" disabled></jqx-multiline-text-box>
+                    </div>
+                    <p>
+                        Light and dark states for text areas
+                    </p>
+                </div>
+                <div class="module multiline">
+                    <div class="dark-theme">
+                        <jqx-multiline-text-box auto-expand class="material-dark" wrap="off" rows="1" label="Label" hint="Helper text"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material-dark" wrap="off" rows="1" label="Label" hint="Helper text" value="Input"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material-dark" wrap="off" rows="1" label="Label" hint="Helper text" value="Input" id="validateMaterialMultilineDark"></jqx-multiline-text-box>
+                        <jqx-multiline-text-box auto-expand class="material-dark" wrap="off" rows="1" label="Label" hint="Helper text" value="Input" disabled></jqx-multiline-text-box>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

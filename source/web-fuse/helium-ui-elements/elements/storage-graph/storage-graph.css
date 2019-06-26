@@ -1,0 +1,52 @@
+.sl-storage-graph-main {
+    font-family: var(--mc-headline-font);
+    width: 300px;
+    background-color: var(--mc-gray-lighter-8);
+    padding: 10px;
+}
+
+.sl-storage-graph-used {
+    margin-top: 20px;
+    font-size: 55px;
+    color: var(--mc-blue-lighter-1);
+    text-align: center;
+}
+
+.sl-storage-graph-limit {
+    text-align: center;
+}
+
+.sl-storage-graph-donut-graph {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.sl-storage-graph-percentage {
+    text-align: center;
+    position: absolute;
+    line-height: 155px;
+    width: 100%;
+    font-size: var(--mc-size-larger-3);
+}
+
+.sl-storage-graph-donut-graph svg {
+    transform: rotate(-90deg);
+}
+
+.sl-storage-graph-donut {
+    /* this value is the size of the circle */
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke: var(--mc-blue-lighter-1);
+    stroke-width: 20;
+}
+
+.sl-storage-graph-donut-empty {
+    stroke: var(--mc-gray-lighter-6);
+    stroke-width: 20;
+}
+
+.sl-storage-graph-donut-graph .sl-storage-graph-donut {
+    animation: sl-storage-graph-donut-graph 1s ease-out forwards;
+}

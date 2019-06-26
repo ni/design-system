@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Accordion Methods</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxaccordion.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <jqx-accordion id="accordion">
+        <jqx-accordion-item label="Item 0">Content </jqx-accordion-item>
+        <jqx-accordion-item label="Item 1">Content </jqx-accordion-item>
+        <jqx-accordion-item label="Item 3">Content</jqx-accordion-item>
+        <jqx-accordion-item label="Item 2">Content</jqx-accordion-item>
+        <jqx-accordion-item label="Item 4">Content</jqx-accordion-item>
+        <jqx-accordion-item label="Item 5">Content</jqx-accordion-item>
+        <jqx-accordion-item label="Item 6">Content</jqx-accordion-item>
+        <jqx-accordion-item label="Item 7">Content</jqx-accordion-item>
+        <jqx-accordion-item label="Item 8">Content</jqx-accordion-item>
+        <jqx-accordion-item label="Item 9">Content</jqx-accordion-item>
+    </jqx-accordion>
+
+    <div id="sideContainer">
+        <h2>Methods</h2>
+        <jqx-button id="collapse">Collapse #</jqx-button>
+        <jqx-button id="expand">Expand #</jqx-button>
+        <input type="text" id="expandCollapseIndex" value="0">
+        <br /><br />
+        <jqx-button id="insert">Insert #</jqx-button>
+        <jqx-button id="update">Update #</jqx-button>
+        <jqx-button id="remove">Remove #</jqx-button>
+        <input type="text" id="crudIndex" value="0">
+        <br /><br />
+        <jqx-check-box id="setFocusable" checked>Focusable</jqx-check-box>
+    </div>
+</body>
+</html>

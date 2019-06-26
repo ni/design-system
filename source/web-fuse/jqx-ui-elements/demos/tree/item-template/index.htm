@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tree Item Template</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmenu.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtree.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <em>Note: Sub-items can be removed by swiping left or right and can be edited by double-clicking or pressing F2.</em>
+    <br />
+    <br />
+    <jqx-tree id="tree" class="animation"
+              editable
+              show-lines
+              show-root-lines
+              toggle-element-position="near">
+        <jqx-tree-items-group expanded>
+            Groceries
+            <jqx-tree-item>Bread</jqx-tree-item>
+            <jqx-tree-item>Milk</jqx-tree-item>
+            <jqx-tree-item>Potatoes</jqx-tree-item>
+            <jqx-tree-item label="editorTemplate"></jqx-tree-item>
+        </jqx-tree-items-group>
+        <jqx-tree-items-group expanded>
+            To do
+            <jqx-tree-item>Check car</jqx-tree-item>
+            <jqx-tree-item>Attend board meeting</jqx-tree-item>
+            <jqx-tree-item>Take kids from school</jqx-tree-item>
+            <jqx-tree-item>Change light bulb</jqx-tree-item>
+            <jqx-tree-item label="editorTemplate"></jqx-tree-item>
+        </jqx-tree-items-group>
+    </jqx-tree>
+
+    <template id="editorTemplate">
+        <input placeholder="New item..." />
+        <jqx-button title="Add item">&#xe835;</jqx-button>
+    </template>
+</body>
+</html>

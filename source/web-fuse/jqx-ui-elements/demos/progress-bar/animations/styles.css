@@ -1,0 +1,36 @@
+.jqx-progress-bar-horizontal {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+h2, h3, h4 {
+    text-align: center;
+}
+
+h1 {
+    margin-left: 250px;
+    margin-top: 40px;
+}
+
+div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+jqx-circular-progress-bar {
+    margin-top: 20px;
+}
+
+jqx-button {
+    margin-top: 10px;
+    display: inline-block;
+    height: 35px;
+}
+
+b {
+    display: block;
+    margin-top: 10px;
+}

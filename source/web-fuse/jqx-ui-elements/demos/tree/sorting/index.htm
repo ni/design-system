@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tree Sorting</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmenu.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtree.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <jqx-check-box id="sorted" checked>Sorted trees</jqx-check-box>
+    <br />
+    <br />
+    <div class="container">
+        <p>Sort direction: ascending</p>
+        <jqx-tree id="tree1" class="animation"
+                  filterable
+                  show-lines
+                  show-root-lines
+                  sort-direction="asc"
+                  sorted
+                  toggle-element-position="near">
+            <jqx-tree-items-group expanded>
+                Numbers
+                <jqx-tree-item>2</jqx-tree-item>
+                <jqx-tree-item>3</jqx-tree-item>
+                <jqx-tree-item>1</jqx-tree-item>
+                <jqx-tree-item>10</jqx-tree-item>
+                <jqx-tree-item>210</jqx-tree-item>
+            </jqx-tree-items-group>
+            <jqx-tree-items-group expanded>
+                Letters
+                <jqx-tree-item value="1000">A</jqx-tree-item>
+                <jqx-tree-item value="50">C</jqx-tree-item>
+                <jqx-tree-item value="30000">D</jqx-tree-item>
+                <jqx-tree-item value="2">B</jqx-tree-item>
+            </jqx-tree-items-group>
+            <jqx-tree-items-group expanded>
+                Greek letters
+                <jqx-tree-item>β</jqx-tree-item>
+                <jqx-tree-item>δ</jqx-tree-item>
+                <jqx-tree-item>α</jqx-tree-item>
+                <jqx-tree-item>γ</jqx-tree-item>
+            </jqx-tree-items-group>
+        </jqx-tree>
+    </div>
+    <div class="container">
+        <p>Sort direction: descending</p>
+        <jqx-tree id="tree2" class="animation"
+                  filterable
+                  show-lines
+                  show-root-lines
+                  sort-direction="desc"
+                  sorted
+                  toggle-element-position="near">
+            <jqx-tree-items-group expanded>
+                Numbers
+                <jqx-tree-item>2</jqx-tree-item>
+                <jqx-tree-item>3</jqx-tree-item>
+                <jqx-tree-item>1</jqx-tree-item>
+                <jqx-tree-item>10</jqx-tree-item>
+                <jqx-tree-item>210</jqx-tree-item>
+            </jqx-tree-items-group>
+            <jqx-tree-items-group expanded>
+                Letters
+                <jqx-tree-item value="1000">A</jqx-tree-item>
+                <jqx-tree-item value="50">C</jqx-tree-item>
+                <jqx-tree-item value="30000">D</jqx-tree-item>
+                <jqx-tree-item value="2">B</jqx-tree-item>
+            </jqx-tree-items-group>
+            <jqx-tree-items-group expanded>
+                Greek letters
+                <jqx-tree-item>β</jqx-tree-item>
+                <jqx-tree-item>δ</jqx-tree-item>
+                <jqx-tree-item>α</jqx-tree-item>
+                <jqx-tree-item>γ</jqx-tree-item>
+            </jqx-tree-items-group>
+        </jqx-tree>
+    </div>
+    <div class="container">
+        <p>Sorting via a custom function</p>
+        <jqx-tree id="tree3" class="animation"
+                  filterable
+                  show-lines
+                  show-root-lines
+                  sort="customSortingFunction"
+                  sorted
+                  toggle-element-position="near">
+            <jqx-tree-items-group expanded>
+                Numbers
+                <jqx-tree-item>2</jqx-tree-item>
+                <jqx-tree-item>3</jqx-tree-item>
+                <jqx-tree-item>1</jqx-tree-item>
+                <jqx-tree-item>10</jqx-tree-item>
+                <jqx-tree-item>210</jqx-tree-item>
+            </jqx-tree-items-group>
+            <jqx-tree-items-group expanded>
+                Letters
+                <jqx-tree-item value="1000">A</jqx-tree-item>
+                <jqx-tree-item value="50">C</jqx-tree-item>
+                <jqx-tree-item value="30000">D</jqx-tree-item>
+                <jqx-tree-item value="2">B</jqx-tree-item>
+            </jqx-tree-items-group>
+            <jqx-tree-items-group expanded>
+                Greek letters
+                <jqx-tree-item>β</jqx-tree-item>
+                <jqx-tree-item>δ</jqx-tree-item>
+                <jqx-tree-item>α</jqx-tree-item>
+                <jqx-tree-item>γ</jqx-tree-item>
+            </jqx-tree-items-group>
+        </jqx-tree>
+    </div>
+</body>
+</html>

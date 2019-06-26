@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Date Time Picker Drop Down Position</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdate.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdatetimepicker.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcalendar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtimepicker.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="demoContainer">
+        <jqx-date-time-picker id="dateTimePicker"
+                              calendar-button
+                              calendar-button-position="right"
+                              calendar-mode="classic"
+                              drop-down-display-mode="classic"
+                              enable-mouse-wheel-action
+                              spin-buttons
+                              spin-buttons-position="left"
+                              drop-down-position="auto"></jqx-date-time-picker>
+    </div>
+    <div class="demoContainer">
+        <h3>Dropdown Position:</h3>
+        <div>
+            <jqx-radio-button checked>Auto</jqx-radio-button>
+            <jqx-radio-button>Bottom</jqx-radio-button>
+            <jqx-radio-button>Top</jqx-radio-button>
+            <br />
+            <jqx-radio-button>Overlay bottom</jqx-radio-button>
+            <jqx-radio-button>Overlay center</jqx-radio-button>
+            <jqx-radio-button>Overlay top</jqx-radio-button>
+            <br />
+            <jqx-radio-button>Center bottom</jqx-radio-button>
+            <jqx-radio-button>Center top</jqx-radio-button>
+        </div>
+        <h3>Calendar Button Position:</h3>
+        <div>
+            <jqx-radio-button>Left</jqx-radio-button>
+            <jqx-radio-button checked>Right</jqx-radio-button>
+            <jqx-radio-button>None</jqx-radio-button>
+        </div>
+    </div>
+</body>
+</html>

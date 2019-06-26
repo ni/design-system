@@ -1,0 +1,8 @@
+.mc-link {
+    color: var(--mc-blue-base);
+    text-decoration: none;
+}
+
+.mc-link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,13 @@
+jqx-tabs.auto-height {
+    width: 500px;
+    height: auto;
+    min-height: initial;
+}
+
+    jqx-tabs.auto-height > .jqx-container {
+        display: block;
+    }
+
+    jqx-tabs.auto-height jqx-tab-item:not(.jqx-visibility-hidden) {
+        position: static;
+    }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Gauge Custom Interval</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxgauge.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumerictextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcomplex.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <jqx-check-box id="toggleCustomInterval" checked>Custom interval</jqx-check-box>
+    <jqx-check-box id="toggleCoerce" checked>Coerce</jqx-check-box>
+    <br />
+    <div class="container">
+        <p>Gauge with floating point scale:</p>
+        <jqx-gauge id="gauge1" analog-display-type="fill" coerce scale-position="outside" min="0" max="10000" value="100" custom-interval custom-ticks='[100, 1000, 5000, 10000]'></jqx-gauge>
+    </div>
+    <div class="container">
+        <p>Gauge with integer scale:</p>
+        <jqx-gauge id="gauge2" analog-display-type="fill" coerce scale-position="outside" scale-type="integer" significant-digits="3" word-length="int64" min="-9223372036854775808" max="9223372036854775807" value="-3e18" custom-interval custom-ticks='[-9e18, -3e18, 1e18, 9e18]'></jqx-gauge>
+    </div>
+    <div class="container">
+        <p>Gauge with logarithmic scale and Fibonacci numbers as custom ticks:</p>
+        <jqx-gauge id="gauge3" analog-display-type="fill" coerce logarithmic-scale scale-position="outside" min="1" max="100" value="55" custom-interval custom-ticks='[1, 2, 3, 5, 8, 13, 21, 34, 55, 89]'></jqx-gauge>
+    </div>
+    <div class="container">
+        <p>Gauge with letters:</p>
+        <jqx-gauge id="gauge4" analog-display-type="fill" label-format-function="gauge4LabelFormatFunction" coerce scale-position="outside" min="1" max="26" value="10" custom-interval custom-ticks='[1, 2, 3, 5, 10, 13, 18, 22, 24, 26]'></jqx-gauge>
+    </div>
+</body>
+</html>

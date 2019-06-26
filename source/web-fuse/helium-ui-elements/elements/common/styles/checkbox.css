@@ -1,0 +1,44 @@
+.mc-checkbox {
+    position: absolute;
+    left: -999em;
+}
+
+.mc-checkbox:checked + label::after {
+    content: '';
+    position: absolute;
+    width: 0.7ex;
+    height: 0.3ex;
+    background: rgba(0, 0, 0, 0);
+    top: 0.8ex;
+    left: 0.5ex;
+    border: 1.2pt solid rgb(51, 51, 51);;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+}
+
+.mc-checkbox + label {
+    color: #555;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.mc-checkbox + label::before {
+    content: "";
+    width: 14px;
+    min-width: 14px;
+    height: 14px;
+    min-height: 14px;
+
+    display: inline-block;
+    vertical-align: -3px;
+    background-color: white;
+    border: 1px solid rgb(169, 169, 169);
+    margin-right: 0.5em;
+}
+

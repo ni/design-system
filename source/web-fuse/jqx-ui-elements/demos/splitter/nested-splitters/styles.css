@@ -1,0 +1,39 @@
+#splitter0,
+#splitter1,
+#splitter2 {
+    width: 800px;
+    height: 500px;
+    border: lightgray solid 1px;
+    margin: 20px;
+}
+
+#item00 {
+    width: 200px;
+}
+
+#item02,
+#item03 {
+    height: 50%;
+}
+
+#item10 {
+    height: 200px;
+}
+
+#item12,
+#item13 {
+    width: 50%;
+}
+
+#item20 {
+    width: 200px;
+}
+
+#item21 > .jqx-container > .jqx-content {
+    padding: 50px;
+}
+
+#item22,
+#item23 {
+    height: 50%;
+}

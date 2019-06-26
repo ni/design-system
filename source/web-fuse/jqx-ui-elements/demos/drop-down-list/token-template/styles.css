@@ -1,0 +1,12 @@
+.jqx-token > span:first-of-type {
+    vertical-align: middle;
+}
+
+.jqx-token > span {
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+    .jqx-token > span img {
+        vertical-align: bottom;
+    }

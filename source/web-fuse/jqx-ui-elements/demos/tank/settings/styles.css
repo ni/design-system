@@ -1,0 +1,40 @@
+.container {
+    display: inline-block;
+    width: 400px;
+    margin: 35px;
+}
+
+jqx-button {
+    display: block;
+    width: 70px;
+    height: 20px;
+}
+
+#control-container {
+    display: block;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+jqx-numeric-text-box {
+    width: 300px;
+    height: 35px;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+#horizontalTank, #invertedHorizontalTank {
+    width: 180px;
+    height: 155px;
+}
+
+#verticalTank, #invertedVerticalTank {
+    width: 210px;
+    height: 180px;
+}
+
+#horizontalTankValue, #verticalTankValue, #invertedHorizontalTankValue, #invertedVerticalTankValue {
+    font-weight: bold;
+}

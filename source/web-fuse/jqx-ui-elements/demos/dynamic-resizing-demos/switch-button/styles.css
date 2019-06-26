@@ -1,0 +1,9 @@
+#horizontalSlider {
+    width: 500px;
+    height: 40px;
+}
+
+jqx-switch-button {
+    --jqx-switch-button-width: 50px;
+    --jqx-switch-button-height: 50px;
+}

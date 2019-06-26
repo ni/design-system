@@ -1,0 +1,22 @@
+jqx-gauge {
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+
+#gauge1 .jqx-value {
+    fill: #2885FF;
+    stroke: white;
+}
+
+.range1 {
+    fill: maroon;
+}
+
+.range2 {
+    fill: orange;
+}
+
+.range3 {
+    fill: forestgreen;
+}

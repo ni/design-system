@@ -1,0 +1,13 @@
+/* Colun Count */
+
+jqx-color-panel.column-count-small {
+    --jqx-color-panel-grid-mode-column-count: 4;
+}
+
+jqx-color-panel.column-count-medium {
+    --jqx-color-panel-grid-mode-column-count: 8;
+}
+
+jqx-color-panel.column-count-large {
+    --jqx-color-panel-grid-mode-column-count: 14;
+}

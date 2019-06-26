@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Window Header Footer Template</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxwindow.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxgauge.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumerictextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcomplex.js"></script>
+    <script type="text/javascript" src="../../../source/jqxpowerbutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <template id="headerTemplate">
+        <jqx-power-button id="power" checked></jqx-power-button>
+        <label>Gauge</label>
+    </template>
+
+    <template id="footerTemplate">
+        <div>Value:<span id="value"></span></div>
+    </template>
+
+    <jqx-window opened header-template="headerTemplate" footer-template="footerTemplate">
+        <section>
+            <jqx-gauge analog-display-type="needle" start-angle="-30" end-angle="210" min="0" max="100" value="0" size-mode="auto"></jqx-gauge>
+        </section>
+    </jqx-window>
+</body>
+</html>

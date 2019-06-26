@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Drop Down List Material</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcombobox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtextbox.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="materialDropDownListContainer">
+        <section>
+            <h1>jqxDropDownList</h1>
+            <div>
+                <h1>DropDownList is a form control for selecting a value from a set of options.</h1>
+                <div class="module">
+                    <p>
+                        A dropdown list selects between multiple selections. It displays the current state and a down/up arrow.
+                        Available states may be shown as a list of strings, a palette, or icons, for example.
+                    </p>
+                    <p>
+                        When a user interacts with the dropDown, a menu can appear over, under or below the drop down list and displays the possible states.
+                        Pressing a state dismisses the menu if the selection is single and updates the button to display this new state.
+                    </p>
+                    <p>Scrolling within the dropdown behaves the same way a menu scrolls.</p>
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../../images/components-buttons.png">
+                    </figure>
+                </div>
+                <div class="module">
+                </div>
+                <div class="module preview">
+                    <jqx-button class="material floating"><i class="material-icons">&#xE412;</i></jqx-button>
+                    <div id="textFields">
+                        <div class="group">
+                            <jqx-text-box class="material" label="Name">Name</jqx-text-box>
+                        </div>
+                        <div class="group">
+                            <jqx-text-box class="material" label="Phone">Phone</jqx-text-box>
+                            <jqx-drop-down-list class="material animation" placeholder="Select:">
+                                <jqx-list-item selected>Mobile</jqx-list-item>
+                                <jqx-list-item>Home</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </div>
+                        <div class="group">
+                            <jqx-text-box class="material" label="Email">Email</jqx-text-box>
+                            <jqx-drop-down-list class="material animation" placeholder="Select:">
+                                <jqx-list-item selected>Work</jqx-list-item>
+                                <jqx-list-item>Mobile</jqx-list-item>
+                                <jqx-list-item>Home</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </div>
+                        <div class="group">
+                            <jqx-text-box class="material" label="Address">Address</jqx-text-box>
+                            <jqx-drop-down-list class="material animation" placeholder="Select:">
+                                <jqx-list-item selected>Home</jqx-list-item>
+                                <jqx-list-item>Mobile</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </div>
+                        <div class="group">
+                            <jqx-text-box class="material" label="Ringtone">Ringtone</jqx-text-box>
+                        </div>
+                        <div class="group">
+                            <jqx-text-box class="material" label="Add note">Add note</jqx-text-box>
+                        </div>
+                    </div>
+                </div>
+                <div class="module">
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#style">Style</a></li>
+                <li><a href="#dropDownListOpenModes">Open Direction</a></li>
+                <li><a href="#dropDownListSelectionModes">Selection Modes</a></li>
+                <li><a href="#demoDropDown">Demo</a></li>
+            </ul>
+        </nav>
+
+        <section id="usage">
+            <h1>Usage</h1>
+            <div class="module">
+                <h2>Generic overflow dropdown list</h2>
+                <p>
+                    The generic overflow dropdown list displays an arrow by default. When the button is pressed, the menu appears.
+                    Pressing an option on the menu navigates to further settings for that option.
+                </p>
+                <br />
+                <h2>Segmented dropdown button</h2>
+                <p>
+                    A segmented dropdown has two sections: the current state and the dropdown arrow icon.
+                    Pressing the current state will cause that state’s action to fire within the screen. Pressing the dropdown arrow will display all the state options.
+                    Selecting one will change the displayed state.
+                </p>
+            </div>
+            <div class="module dropDownListUsage">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Generic</th>
+                        <th>Segmented</th>
+                    </tr>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td>
+                            <jqx-drop-down-list class="animation material">
+                                <jqx-list-item>Arial</jqx-list-item>
+                                <jqx-list-item selected>Calibri</jqx-list-item>
+                                <jqx-list-item>Courier</jqx-list-item>
+                                <jqx-list-item>Verdana</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material" drop-down-open-mode="dropDownButton">
+                                <jqx-list-item selected>25%</jqx-list-item>
+                                <jqx-list-item>50%</jqx-list-item>
+                                <jqx-list-item>75%</jqx-list-item>
+                                <jqx-list-item>100%</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Pressed</p></td>
+                        <td>
+                            <jqx-drop-down-list class="animation material">
+                                <jqx-list-item>Arial</jqx-list-item>
+                                <jqx-list-item selected>Calibri</jqx-list-item>
+                                <jqx-list-item>Courier</jqx-list-item>
+                                <jqx-list-item>Verdana</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material" drop-down-open-mode="dropDownButton">
+                                <jqx-list-item selected>25%</jqx-list-item>
+                                <jqx-list-item>50%</jqx-list-item>
+                                <jqx-list-item>75%</jqx-list-item>
+                                <jqx-list-item>100%</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                    </tr>
+                </table>
+                <p>Generic and segmented dropdown lists in normal and pressed.</p>
+            </div>
+        </section>
+
+        <section id="style">
+            <h1>Style</h1>
+            <div class="module">
+                <h2>Light</h2>
+                <p>
+                    Action button: Transparent<br />
+                    Drop down button: Transparent
+                </p>
+                <p>
+                    Action button (pressed): #FAFAFA<br />
+                    Drop down button (pressed): #FAFAFA
+                </p>
+                <p>Disabled: #000000, Opacity 20%</p>
+            </div>
+            <div class="module dropDownListLightTheme">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Generic</th>
+                        <th>Segmented</th>
+                        <th>Generic</th>
+                    </tr>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td>
+                            <jqx-drop-down-list class="animation material">
+                                <jqx-list-item selected>Home</jqx-list-item>
+                                <jqx-list-item>Mobile</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item>Personal</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material" drop-down-open-mode="dropDownButton">
+                                <jqx-list-item>Mobile</jqx-list-item>
+                                <jqx-list-item selected>Home</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item>Personal</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material">
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Mobile</jqx-list-item>
+                                <jqx-list-item selected>Home</jqx-list-item>
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item>Personal</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Pressed</p></td>
+                        <td>
+                            <jqx-drop-down-list class="animation material">
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item selected>Mobile</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Home</jqx-list-item>
+                                <jqx-list-item>Personal</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material" drop-down-open-mode="dropDownButton">
+                                <jqx-list-item>Home</jqx-list-item>
+                                <jqx-list-item selected>Mobile</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item>Personal</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material">
+                                <jqx-list-item>Personal</jqx-list-item>
+                                <jqx-list-item selected>Mobile</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item>Home</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Disabled</p></td>
+                        <td>
+                            <jqx-drop-down-list class="animation material" disabled>
+                                <jqx-list-item>Home</jqx-list-item>
+                                <jqx-list-item>Mobile</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item selected>Personal</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material" disabled drop-down-open-mode="dropDownButton">
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Mobile</jqx-list-item>
+                                <jqx-list-item>Home</jqx-list-item>
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item selected>Personal</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material" disabled>
+                                <jqx-list-item>Mobile</jqx-list-item>
+                                <jqx-list-item>Home</jqx-list-item>
+                                <jqx-list-item>Work</jqx-list-item>
+                                <jqx-list-item>Business</jqx-list-item>
+                                <jqx-list-item selected>Personal</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                    </tr>
+                </table>
+                <p>Light theme</p>
+            </div>
+
+            <div class="module">
+                <h2>Dark</h2>
+                <p>
+                    Action button: Transparent<br />
+                    Drop down button: Transparent
+                </p>
+                <p>
+                    Action button (pressed): #0078D7<br />
+                    Drop down button (pressed): #0078D7
+                </p>
+                <p>Disabled: #000000, Opacity 20%</p>
+            </div>
+            <div class="module dropDownListDarkTheme">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Generic</th>
+                        <th>Segmented</th>
+                        <th>Generic</th>
+                    </tr>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark">
+                                <jqx-list-item selected>Cupcake</jqx-list-item>
+                                <jqx-list-item>Donut</jqx-list-item>
+                                <jqx-list-item>Eclair</jqx-list-item>
+                                <jqx-list-item>Froyo</jqx-list-item>
+                                <jqx-list-item>Gingerbread</jqx-list-item>
+                                <jqx-list-item>Honeycomb</jqx-list-item>
+                                <jqx-list-item>Jelly Bean</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark" drop-down-open-mode="dropDownButton" selection-mode="checkBox">
+                                <jqx-list-item>KitKat</jqx-list-item>
+                                <jqx-list-item selected>Lollipop</jqx-list-item>
+                                <jqx-list-item>Marshmallow</jqx-list-item>
+                                <jqx-list-item>Nougat</jqx-list-item>
+                                <jqx-list-item>Oreo</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark">
+                                <jqx-list-item>Froyo</jqx-list-item>
+                                <jqx-list-item selected>Gingerbread</jqx-list-item>
+                                <jqx-list-item>Honeycomb</jqx-list-item>
+                                <jqx-list-item>Jelly Bean</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Pressed</p></td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark">
+                                <jqx-list-item>Donut</jqx-list-item>
+                                <jqx-list-item selected>Cupcake</jqx-list-item>
+                                <jqx-list-item>Eclair</jqx-list-item>
+                                <jqx-list-item>Froyo</jqx-list-item>
+                                <jqx-list-item>Gingerbread</jqx-list-item>
+                                <jqx-list-item>Honeycomb</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark" drop-down-open-mode="dropDownButton">
+                                <jqx-list-item>Marshmallow</jqx-list-item>
+                                <jqx-list-item>KitKat</jqx-list-item>
+                                <jqx-list-item selected>Lollipop</jqx-list-item>
+                                <jqx-list-item>Nougat</jqx-list-item>
+                                <jqx-list-item>Oreo</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark">
+                                <jqx-list-item>Lollipop</jqx-list-item>
+                                <jqx-list-item>KitKat</jqx-list-item>
+                                <jqx-list-item>Marshmallow</jqx-list-item>
+                                <jqx-list-item>Nougat</jqx-list-item>
+                                <jqx-list-item selected>Gingerbread</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Disabled</p></td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark" disabled>
+                                <jqx-list-item>Donut</jqx-list-item>
+                                <jqx-list-item selected>Eclair</jqx-list-item>
+                                <jqx-list-item>Froyo</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark" disabled drop-down-open-mode="dropDownButton">
+                                <jqx-list-item>Eclair</jqx-list-item>
+                                <jqx-list-item selected>Donut</jqx-list-item>
+                                <jqx-list-item>Froyo</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                        <td>
+                            <jqx-drop-down-list class="animation material-dark" disabled>
+                                <jqx-list-item selected>Froyo</jqx-list-item>
+                                <jqx-list-item>Donut</jqx-list-item>
+                                <jqx-list-item>Eclair</jqx-list-item>
+                            </jqx-drop-down-list>
+                        </td>
+                    </tr>
+                </table>
+                <p>Dark theme</p>
+            </div>
+        </section>
+
+        <section id="dropDownListOpenModes">
+            <h1>Open Directions</h1>
+            <div class="module">
+                <p>jqxDropDownList has a number of opening directions but the most popular are "bottom", "overlay-center" and "top".</p>
+            </div>
+            <div class="module dropDownOpenModes">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Bottom</th>
+                            <th>Overlay-center</th>
+                            <th>Top</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <jqx-drop-down-list class="animation material">
+                                    <jqx-list-item>Africa</jqx-list-item>
+                                    <jqx-list-item selected>America</jqx-list-item>
+                                    <jqx-list-item>Asia</jqx-list-item>
+                                    <jqx-list-item>Europe</jqx-list-item>
+                                </jqx-drop-down-list>
+                            </td>
+                            <td>
+                                <jqx-drop-down-list class="animation material" drop-down-position="overlay-center">
+                                    <jqx-list-item>Yogurt</jqx-list-item>
+                                    <jqx-list-item selected>Honey</jqx-list-item>
+                                    <jqx-list-item>Strawberries</jqx-list-item>
+                                </jqx-drop-down-list>
+                            </td>
+                            <td>
+                                <jqx-drop-down-list class="animation material" drop-down-position="top">
+                                    <jqx-list-item>Peanuts</jqx-list-item>
+                                    <jqx-list-item selected>Hazelnuts</jqx-list-item>
+                                    <jqx-list-item>Almonds</jqx-list-item>
+                                </jqx-drop-down-list>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Additional selection modes are "zeroOrOne", "OneOrMany", "zeroOrMany" and "none"</p>
+            </div>
+        </section>
+
+        <section id="dropDownListSelectionModes">
+            <h1>Selection Modes</h1>
+            <div class="module">
+                <p>jqxDropDownList has a variaty of selection modes allowing single or multiple item selection.</p>
+            </div>
+            <div class="module dropDownSelections">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>One</th>
+                            <th>Default</th>
+                            <th>CheckBox</th>
+                            <th>RadioButton</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <jqx-drop-down-list class="animation material">
+                                    <jqx-list-item selected>State 1</jqx-list-item>
+                                    <jqx-list-item>State 2</jqx-list-item>
+                                    <jqx-list-item>State 3</jqx-list-item>
+                                </jqx-drop-down-list>
+                            </td>
+                            <td>
+                                <jqx-drop-down-list class="animation material" selection-mode="oneOrManyExtended">
+                                    <jqx-list-item>State 1</jqx-list-item>
+                                    <jqx-list-item selected>State 2</jqx-list-item>
+                                    <jqx-list-item>State 3</jqx-list-item>
+                                </jqx-drop-down-list>
+                            </td>
+                            <td>
+                                <jqx-drop-down-list class="animation material" selection-mode="checkBox">
+                                    <jqx-list-item>Item 1</jqx-list-item>
+                                    <jqx-list-item selected>Item 2</jqx-list-item>
+                                    <jqx-list-item>Item 3</jqx-list-item>
+                                </jqx-drop-down-list>
+                            </td>
+                            <td>
+                                <jqx-drop-down-list class="animation material" selection-mode="radioButton">
+                                    <jqx-list-item>State 1</jqx-list-item>
+                                    <jqx-list-item>State 2</jqx-list-item>
+                                    <jqx-list-item selected>State 3</jqx-list-item>
+                                </jqx-drop-down-list>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Additional selection modes are "zeroOrOne", "OneOrMany", "zeroOrMany" and "none"</p>
+            </div>
+        </section>
+
+        <section id="demoDropDown">
+            <h1>Demo</h1>
+            <div class="module">
+                <p>DropDownLists are controls that are used for making a selection from a list of options.</p>
+            </div>
+            <div class="module shipping">
+                <div>
+                    <h2>Edit shipping info</h2>
+                    <div>
+                        <div class="name">
+                            <i class="material-icons">&#xE7FD;</i>
+                            <span>John Williams</span>
+                        </div>
+                        <div class="address">
+                            <div>
+                                <i class="material-icons">&#xE55F;</i>
+                                <span>2000 Main Street</span> <br />
+                            </div>
+                            <div>
+                                <span>Hoboken</span>
+                                <jqx-drop-down-list class="animation material" drop-down-position="overlay-center">
+                                    <jqx-list-item>NJ</jqx-list-item>
+                                    <jqx-list-item selected>DE</jqx-list-item>
+                                    <jqx-list-item>FL</jqx-list-item>
+                                    <jqx-list-item>NH</jqx-list-item>
+                                    <jqx-list-item>GA</jqx-list-item>
+                                    <jqx-list-item>IN</jqx-list-item>
+                                    <jqx-list-item>HI</jqx-list-item>
+                                    <jqx-list-item>CT</jqx-list-item>
+                                    <jqx-list-item>NM</jqx-list-item>
+                                    <jqx-list-item>ID</jqx-list-item>
+                                    <jqx-list-item>KS</jqx-list-item>
+                                    <jqx-list-item>LA</jqx-list-item>
+                                    <jqx-list-item>KY</jqx-list-item>
+                                    <jqx-list-item>CO</jqx-list-item>
+                                    <jqx-list-item>NE</jqx-list-item>
+                                    <jqx-list-item>OH</jqx-list-item>
+                                    <jqx-list-item>SC</jqx-list-item>
+                                    <jqx-list-item>RI</jqx-list-item>
+                                    <jqx-list-item>TX</jqx-list-item>
+                                    <jqx-list-item>WA</jqx-list-item>
+                                </jqx-drop-down-list>
+                                <span>94122</span>
+                            </div>
+                        </div>
+                        <div class="email">
+                            <i class="material-icons">&#xE0BE;</i>
+                            <span>Email</span>
+                        </div>
+                        <div class="buttons">
+                            <jqx-button class="material flat">Cancel</jqx-button>
+                            <jqx-button class="material flat" disabled>Done</jqx-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module welcome">
+                <div>
+                    <h2>Welcome</h2>
+                    <jqx-drop-down-list class="animation material" drop-down-position="overlay-center" selection-mode="zeroOrOne" placeholder="Select Language">
+                        <jqx-list-item>English(US)</jqx-list-item>
+                        <jqx-list-item>English(UK)</jqx-list-item>
+                        <jqx-list-item>English(AU)</jqx-list-item>
+                        <jqx-list-item>English(IN)</jqx-list-item>
+                        <jqx-list-item>Czech</jqx-list-item>
+                        <jqx-list-item>Dutch</jqx-list-item>
+                        <jqx-list-item>French</jqx-list-item>
+                        <jqx-list-item>German(DE)</jqx-list-item>
+                        <jqx-list-item>German(AT)</jqx-list-item>
+                        <jqx-list-item>Italian</jqx-list-item>
+                        <jqx-list-item>Japanase</jqx-list-item>
+                        <jqx-list-item>Korean</jqx-list-item>
+                        <jqx-list-item>Polish</jqx-list-item>
+                        <jqx-list-item>Russian</jqx-list-item>
+                        <jqx-list-item>Spanish</jqx-list-item>
+                        <jqx-list-item>Arabic(EG)</jqx-list-item>
+                        <jqx-list-item>Arabic(IL)</jqx-list-item>
+                        <jqx-list-item>Bulgarian</jqx-list-item>
+                        <jqx-list-item>Croatian</jqx-list-item>
+                        <jqx-list-item>Danish</jqx-list-item>
+                        <jqx-list-item>Finnish</jqx-list-item>
+                        <jqx-list-item>Romanian</jqx-list-item>
+                        <jqx-list-item>Swedish</jqx-list-item>
+                        <jqx-list-item>Thai</jqx-list-item>
+                        <jqx-list-item>Turkish</jqx-list-item>
+                        <jqx-list-item>Ukrainian</jqx-list-item>
+                        <jqx-list-item>Vietnamese</jqx-list-item>
+                    </jqx-drop-down-list>
+                    <jqx-button class="material floating"><i class="material-icons">&#xE5C8;</i></jqx-button>
+                    <jqx-button class="material flat"><i class="material-icons">&#xE0CD;</i><span>EMERGENCY</span></jqx-button>
+                </div>
+                <p>Android welcome screen</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>List Box Material</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxswitchbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxslider.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <template id="itemTemplate">
+        <div class="templateContainer">
+            <div class="primaryAction"><i class="material-icons"></i>{{label}}</div>
+            <div class="secondaryAction"></div>
+        </div>
+    </template>
+
+    <template id="multiLineTemplate">
+        <div class="templateContainer">
+            <div class="firstLine">{{label}}</div>
+            <div class="secondLine"></div>
+        </div>
+    </template>
+    <div id="materialListBoxContainer">
+        <section>
+            <h1>jqxListBox</h1>
+            <div>
+                <h1>Lists present multiple line items vertically as a single continuous element.</h1>
+                <div class="module">
+                    <p>
+                        Lists are made up of a continuous column of rows. Each row contains a tile.
+                        Primary actions fill the tile, and supplemental actions are represented by icons and text.
+                    </p>
+                    <p>Lists are best suited for similar data types.:</p>
+                    <p><strong>Determinate indicators</strong> display how long an operation will take.</p>
+                    <p><strong>Indeterminate indicators</strong> visualize an unspecified wait time.</p>
+                </div>
+                <div class="module">
+                    <h3>Actions</h3>
+                    <p>Vertical and Horizontal scrolling<br>Filtering and Sorting</p>
+                    <h3>Gestures</h3>
+                    <p>Swipe<br>Drag and drop</p>
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../../images/components-lists.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#behavior">Behavior</a></li>
+                <li><a href="#appearance">Appearance</a></li>
+            </ul>
+        </nav>
+
+        <section id="usage">
+            <h1>Usage</h1>
+            <div class="module">
+                <p>
+                    A <strong>list</strong> consists of a single continuous column of tessellated sub-divisions of equal width called
+                    <strong>rows</strong> that function as containers for <strong>tiles</strong>.
+                </p>
+                <p><strong>Tiles</strong> hold content, and can vary in height within a list.</p>
+            </div>
+            <div class="module">
+                <img alt="" src="../../images/listBox-usage.png">
+                <p>List</p>
+            </div>
+            <div class="module">
+                <img alt="" src="../../images/listBox-usage3.png">
+                <p>Row and tile</p>
+            </div>
+            <div class="module">
+                <p>
+                    Lists are best suited to presenting a homogeneous data type or sets of data types, such as images and text.
+                    They are optimized for reading comprehension while differentiating either between similar data types,
+                    or qualities within a single data type.
+                </p>
+                <h3>Density</h3>
+                <p>When the mouse and keyboard are the primary input methods, measurements may be condensed to accommodate denser layouts.</p>
+            </div>
+            <div class="module">
+                <img alt="" src="../../images/listBox-usage2.png">
+                <p>Typical list scanning pattern</p>
+            </div>
+        </section>
+
+        <section id="behavior">
+            <h1>Behavior</h1>
+            <div class="module">
+                <h2>Scrolling</h2>
+                <p>Lists scroll vertically and horizontally.</p>
+            </div>
+            <div class="module">
+                <jqx-list-box class="material horizontal-scrolling">
+                    <jqx-list-item unselectable>Washington, Connecticut</jqx-list-item>
+                    <jqx-list-item>Washington, Iowa</jqx-list-item>
+                    <jqx-list-item>Washington Park, North Carolina</jqx-list-item>
+                    <jqx-list-item>Springfield, Massachusetts</jqx-list-item>
+                    <jqx-list-item>Mount Washington, Massachusetts</jqx-list-item>
+                    <jqx-list-item>Springfield, West Virginia</jqx-list-item>
+                    <jqx-list-item>Los Angeles, California</jqx-list-item>
+                    <jqx-list-item>Dallas, Texas</jqx-list-item>
+                    <jqx-list-item>Charleston, South Carolina</jqx-list-item>
+                    <jqx-list-item>Las Vegas, Nevada</jqx-list-item>
+                    <jqx-list-item>Seattle, Washington</jqx-list-item>
+                    <jqx-list-item>San Francisco, California</jqx-list-item>
+                    <jqx-list-item>Washington, D.C.</jqx-list-item>
+                    <jqx-list-item>New Orleans, Louisiana</jqx-list-item>
+                    <jqx-list-item>Palm Springs, California</jqx-list-item>
+                    <jqx-list-item>Saint Augustine, Florida</jqx-list-item>
+                    <jqx-list-item>St. Louis, Missouri</jqx-list-item>
+                </jqx-list-box>
+            </div>
+            <div class="module"></div>
+            <div class="module">
+                <h2>Gestures</h2>
+                <p>The swipe action of each tile should be consistent within lists.</p>
+            </div>
+            <div class="module gestures">
+                <jqx-list-box id="gestureListBox" class="material">
+                    <jqx-list-item>Attarctions</jqx-list-item>
+                    <jqx-list-item>Dining</jqx-list-item>
+                    <jqx-list-item>Education</jqx-list-item>
+                    <jqx-list-item>Family</jqx-list-item>
+                    <jqx-list-item>Health</jqx-list-item>
+                    <jqx-list-item>Office</jqx-list-item>
+                    <jqx-list-item>Promotions</jqx-list-item>
+                    <jqx-list-item>Radio</jqx-list-item>
+                    <jqx-list-item>TV</jqx-list-item>
+                    <jqx-list-item>Entertainment</jqx-list-item>
+                    <jqx-list-item>Recipies</jqx-list-item>
+                    <jqx-list-item>Sports</jqx-list-item>
+                    <jqx-list-item>Travel</jqx-list-item>
+                    <jqx-list-item>Sports</jqx-list-item>
+                    <jqx-list-item>Hiking</jqx-list-item>
+                    <jqx-list-item>Skiing</jqx-list-item>
+                    <jqx-list-item>Politics</jqx-list-item>
+                </jqx-list-box>
+                <p>jqxListBox provides Swipe left and Swipe right events to allow even more customizability.</p>
+            </div>
+
+            <div class="module">
+                <h2>Drag & Drop</h2>
+                <p>Tiles may be moved between a list and drop target (similar to moving a file into a folder) and picked up and manually reordered within a list.</p>
+                <p>Reorder property allows the items inside the list box to be moved.</p>
+                <p>Items can even be moved accross list boxes.</p>
+            </div>
+            <div class="module dragDrop">
+                <jqx-list-box id="dragDrop" class="material" reorder>
+                    <jqx-list-item>Butter</jqx-list-item>
+                    <jqx-list-item>Tacos</jqx-list-item>
+                    <jqx-list-item>Bread</jqx-list-item>
+                    <jqx-list-item>Chocolate</jqx-list-item>
+                    <jqx-list-item>Ice cream</jqx-list-item>
+                    <jqx-list-item>Meat</jqx-list-item>
+                    <jqx-list-item>Fries</jqx-list-item>
+                    <jqx-list-item>Potatoes</jqx-list-item>
+                    <jqx-list-item>Salad</jqx-list-item>
+                    <jqx-list-item>Rice</jqx-list-item>
+                    <jqx-list-item>Recipies</jqx-list-item>
+                    <jqx-list-item>Pie</jqx-list-item>
+                    <jqx-list-item>Milk</jqx-list-item>
+                    <jqx-list-item>Eggs</jqx-list-item>
+                    <jqx-list-item>Seafood</jqx-list-item>
+                    <jqx-list-item>Cereal</jqx-list-item>
+                    <jqx-list-item>Spaghetti</jqx-list-item>
+                </jqx-list-box>
+                <p>List box A</p>
+            </div>
+            <div class="module">
+                <jqx-list-box class="material" reorder>
+                    <jqx-list-item>Tofu</jqx-list-item>
+                    <jqx-list-item>Buttered toast with Marmite</jqx-list-item>
+                    <jqx-list-item>Marzipan</jqx-list-item>
+                    <jqx-list-item>Ketchup</jqx-list-item>
+                    <jqx-list-item>French toast</jqx-list-item>
+                    <jqx-list-item>Chicken parm</jqx-list-item>
+                    <jqx-list-item>Hummus</jqx-list-item>
+                    <jqx-list-item>Chili crab</jqx-list-item>
+                    <jqx-list-item>Maple syrup</jqx-list-item>
+                    <jqx-list-item>Ankimo</jqx-list-item>
+                    <jqx-list-item>Parma ham</jqx-list-item>
+                    <jqx-list-item>Goi cuon (summer roll),</jqx-list-item>
+                    <jqx-list-item>Ohmi-gyu beef steak</jqx-list-item>
+                    <jqx-list-item>Pho</jqx-list-item>
+                    <jqx-list-item>Lechón</jqx-list-item>
+                    <jqx-list-item>Fajitas</jqx-list-item>
+                    <jqx-list-item>Butter garlic crab</jqx-list-item>
+                    <jqx-list-item>Champ</jqx-list-item>
+                    <jqx-list-item>Lasagna</jqx-list-item>
+                    <jqx-list-item>Poke</jqx-list-item>
+                    <jqx-list-item>Croissant</jqx-list-item>
+                    <jqx-list-item>Arepas</jqx-list-item>
+                </jqx-list-box>
+                <p>List box B</p>
+            </div>
+            <div class="module">
+                <h2>Filtering and sorting</h2>
+                <p>List tiles can be sorted or filtered by date, file size, alphabetical order, or other parameters.</p>
+                <h2>Icon with text</h2>
+                <p>List tiles can contain text with icons. Thanks to the itemTemplate property any HTML code can be placed inside the tiles.</p>
+                <h2>Avatar with text</h2>
+                <p>List tiles can also contain avatars.</p>
+            </div>
+            <div class="module">
+                <jqx-list-box id="phoneBook" class="material" sorted>
+                    <jqx-list-item>Andrew Watson</jqx-list-item>
+                    <jqx-list-item>Anne Kean</jqx-list-item>
+                    <jqx-list-item>Avril Janin</jqx-list-item>
+                    <jqx-list-item>Janet Pattenson</jqx-list-item>
+                    <jqx-list-item>Johanna Svensson</jqx-list-item>
+                    <jqx-list-item>Johnny Abana</jqx-list-item>
+                    <jqx-list-item>Laura Thene</jqx-list-item>
+                    <jqx-list-item>Margaret Vetton</jqx-list-item>
+                    <jqx-list-item>Maria Sevrano</jqx-list-item>
+                    <jqx-list-item>Mark Yemen</jqx-list-item>
+                    <jqx-list-item>Maya Verdara</jqx-list-item>
+                    <jqx-list-item>Michael Barton</jqx-list-item>
+                    <jqx-list-item>Monica Oghini</jqx-list-item>
+                    <jqx-list-item>Nancy Queens</jqx-list-item>
+                    <jqx-list-item>Robert Drawny</jqx-list-item>
+                    <jqx-list-item>Steven Fedrichy</jqx-list-item>
+                    <jqx-list-item>Toni Versachi</jqx-list-item>
+                </jqx-list-box>
+                <p>Alphabetical sorting makes information easier to find.</p>
+            </div>
+            <div class="module">
+                <jqx-list-box id="settingsMenu" class="material" filterable filter-input-placeholder="Searching ...">
+                    <jqx-list-items-group label="Wireless & Networks">
+                        <jqx-list-item>Wi-Fi</jqx-list-item>
+                        <jqx-list-item>Bluetooth</jqx-list-item>
+                        <jqx-list-item>Data usage</jqx-list-item>
+                        <jqx-list-item>Connect a device</jqx-list-item>
+                        <jqx-list-item>More...</jqx-list-item>
+                    </jqx-list-items-group>
+                    <jqx-list-items-group label="Device">
+                        <jqx-list-item>Personalisation</jqx-list-item>
+                        <jqx-list-item>Call Settings</jqx-list-item>
+                        <jqx-list-item>Sound</jqx-list-item>
+                        <jqx-list-item>Display</jqx-list-item>
+                        <jqx-list-item>Storage</jqx-list-item>
+                        <jqx-list-item>Power management</jqx-list-item>
+                        <jqx-list-item>Apps</jqx-list-item>
+                        <jqx-list-item>Users</jqx-list-item>
+                    </jqx-list-items-group>
+                    <jqx-list-items-group label="Personal">
+                        <jqx-list-item>Location</jqx-list-item>
+                        <jqx-list-item>Security</jqx-list-item>
+                        <jqx-list-item>Profiles</jqx-list-item>
+                        <jqx-list-item>Google</jqx-list-item>
+                        <jqx-list-item>Language & Keyboard</jqx-list-item>
+                        <jqx-list-item>Backup & Restore</jqx-list-item>
+                    </jqx-list-items-group>
+                    <jqx-list-items-group label="System">
+                        <jqx-list-item>Date & Time</jqx-list-item>
+                        <jqx-list-item>Accessibility</jqx-list-item>
+                        <jqx-list-item>Printing</jqx-list-item>
+                        <jqx-list-item>About phone</jqx-list-item>
+                        <jqx-list-item>Support</jqx-list-item>
+                    </jqx-list-items-group>
+                </jqx-list-box>
+                <p>Filtering allows the user to quickly find the needed items.</p>
+            </div>
+        </section>
+
+        <section id="multiLineLists">
+            <div class="module">
+                <h2>Two-line list</h2>
+                <p>Lists can have multiple lines of text in a single tile.</p>
+            </div>
+            <div class="module">
+                <img alt="" src="../../images/two-line-list.png">
+                <p>Two-line list</p>
+            </div>
+            <div class="module">
+                <img alt="" src="../../images/two-line-list-icon.png">
+                <p>Two-line list with icon</p>
+            </div>
+            <div class="module">
+                <h2>Demo usage</h2>
+            </div>
+            <div class="module">
+                <jqx-list-box id="twoLineList" class="material" sorted>
+                    <jqx-list-item>Andrew Watson</jqx-list-item>
+                    <jqx-list-item>Anne Kean</jqx-list-item>
+                    <jqx-list-item>Avril Janin</jqx-list-item>
+                    <jqx-list-item>Janet Pattenson</jqx-list-item>
+                    <jqx-list-item>Johanna Svensson</jqx-list-item>
+                    <jqx-list-item>Johnny Abana</jqx-list-item>
+                    <jqx-list-item>Laura Thene</jqx-list-item>
+                    <jqx-list-item>Margaret Vetton</jqx-list-item>
+                    <jqx-list-item>Maria Sevrano</jqx-list-item>
+                    <jqx-list-item>Mark Yemen</jqx-list-item>
+                    <jqx-list-item>Maya Verdara</jqx-list-item>
+                    <jqx-list-item>Michael Barton</jqx-list-item>
+                    <jqx-list-item>Monica Oghini</jqx-list-item>
+                    <jqx-list-item>Nancy Queens</jqx-list-item>
+                    <jqx-list-item>Robert Drawny</jqx-list-item>
+                    <jqx-list-item>Steven Fedrichy</jqx-list-item>
+                    <jqx-list-item>Toni Versachi</jqx-list-item>
+                </jqx-list-box>
+                <p>Example of a two-line list.</p>
+            </div>
+            <div class="module checkList">
+                <jqx-list-box id="twoLineCheckList" class="material" sorted selection-mode="checkBox">
+                    <jqx-list-item>Alarms</jqx-list-item>
+                    <jqx-list-item>Android</jqx-list-item>
+                    <jqx-list-item>DCIM</jqx-list-item>
+                    <jqx-list-item>DeviceConfifg</jqx-list-item>
+                    <jqx-list-item>Documents</jqx-list-item>
+                    <jqx-list-item>Download</jqx-list-item>
+                    <jqx-list-item>Edited</jqx-list-item>
+                    <jqx-list-item>LazyList</jqx-list-item>
+                    <jqx-list-item>Movies</jqx-list-item>
+                    <jqx-list-item>Music</jqx-list-item>
+                    <jqx-list-item>Notifications</jqx-list-item>
+                    <jqx-list-item>System</jqx-list-item>
+                    <jqx-list-item>System Volume Information</jqx-list-item>
+                    <jqx-list-item>Podcast</jqx-list-item>
+                    <jqx-list-item>Ringtones</jqx-list-item>
+                    <jqx-list-item>New folder</jqx-list-item>
+                    <jqx-list-item>Temp</jqx-list-item>
+                </jqx-list-box>
+                <jqx-button id="deleteButton" class="material floating jqx-visibility-hidden"><i class="material-icons">&#xE16C;</i></jqx-button>
+                <p>Example of a two-line list with icon.</p>
+            </div>
+        </section>
+
+        <section id="appearance">
+            <h1>Appearance</h1>
+            <div class="module">
+                <h2>Themes</h2>
+                <p>Two themes are available by default: Light and Dark.</p>
+            </div>
+            <div class="module">
+                <jqx-list-box id="listBoxLight" class="material">
+                    <jqx-list-items-group label="Sound">
+                        <jqx-list-item>Audio settings</jqx-list-item>
+                        <jqx-list-item>Accessory settings</jqx-list-item>
+                        <jqx-list-item>Media volume</jqx-list-item>
+                        <jqx-list-item>Alarm volume</jqx-list-item>
+                        <jqx-list-item>Ring volume</jqx-list-item>
+                        <jqx-list-item>Also vibrate for calls</jqx-list-item>
+                        <jqx-list-item>Do not disturb</jqx-list-item>
+                        <jqx-list-item>Phone ringtone</jqx-list-item>
+                        <jqx-list-item>Increasing ringtone</jqx-list-item>
+                        <jqx-list-item>Notification sound</jqx-list-item>
+                        <jqx-list-item>Other sounds</jqx-list-item>
+                    </jqx-list-items-group>
+                    <jqx-list-items-group label="Notification">
+                        <jqx-list-item>Notification light</jqx-list-item>
+                        <jqx-list-item>When device is locked</jqx-list-item>
+                        <jqx-list-item>App notifications</jqx-list-item>
+                        <jqx-list-item>Keep notifications on lock screen</jqx-list-item>
+                    </jqx-list-items-group>
+                    <jqx-list-items-group label="Advanced">
+                        <jqx-list-item>Notification access</jqx-list-item>
+                        <jqx-list-item>Do not disturb access</jqx-list-item>
+                    </jqx-list-items-group>
+                </jqx-list-box>
+                <p>jqxListBox light theme.</p>
+            </div>
+            <div class="module checkList">
+                <jqx-list-box id="listBoxDark" class="material-dark">
+                    <jqx-list-items-group label="Sound">
+                        <jqx-list-item>Audio settings</jqx-list-item>
+                        <jqx-list-item>Accessory settings</jqx-list-item>
+                        <jqx-list-item>Media volume</jqx-list-item>
+                        <jqx-list-item>Alarm volume</jqx-list-item>
+                        <jqx-list-item>Ring volume</jqx-list-item>
+                        <jqx-list-item>Also vibrate for calls</jqx-list-item>
+                        <jqx-list-item>Do not disturb</jqx-list-item>
+                        <jqx-list-item>Phone ringtone</jqx-list-item>
+                        <jqx-list-item>Increasing ringtone</jqx-list-item>
+                        <jqx-list-item>Notification sound</jqx-list-item>
+                        <jqx-list-item>Other sounds</jqx-list-item>
+                    </jqx-list-items-group>
+                    <jqx-list-items-group label="Notification">
+                        <jqx-list-item>Notification light</jqx-list-item>
+                        <jqx-list-item>When device is locked</jqx-list-item>
+                        <jqx-list-item>App notifications</jqx-list-item>
+                        <jqx-list-item>Keep notifications on lock screen</jqx-list-item>
+                    </jqx-list-items-group>
+                    <jqx-list-items-group label="Advanced">
+                        <jqx-list-item>Notification access</jqx-list-item>
+                        <jqx-list-item>Do not disturb access</jqx-list-item>
+                    </jqx-list-items-group>
+                </jqx-list-box>
+                <p>jqxListBox dark theme.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

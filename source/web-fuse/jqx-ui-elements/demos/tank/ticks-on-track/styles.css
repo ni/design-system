@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    background-color: #F3F3F3;
+}
+
+#tank {
+    --jqx-border-width: 4px;
+    width: 500px;
+    height: 300px;
+    margin-left: 50px;
+}
+
+    #tank .jqx-track {
+        border-style: solid;
+        border-color: #9D9D9D;
+        background-color: #9D9D9D;
+    }
+
+    #tank .jqx-value {
+        background-color: #FFBB00;
+    }
+
+    #tank .jqx-tick {
+        background-color: #F3F3F3;
+    }

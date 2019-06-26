@@ -1,0 +1,52 @@
+jqx-docking-layout {
+    width: 50%;
+    height: 725px;
+    float: left;
+}
+
+    jqx-docking-layout .jqx-items-container > .jqx-container > jqx-splitter-item {
+        width: 33.3%;
+    }
+
+#saveState {
+    margin-left: 65%;
+}
+
+#state {
+    float: left;
+    margin-left: 15%;
+    width: 35%;
+    height: 725px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    white-space: pre;
+    font-family: monospace;
+    overflow: auto;
+}
+
+.jqx-window jqx-carousel,
+.jqx-window jqx-multiline-text-box,
+.jqx-window jqx-gauge,
+.jqx-window jqx-tank {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+    .jqx-window jqx-carousel .jqx-carousel-item .jqx-carousel-item-container {
+        background-size: cover;
+    }
+
+.jqx-window jqx-tab-item > .jqx-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jqx-window jqx-multiline-text-box {
+    color: black;
+}
+
+.jqx-window jqx-progress-bar {
+    margin-right: 5px;
+}

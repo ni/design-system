@@ -1,0 +1,26 @@
+jqx-docking-layout {
+    width: 50%;
+    height: 500px;
+}
+
+    jqx-docking-layout .jqx-items-container jqx-splitter-item,
+    jqx-docking-layout .jqx-items-container > .jqx-container > jqx-splitter-item {
+        width: 50%;
+        height: 50%;
+    }
+
+jqx-tabs-window jqx-slider,
+jqx-tabs-window jqx-tank {
+    height: 100%;
+    width: 100%;
+}
+
+/* Setting the icon of the custom settings button in the header of the TankPanel */
+.jqx-window .jqx-settings-button:after {
+    content: '\f0c9';
+    font-size: 0.8rem;
+}
+
+#menu {
+    height: auto;
+}

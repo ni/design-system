@@ -1,0 +1,36 @@
+:host {
+    margin: auto;
+}
+
+.mc-error-main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mc-error-code {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 200px;
+    font-family: var(--mc-headline-font);
+}
+
+.mc-error-message {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--mc-size-larger-2);
+    font-family: var(--mc-headline-font);
+}
+
+.mc-error-link {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--mc-space-larger-3);
+    font-size: var(--mc-size-larger-1);
+    color: var(--mc-blue-base);
+    text-decoration: none;
+}
+
+.mc-error-link:hover {
+    text-decoration: underline;
+}

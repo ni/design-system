@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Menu Data Grid</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmenu.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="columnHeader">
+        <div id="columnText">First Name</div>
+        <div id="columnMenuButton">
+            <jqx-menu id="filterMenu" class="animation" mode="dropDown">
+                <jqx-menu-item><img src="https://www.jqwidgets.com/jquery-widgets-demo/jqwidgets/styles/images/icon-sort-asc.png" /> Sort Ascending</jqx-menu-item>
+                <jqx-menu-item><img src="https://www.jqwidgets.com/jquery-widgets-demo/jqwidgets/styles/images/icon-sort-desc.png" /> Sort Descending</jqx-menu-item>
+                <jqx-menu-item disabled separator><img src="https://www.jqwidgets.com/jquery-widgets-demo/jqwidgets/styles/images/icon-sort-remove.png" /> Remove Sort</jqx-menu-item>
+                <jqx-menu-item label="filterTemplate"></jqx-menu-item>
+            </jqx-menu>
+        </div>
+    </div>
+
+    <template id="filterTemplate">
+        <div id="templateContainer">
+            <div>Show rows where:</div>
+            <br />
+            <jqx-drop-down-list data-source='["empty", "not empty", "contains", "contains (match case)", "does not contain", "does not contain (match case)", "starts with", "starts with (match case)", "ends with", "ends with (match case)", "equal", "equal (match case)", "null", "not null"]' selected-values='["contains"]' drop-down-append-to="body">
+            </jqx-drop-down-list>
+            <jqx-text-box value="Beate"></jqx-text-box>
+            <jqx-drop-down-list id="andOrSelection" data-source='["And", "Or"]' selected-values='["Or"]' drop-down-height="auto" drop-down-append-to="body"></jqx-drop-down-list>
+            <jqx-drop-down-list data-source='["empty", "not empty", "contains", "contains (match case)", "does not contain", "does not contain (match case)", "starts with", "starts with (match case)", "ends with", "ends with (match case)", "equal", "equal (match case)", "null", "not null"]' selected-values='["starts with"]' drop-down-append-to="body">
+            </jqx-drop-down-list>
+            <jqx-text-box value="Andrew"></jqx-text-box>
+            <div id="buttonContainer">
+                <jqx-button>Filter</jqx-button>
+                <jqx-button>Clear</jqx-button>
+            </div>
+        </div>
+    </template>
+</body>
+</html>

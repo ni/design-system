@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Menu Overview</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmenu.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <p>Menu 1 is initially in <em>menu1Container</em> (blue), but is then appended to the body (<code>drop-down-append-to="body"</code>). It is positioned relative to <em>menu1Container</em>.</p>
+    <p>Menu 2 is initially in <em>menu2Container</em> (gold), but is then appended to <em>menu2ActualContainer</em> (orange) (<code>drop-down-append-to="menu2ActualContainer"</code>). It is positioned relative to <em>menu2Container</em>.</p>
+    <p>Menu 3 is initially in the body, but is then appended to the <em>menu3ActualContainer</em> (green) (<code>drop-down-append-to="menu3ActualContainer"</code>). It is positioned relative to the body.</p>
+    <jqx-button id="open1">Open Menu 1</jqx-button>
+    <jqx-button id="open2">Open Menu 2</jqx-button>
+    <jqx-button id="open3">Open Menu 3</jqx-button>
+    <div id="menu1Container">
+        <jqx-menu id="menu1" mode="dropDown" drop-down-append-to="body">
+            <jqx-menu-items-group>
+                File
+                <jqx-menu-item shortcut="Ctrl+N">New</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+0">Open</jqx-menu-item>
+                <jqx-menu-items-group>
+                    Open Containing Folder
+                    <jqx-menu-item>Explorer</jqx-menu-item>
+                    <jqx-menu-item>cmd</jqx-menu-item>
+                </jqx-menu-items-group>
+                <jqx-menu-item shortcut="Ctrl+S" disabled>Save</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+Alt+S" separator>Save As...</jqx-menu-item>
+                <jqx-menu-item shortcut="Alt+F4">Exit</jqx-menu-item>
+            </jqx-menu-items-group>
+            <jqx-menu-items-group>
+                Edit
+                <jqx-menu-item shortcut="Ctrl+Z">Undo</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+Y" separator>Redo</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+X">Cut</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+C">Copy</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+V" disabled>Paste</jqx-menu-item>
+            </jqx-menu-items-group>
+        </jqx-menu>
+    </div>
+    <div id="menu2Container">
+        <jqx-menu id="menu2" mode="dropDown" drop-down-append-to="menu2ActualContainer">
+            <jqx-menu-items-group>
+                File
+                <jqx-menu-item shortcut="Ctrl+N">New</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+0">Open</jqx-menu-item>
+                <jqx-menu-items-group>
+                    Open Containing Folder
+                    <jqx-menu-item>Explorer</jqx-menu-item>
+                    <jqx-menu-item>cmd</jqx-menu-item>
+                </jqx-menu-items-group>
+                <jqx-menu-item shortcut="Ctrl+S" disabled>Save</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+Alt+S" separator>Save As...</jqx-menu-item>
+                <jqx-menu-item shortcut="Alt+F4">Exit</jqx-menu-item>
+            </jqx-menu-items-group>
+            <jqx-menu-items-group>
+                Edit
+                <jqx-menu-item shortcut="Ctrl+Z">Undo</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+Y" separator>Redo</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+X">Cut</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+C">Copy</jqx-menu-item>
+                <jqx-menu-item shortcut="Ctrl+V" disabled>Paste</jqx-menu-item>
+            </jqx-menu-items-group>
+        </jqx-menu>
+    </div>
+    <div id="menu2ActualContainerParent">
+        <div id="menu2ActualContainer"></div>
+    </div>
+    <jqx-menu id="menu3" mode="dropDown" drop-down-append-to="menu3ActualContainer">
+        <jqx-menu-items-group>
+            File
+            <jqx-menu-item shortcut="Ctrl+N">New</jqx-menu-item>
+            <jqx-menu-item shortcut="Ctrl+0">Open</jqx-menu-item>
+            <jqx-menu-items-group>
+                Open Containing Folder
+                <jqx-menu-item>Explorer</jqx-menu-item>
+                <jqx-menu-item>cmd</jqx-menu-item>
+            </jqx-menu-items-group>
+            <jqx-menu-item shortcut="Ctrl+S" disabled>Save</jqx-menu-item>
+            <jqx-menu-item shortcut="Ctrl+Alt+S" separator>Save As...</jqx-menu-item>
+            <jqx-menu-item shortcut="Alt+F4">Exit</jqx-menu-item>
+        </jqx-menu-items-group>
+        <jqx-menu-items-group>
+            Edit
+            <jqx-menu-item shortcut="Ctrl+Z">Undo</jqx-menu-item>
+            <jqx-menu-item shortcut="Ctrl+Y" separator>Redo</jqx-menu-item>
+            <jqx-menu-item shortcut="Ctrl+X">Cut</jqx-menu-item>
+            <jqx-menu-item shortcut="Ctrl+C">Copy</jqx-menu-item>
+            <jqx-menu-item shortcut="Ctrl+V" disabled>Paste</jqx-menu-item>
+        </jqx-menu-items-group>
+    </jqx-menu>
+    <div id="menu3ActualContainerParent">
+        <div id="menu3ActualContainer"></div>
+    </div>
+</body>
+</html>

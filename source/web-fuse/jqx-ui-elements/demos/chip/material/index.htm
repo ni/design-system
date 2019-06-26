@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chip Material</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxchip.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div style="position: relative;" id="container">
+        <section>
+            <h1>jqxChip</h1>
+            <div>
+                <h1>Chips represent complex entities in small blocks, such as a contact.</h1>
+                <div class="module">
+                    <p>A chip may contain entities such as a photo, text, rules, an icon, or a contact.</p>
+                    <p>Contact chips may represent contact information in a compact way.</p>
+                </div>
+                <div class="module">
+                    <h3>Behavior</h3>
+                    <ul>
+                        <li>Selecting a chip opens a full detail view.</li>
+                        <li>Chips may be deleted if they display a delete icon.</li>
+                    </ul>
+                </div>
+                <div class="module">
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#chips-usage">Usage</a></li>
+                <li><a href="#chips-behavior">Behavior</a></li>
+                <li><a href="#chips-contact-chips">Contact chips</a></li>
+                <li><a href="#chips-specs">Specs</a></li>
+            </ul>
+        </nav>
+        <section id="chips-usage">
+            <h2>Usage</h2>
+            <div class="module ">
+                <h2>Types of chips</h2>
+                <p>
+                    Chips can be used for various types of entities, including free form text, predefined text, rules, or contacts. Chips may also contain icons.
+                </p>
+            </div>
+            <div class="module">
+                <div class="light">
+                    <jqx-chip close-button class="material">Example Chip</jqx-chip> <br /><br />
+                    <jqx-chip class="material">Example Chip</jqx-chip>
+                </div>
+                <p>Chips with text</p>
+            </div>
+            <div class="module">
+                <div class="light">
+                    <jqx-chip class="material" close-button>Trevor Hansen</jqx-chip> <br /><br />
+                    <jqx-chip class="material" avatar="A">ANZ Bank</jqx-chip>
+                </div>
+                <p>Chips with text and an icon</p>
+            </div>
+        </section>
+
+        <section id="chips-usage">
+            <h2>Behavior</h2>
+            <h3>Opening chips</h3>
+            <p>
+                Touching a chip opens a full detailed view (either in a card or full screen) or a menu of options related to that chip.
+            </p>
+            <div class="module ">
+                <h2>Deleting chips</h2>
+                <p>
+                    Chips can be deletable or non-deletable. Display a delete icon if a chip is deletable.
+                </p>
+            </div>
+            <div class="module module-large">
+                <div class="light">
+                    <div id="deletableChips" class="chips">
+                        <span class="left-container"><i class="material-icons">&#xE152;</i></span>
+                        <span class="edit-container">
+                            <jqx-chip close-button class="material">Redbull (interest)</jqx-chip>
+                            <jqx-chip close-button class="material">GoPro (interest)</jqx-chip>
+
+                        </span>
+                        <span class="right-container"> <span class="small">OR</span> <i class="material-icons">&#xE161;</i> <i class="material-icons">&#xE14C;</i></span>
+                    </div>
+                </div>
+                <p>
+                    Users may press the delete icon or use the keyboard “Delete” button to remove a chip.
+                </p>
+            </div>
+            <div class="module">
+            </div>
+        </section>
+
+        <section id="chips-themes">
+            <h2>Themes</h2>
+            <div class="module">
+            </div>
+            <div class="module">
+                <div class="light">
+                    <jqx-chip close-button class="material">ANZ Bank</jqx-chip>
+                </div>
+                <p>Light theme</p>
+            </div>
+            <div class="module">
+                <div class="dark">
+                    <jqx-chip close-button class="material-dark">ANZ Bank</jqx-chip>
+                </div>
+                <p>Dark theme</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+[
+    {
+       "cursor": "StandardCanvas_Pallete_32x32.svg"
+    },
+    {
+       "cursor": "HoverObject_32x32.svg"
+    },
+    {
+       "cursor": "MoveObject_32x32.svg"
+    },
+    {
+       "cursor": "Duplicate_32x32.svg"
+    },
+    {
+       "cursor": "ShiftRegister_32x32.svg"
+    },
+    {
+       "cursor": "ShiftRegisterHover_32x32.svg"
+    },
+    {
+       "cursor": "Tunnel_32x32.svg"
+    },
+    {
+       "cursor": "TunnelHover_32x32.svg"
+    },
+    {
+       "cursor": "AddShowHiddenElement_32x32.svg"
+    },
+    {
+       "cursor": "Selection_32x32.svg"
+    },
+    {
+       "cursor": "Help_32x32.svg"
+    },
+    {
+       "cursor": "Unavailable_32x32.svg"
+    },
+    {
+       "cursor": "MultiSelect_32x32.svg"
+    },
+    {
+       "cursor": "Probes_32x32.svg"
+    },
+    {
+       "cursor": "SweepHorizontal_32x32.svg"
+    },
+    {
+       "cursor": "SweepVertical_32x32.svg"
+    },
+    {
+       "cursor": "ResizeHorizontal_32x32.svg"
+    },
+    {
+       "cursor": "ResizeDiagnal_TopL_BottomR_32x32.svg"
+    },
+    {
+       "cursor": "ResizeDiagnal_TopR_BottomL_32x32.svg"
+    },
+    {
+       "cursor": "ResizeVertical_32x32.svg"
+    },
+    {
+       "cursor": "Rotate_BottomL_32x32.svg"
+    },
+    {
+       "cursor": "Rotate_BottomR_32x32.svg"
+    },
+    {
+       "cursor": "Rotate_TopL_32x32.svg"
+    },
+    {
+       "cursor": "Rotate_TopR_32x32.svg"
+    },
+    {
+       "cursor": "WiringTool_Default_32x32.svg"
+    },
+    {
+       "cursor": "ZoomIn_32x32.svg"
+    },
+    {
+       "cursor": "ZoomOut_32x32.svg"
+    },
+    {
+       "cursor": "ZoomSweepHorizontal_32x32.svg"
+    },
+    {
+       "cursor": "ZoomSweepVertical_32x32.svg"
+    },
+    {
+       "cursor": "ZoomSelectedArea_32x32.svg"
+    },
+    {
+       "cursor": "LinkSelect_32x32.svg"
+    },
+    {
+       "cursor": "Grab_32x32.svg"
+    },
+    {
+       "cursor": "Grabbing_32x32.svg"
+    },
+    {
+       "cursor": "GrabSwipeHorizontal_32x32.svg"
+    },
+    {
+       "cursor": "GrabbingSwipeHorizontal_32x32.svg"
+    },
+    {
+       "cursor": "GrabSwipeVertical_32x32.svg"
+    },
+    {
+       "cursor": "GrabbingSwipeVertical_32x32.svg"
+    },
+    {
+       "cursor": "DrawLine_32x32.svg"
+    },
+    {
+       "cursor": "PenTool_Curves_32x32.svg"
+    },
+    {
+       "cursor": "DrawStructure_32x32.svg"
+    },
+    {
+       "cursor": "PenTool_Add_32x32.svg"
+    },
+    {
+       "cursor": "PenTool_Subtract_32x32.svg"
+    },
+    {
+       "cursor": "PenTool_Close_32x32.svg"
+    },
+    {
+       "cursor": "PenTool_Continue_32x32.svg"
+    },
+    {
+       "cursor": "Signature_32x32.svg"
+    }
+ ]

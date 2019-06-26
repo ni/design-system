@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px auto 0px auto;
+    padding: 0px 10px 0px 10px;
+}
+
+jqx-accordion {
+    float: left;
+    width: 250px;
+    height: 500px;
+    margin-right: 50px;
+}
+
+#sideContainer {
+    float: left;
+    padding-top: 10px;
+    height: 100%;
+}
+
+#log {
+    float: left;
+    padding-top: 10px;
+    height: 100%;
+}
+
+jqx-accordion-item[expanded] .jqx-accordion-item-header,
+jqx-accordion-item[expanded] .jqx-accordion-item-content {
+    background-color: #f2f2f2;
+}
+
+jqx-accordion-item[expanded] .jqx-accordion-item-header {
+    border-bottom: gray dashed 1px;
+}
+
+.expanded {
+    margin-bottom: 10px;
+}

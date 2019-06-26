@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calendar Important Daays</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcalendar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtooltip.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <jqx-calendar class="special-days" important-dates-template="importantDatesTemplate" important-dates='["2017, 6, 9", "2017, 7, 1", "2017, 7, 30", "2018, 12, 24"]' tooltip></jqx-calendar>
+    <template id="importantDatesTemplate">
+        <span>{{day}}</span>
+        <span>&#127874</span>
+    </template>
+    <div>
+        <h3>Important Dates:</h3>
+        <div id="importantDates"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+---
+layout: page
+title: Colors
+category: style
+tags:
+  - palette
+  - hex
+  - rgb
+  - IDE
+  - color
+status: ready
+description: foo
+---
+
+To use these colors, you will need to make sure that your XAML file has a direct or indirect references to **Colors.xaml**.
+
+## Editor colors
+
+This list contains the primary colors used throughout NI software interfaces.
+
+export const colorseditor = 
+[
+    {
+       "name": "NIBlueBrush",
+       "value": "#065FA3"
+    },
+    {
+       "name": "NIHighlightBrush",
+       "value": "#4386B9"
+    },
+    {
+       "name": "NIBlueMediumAccentBrush",
+       "value": "#4386B9"
+    }
+]
+
+import colors from './colors-editor.json'
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Example</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+  { colors.map(color => {
+    if (color.type == null) {
+    return (
+    <tr>
+      <td> { color.name } </td>
+      <td style={{ backgroundColor: color.value }}></td>
+      <td> { color.value } </td> 
+    </tr> )
+    } 
+    return ( 
+      <tr>
+        <td> { color.name } </td>
+        <td style={{ background: `linear-gradient(#E9EBEC 0% , #D9DEE1 40%)` }}></td>
+        <td> {`${color.stop1value } (Offset: ${ color.stop1offset }) ${ color.stop2value } (Offset: ${ color.stop2offset })` }</td> 
+      </tr> )
+    }
+  )}
+  </tbody>
+</table>
+
+#### Editor colors implementation example
+To use the colors in a XAML file, reference the resource dictionary and use the names of the colors.
+
+```xml
+<!--Reference Colors.xaml as a resource dictionary -->
+<ResourceDictionary Source="/NationalInstruments.Core;component/Themes/Colors.xaml" />
+<!--After that, you can use the colors by name -->
+ <Rectangle 
+  Fill="{StaticResource NIHighlightBrush}" 
+  Height="100" 
+  Width="100"/>  
+```
+
+## Data type colors
+Data type colors are defined in **PlatformFramework\\SourceModel\\StockTypeAssets.cs** as part of the public static class `StockTypeAssets`.
+
+import typecolors from './color-data-type.json'
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>      
+      <th>Example</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  
+    { typecolors.map(color => {
+      return (   
+        <tbody>  
+        <th colspan="3">{ color.type }</th>
+        <tr>            
+            <td>{ color.name }</td>
+            <td style={{ backgroundColor: color.primary }}></td>
+            <td>{ color.primary }</td>
+        </tr>
+         <tr>
+            <td>{ color.name }Secondary</td>
+            <td style={{ backgroundColor: color.secondary }}></td>
+            <td>{ color.secondary }</td>
+        </tr>
+        <tr>
+            <td style="border:0px"></td>
+            <td style="border:0px"></td>
+            <td style="border:0px"></td>
+        </tr> 
+        </tbody>)})}
+</table>

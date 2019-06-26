@@ -1,0 +1,17 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+jqx-grid-column .jqx-sort-button.jqx-grid-icon {
+	font-family: 'FontAwesome';	
+	font-size: 13px;
+	color: #9B9B9B;
+}
+
+jqx-grid-column .jqx-sort-button.jqx-icon-sort:before {
+	content: "\f0dc";
+}
+
+jqx-grid-column .jqx-sort-button.asc:before,
+jqx-grid-column .jqx-sort-button.desc:before {
+	content: "\f0dd";
+}
+

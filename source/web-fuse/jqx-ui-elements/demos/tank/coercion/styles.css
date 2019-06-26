@@ -1,0 +1,13 @@
+p, jqx-numeric-text-box, #tank {
+    margin-left: 35px;
+}
+
+jqx-numeric-text-box {
+    width: 300px;
+    height: 35px;
+}
+
+#tank {
+    width: 160px;
+    height: 180px;
+}

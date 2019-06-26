@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calendar Hotel Scenario</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcombobox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcalendar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtextbox.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div>
+        <h4>Welcome, user10</h4><jqx-button id="logoutButton">Logout</jqx-button>
+    </div>
+    <div id="mainContainer">
+        <h2>Search</h2>
+        <div>
+            <h4>Name of the destination:</h4>
+            <jqx-text-box id="nameInput" placeholder="London"></jqx-text-box>
+        </div>
+        <div id="travelChooser">
+            <h4>Work travel ?</h4>
+            <jqx-radio-button>Yes</jqx-radio-button>
+            <jqx-radio-button>No</jqx-radio-button>
+        </div>
+        <div>
+            <h4>Reservation dates:</h4>
+            <jqx-calendar id="datePicker" min="new Date()" months="2" selection-mode="many" view-sections='["header", "footer"]'></jqx-calendar>
+        </div>
+        <div id="summary" class="jqx-visibility-hidden"></div>
+        <div id="personPicker">
+            <div>
+                <h4>Rooms:</h4>
+                <jqx-combo-box id="roomPicker" class="hotelRoomPicker" selection-mode="one"></jqx-combo-box>
+            </div>
+            <div>
+                <h4>Adults:</h4>
+                <jqx-combo-box id="adultPicker" class="hotelRoomPicker" selection-mode="one"></jqx-combo-box>
+            </div>
+            <div>
+                <h4>Children:</h4>
+                <jqx-combo-box id="childrenPicker" class="hotelRoomPicker" selection-mode="one"></jqx-combo-box>
+            </div>
+        </div>
+        <jqx-button id="submitButton">Search</jqx-button>
+    </div>
+</body>
+</html>

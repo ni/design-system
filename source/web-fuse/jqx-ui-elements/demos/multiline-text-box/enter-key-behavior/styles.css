@@ -1,0 +1,48 @@
+#messageContainer {
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    width: 400px;
+    height: 700px;
+    max-height: 90vh;
+    box-sizing: border-box;
+    border: dashed 1px lightgray;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+#messageWindowJ,
+#messageWindowS {
+    height: auto;
+}
+
+#messageWindowS {
+    left: 1300px;
+    top: 200px;
+}
+
+#messageBoxJ,
+#messageBoxS {
+    border: none;
+    margin: 20px;
+    width: 100%;
+}
+
+#startChat {
+    width: 400px;
+    height: 30px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+jqx-chip .jqx-avatar {
+    vertical-align: top;
+}
+
+jqx-chip[avatar="J"] .jqx-avatar {
+    background-color: brown;
+}

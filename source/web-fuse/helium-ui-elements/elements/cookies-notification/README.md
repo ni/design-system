@@ -1,0 +1,1 @@
+## Cookies notification readme

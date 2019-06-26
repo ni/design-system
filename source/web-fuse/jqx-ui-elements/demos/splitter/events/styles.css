@@ -1,0 +1,15 @@
+#logContainer {
+    border: 1px solid black;
+    height: 500px;
+    width: 200px;
+    overflow-y: auto;
+}
+
+    #logContainer h4 {
+        text-align: center;
+    }
+
+#logContainer, jqx-splitter {
+    float: left;
+    margin: 50px;
+}

@@ -1,0 +1,59 @@
+jqx-list-box {
+    background-color: #F2F2F2;
+    position: absolute;
+    left: 25px;
+    top: 75px;
+    width: 200px;
+    height: 350px;
+    border-width: 2px;
+    border-color: black;
+}
+
+    jqx-list-box > .jqx-container {
+        border: 3px transparent solid;
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+    }
+/*
+
+            /*In case of IE && EDGE && Chromium v39
+            jqx-list-box jqx-scroll-bar[orientation="vertical"] {
+                width: 10px;
+            }
+
+            jqx-list-box jqx-scroll-bar {
+                height: 10px;
+            }
+
+            jqx-list-box input {
+                width: calc(100% - 10px);
+            }
+
+                jqx-list-box jqx-scroll-bar.bottom-right-visible {
+                    width: calc(100% - 10px);
+                }
+
+                jqx-list-box jqx-scroll-bar::before {
+                    height: 10px;
+                }
+
+                    jqx-list-box jqx-scroll-bar[orientation="vertical"].bottom-right-visible {
+                        height: calc(100% - 10px);
+                    }
+
+            jqx-list-box .jqx-items-container.horizontal-scroll-bar-enabled {
+                height: calc(100% - 10px);
+            }
+
+            jqx-list-box .jqx-items-container.vertical-scroll-bar-enabled {
+                width: calc(100% - 10px);
+            }
+
+            jqx-list-box .jqx-items-container.jqx-filter-enabled {
+                height: calc(100% - 25px);
+            }
+
+            jqx-list-box .jqx-items-container.horizontal-scroll-bar-enabled.jqx-filter-enabled {
+                height: calc(100% - 35px);
+            }
+             */

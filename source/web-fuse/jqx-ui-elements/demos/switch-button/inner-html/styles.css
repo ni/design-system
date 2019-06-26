@@ -1,0 +1,24 @@
+jqx-switch-button {
+    font-size: 10px;
+}
+
+    jqx-switch-button .jqx-true-content {
+        color: rosybrown;
+    }
+
+    jqx-switch-button .jqx-false-content {
+        color: gray;
+    }
+
+    jqx-switch-button[orientation="vertical"] .jqx-true-content,
+    jqx-switch-button[orientation="vertical"] .jqx-false-content {
+        writing-mode: tb-rl;
+    }
+
+    jqx-switch-button[orientation="vertical"] .jqx-true-content {
+        padding: 0px 0px 5px 0px;
+    }
+
+    jqx-switch-button[orientation="vertical"] .jqx-false-content {
+        padding: 5px 0px 0px 0px;
+    }

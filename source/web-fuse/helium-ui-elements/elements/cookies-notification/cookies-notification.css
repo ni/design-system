@@ -1,0 +1,8 @@
+.mc-cookies-notification-link {
+    color: var(--mc-gray-lighter-9);
+    text-decoration: none;
+}
+
+.mc-cookies-notification-link:hover {
+    text-decoration: underline;
+}

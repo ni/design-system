@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Color Panel with displayMode:"spectrumGrid"</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.default.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcolorpanel.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Display Mode "spectrumGrid"</h1>
+
+    <jqx-color-panel id="colorPanel" display-mode="spectrumGrid"></jqx-color-panel>
+
+    <div class="options">
+        <div class="option">
+            Selected color:
+            <input type="text" placeholder="#RRGGBB" id="rgbValue" />
+        </div>
+        <div class="option">
+            <h3>Toggle Grid Column Size</h3>
+            <jqx-radio-button group-name="columnCount">5</jqx-radio-button>
+            <jqx-radio-button group-name="columnCount" checked>10</jqx-radio-button>
+            <jqx-radio-button group-name="columnCount">15</jqx-radio-button>
+        </div>
+        <div class="option">
+            <h3>Toggle Grid Color Size</h3>
+            <jqx-radio-button group-name="columnSize" checked>20</jqx-radio-button>
+            <jqx-radio-button group-name="columnSize">40</jqx-radio-button>
+            <jqx-radio-button group-name="columnSize">60</jqx-radio-button>
+        </div>
+        <div class="option">
+            <h3>Toggle Grid Column Gap</h3>
+            <jqx-radio-button group-name="columnGap" checked>3</jqx-radio-button>
+            <jqx-radio-button group-name="columnGap">6</jqx-radio-button>
+            <jqx-radio-button group-name="columnGap">9</jqx-radio-button>
+        </div>
+        <div class="option">
+            <h3>Apply Value Mode</h3>
+            <jqx-radio-button group-name="applyValueMode" checked>instantly</jqx-radio-button>
+            <jqx-radio-button group-name="applyValueMode">useButtons</jqx-radio-button>
+
+        </div>
+        <div class="option">
+            <h3>Palette</h3>
+            <jqx-radio-button group-name="palette" checked>default</jqx-radio-button>
+            <jqx-radio-button group-name="palette">gray</jqx-radio-button>
+            <jqx-radio-button group-name="palette">red</jqx-radio-button>
+            <jqx-radio-button group-name="palette">green</jqx-radio-button>
+            <jqx-radio-button group-name="palette">blue</jqx-radio-button>
+        </div>
+        <div class="option">
+            <h3>Inverted</h3>
+            <jqx-check-box id="inverted">inverted</jqx-check-box>
+        </div>
+    </div>
+</body>
+</html>

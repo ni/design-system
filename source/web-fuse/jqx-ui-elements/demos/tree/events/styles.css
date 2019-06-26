@@ -1,0 +1,17 @@
+#tree {
+    float: left;
+    margin-right: 50px;
+}
+
+#sideContainer {
+    float: left;
+    padding-top: 10px;
+    height: 100%;
+}
+
+#log {
+    float: left;
+    padding-top: 10px;
+    height: 500px;
+    overflow: auto;
+}

@@ -1,0 +1,255 @@
+.mc-header-page {
+    align-items: stretch;
+    background: var(--mc-white);
+    border-bottom: solid var(--mc-border-smaller-1) var(--mc-blue-base);
+    border-top: solid var(--mc-border-base) var(--mc-blue-base);
+    color: var(--mc-blue-base);
+    display: flex;
+    flex-wrap: nowrap;
+    height: var(--mc-header-height);
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+}
+
+/* -------------- Navigation section of header  ------------------- */
+
+.mc-header-nav {
+    align-items: stretch;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.mc-header-nav .mc-header-categories {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: auto;
+    padding: var(--mc-space-none);
+}
+
+.mc-header-nav .mc-header-category {
+    display: block;
+    height: 100%;
+    color: var(--mc-blue-lighter-2);
+    font-family: var(--mc-headline-font);
+    font-size: var(--mc-size-larger-1);
+    font-weight: var(--mc-weight-larger-2);
+    line-height: var(--mc-header-height);
+    min-width: var(--mc-space-larger-7);
+    text-align: center;
+    text-decoration: none;
+    transition: var(--mc-button-transition);
+}
+
+.mc-header-nav .mc-header-category:hover {
+    background-color: var(--mc-gray-lighter-7);
+    border-bottom-color: var(--mc-blue-base);
+    text-decoration: none;
+}
+
+.mc-header-nav .mc-header-category:active {
+    background-color: var(--mc-gray-lighter-6);
+    border-bottom-color: var(--mc-blue-base);
+    border-bottom-color: var(--mc-blue-base);
+}
+
+.mc-header-nav .mc-header-category.mc-header-active {
+    color: var(--mc-blue-base);
+    background-color: var(--mc-gray-lighter-8);
+    border-bottom-color: var(--mc-blue-base);
+}
+
+.mc-header-nav .mc-header-menu-icon {
+    background-image: url("images/hamburger.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: var(--mc-space-larger-5);
+    display: none; /* Do not show unless in tablet or phone */
+}
+
+/* -------------- Left section of header  ------------------- */
+
+.mc-header-left {
+    align-items: stretch;
+    display: flex;
+    flex: 1 1;
+    justify-content: flex-start;
+}
+
+.mc-header-app-title-button {
+    border: var(--mc-border-none);
+    padding: var(--mc-space-none) var(--mc-space-none);
+    width: 160px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.mc-header-app-title-button:hover {
+  background-color: var(--mc-gray-lighter-7);
+}
+
+.mc-header-app-title {
+    font-family: var(--mc-headline-font);
+    font-size: var(--mc-size-larger-1);
+    font-weight: var(--mc-weight-base);
+    color: var(--mc-blue-base);
+}
+
+/* -------------- Right section of header  ------------------- */
+
+.mc-header-right {
+    align-items: stretch;
+    display: flex;
+    flex: 1 1;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+/* User and help drop down menus */
+.mc-header-menu {
+    border: var(--mc-border-none);
+    height: 100%;
+    width: 70px;
+}
+
+.mc-header-menu-icon:hover {
+    background-color: var(--mc-gray-lighter-8);
+}
+
+.mc-header-help-menu-button {
+    height: var(--mc-navigation-bar-icon-size);
+    background-image: url("images/help-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: var(--mc-navigation-bar-icon-size);
+}
+
+.mc-header-user-menu-button {
+    height: var(--mc-navigation-bar-icon-size);
+    width: var(--mc-navigation-bar-icon-size);
+    background-image: url("images/account-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mc-header-user-name {
+    align-self: center;
+    color: var(--mc-gray-base);
+    flex-grow: 1;
+    font-size: var(--mc-size-base);
+    margin-right: var(--mc-space-base);
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/**************************************/
+
+/*Phone*/
+
+/**************************************/
+
+@media (max-width: 425px) {
+    .mc-header-app-title {
+        font-size: var(--mc-size-base);
+    }
+}
+
+/**************************************/
+
+/*Tablet*/
+
+/**************************************/
+
+@media (max-width: 768px) {
+    .mc-header-nav .mc-header-menu-icon {
+        display: inline-block;  /* show hamburger menu on mobile */
+    }
+
+    .mc-header-nav .mc-header-categories,
+    .mc-header-nav .mc-header-categories:active {
+        background-color: var(--mc-white);
+        border-top: solid var(--mc-border-smaller-1) var(--mc-blue-base);
+        border-bottom: solid var(--mc-border-smaller-1) var(--mc-blue-base);
+        position: absolute;
+        right: var(--mc-space-none);
+        top: var(--mc-space-larger-6);
+        width: 100%;
+        display: none; /* only show navigation menu on hover */
+    }
+
+    .mc-header-nav:hover .mc-header-categories {
+        display: block; /* only show navigation menu on hover */
+    }
+
+    .mc-header-nav li {
+        margin: var(--mc-space-none);
+        text-align: center;
+        width: 100%;
+    }
+
+    .mc-header-center {
+        order: 0;
+        width: var(--mc-space-larger-5);
+    }
+
+    .mc-header-left {
+        order: 1;
+    }
+
+    .mc-header-right {
+        order: 2;
+    }
+}
+
+
+/*************** drop down *****************/
+.mc-header-dropdown {
+    display: inline-block;
+}
+
+.mc-header-dropdown-hidden {
+    display: none;
+}
+
+.mc-header-dropdown-button {
+    height: 100%;
+    width: 70px;
+}
+
+.mc-header-dropdown-button:hover {
+    cursor: pointer;
+    background-color: var(--mc-menu-item-hovered);
+}
+
+.mc-header-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--mc-white);
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    z-index: 1;
+    margin-left: -90px;
+}
+
+.mc-header-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.mc-header-dropdown a:hover {
+    background-color: var(--mc-menu-item-hovered);
+}
+
+.mc-header-dropdown-show .mc-header-dropdown-content {
+    display: block;
+}

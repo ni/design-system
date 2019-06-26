@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slider Material</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxslider.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="materialSliderContainer">
+        <section>
+            <h1>jqxSlider</h1>
+            <div>
+                <h1>Sliders let users select from a range of values by moving the slider thumb.</h1>
+                <div class="module">
+                    <p>
+                        Sliders are ideal components for adjusting settings that reflect intensity levels, such as volume, brightness, or color saturation.
+                    </p>
+                    <p>
+                        Sliders may have icons on both ends of the bar that reflect the value intensity.
+                        Place the smallest value for the slider range on the left and the largest value on the right.
+                    </p>
+                </div>
+                <div class="module">
+                    <h3>Continuous sliders</h3>
+                    <p>
+                        Continuous sliders allow users to select a value along a subjective range.
+                        They do not require a specific value to make adjustments, although they may, in some instances, offer an editable numeric value.
+                    </p>
+                    <h3>Discrete sliders</h3>
+                    <p>Discrete sliders allow users to select a specific value from a range.</p>
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../../images/components-sliders.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#continuousSliders">Continuous slider</a></li>
+                <li><a href="#discreteSliders">Discrete slider</a></li>
+                <li><a href="#scaleSliders">Scales</a></li>
+                <li><a href="#verticalSliders">Orientation</a></li>
+                <li><a href="#demoSliders">Demo</a></li>
+            </ul>
+        </nav>
+
+        <section id="continuousSliders">
+            <h1>Continuous slider</h1>
+            <div class="module">
+                <p>
+                    Use continuous sliders for subjective settings that do not require a specific value for the user to make meaningful adjustments.
+                </p>
+            </div>
+            <div class="module">
+                <h2>Light</h2>
+                <p>
+                    Thumb ( value > min ): #009688, Opacity 100% <br />
+                    Track: #B9B9B9, Opacity 100%
+                </p>
+                <p>
+                    Thumb ( value === min ): #EEEEEE, Opacity 100% <br />
+                    Track : #B9B9B9, Opacity 100%
+                </p>
+                <p>
+                    Thumb focused: #009688, Opacity 100% <br />
+                    Track focused: #EEEEEE, Opacity 100%
+                </p>
+                <p>Disabled: #000000, Opacity 20%</p>
+            </div>
+            <div class="module continuousSliderLight">
+                <table>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td><jqx-slider class="animation material" scale-position="none"></jqx-slider></td>
+                        <td><jqx-slider class="animation material" scale-position="none" value="50"></jqx-slider></td>
+                        <td><jqx-slider class="animation material" scale-position="none" value="100"></jqx-slider></td>
+                    </tr>
+                    <tr>
+                        <td><p>Disabled</p></td>
+                        <td><jqx-slider class="animation material" disabled scale-position="none"></jqx-slider></td>
+                        <td><jqx-slider class="animation material" disabled scale-position="none" value="50"></jqx-slider></td>
+                        <td><jqx-slider class="animation material" disabled scale-position="none" value="100"></jqx-slider></td>
+                    </tr>
+                </table>
+                <p>Light theme</p>
+            </div>
+
+            <div class="module">
+                <h2>Dark</h2>
+                <p>
+                    Thumb ( value > min ): #009688, Opacity 100% <br />
+                    Track: #5A5A5A, Opacity 100%
+                </p>
+                <p>
+                    Thumb ( value === min ): #000, Opacity 100% <br />
+                    Track : #5A5A5A, Opacity 100%
+                </p>
+                <p>
+                    Thumb focused: #009688, Opacity 100% <br />
+                    Track focused: #5A5A5A, Opacity 100%
+                </p>
+                <p>Disabled: #5A5A5A, Opacity 20%</p>
+            </div>
+            <div class="module continuousSliderDark">
+                <table>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td><jqx-slider class="animation material-dark" scale-position="none"></jqx-slider></td>
+                        <td><jqx-slider class="animation material-dark" scale-position="none" value="50"></jqx-slider></td>
+                        <td><jqx-slider class="animation material-dark" scale-position="none" value="100"></jqx-slider></td>
+                    </tr>
+                    <tr>
+                        <td><p>Disabled</p></td>
+                        <td><jqx-slider class="animation material-dark" disabled scale-position="none"></jqx-slider></td>
+                        <td><jqx-slider class="animation material-dark" disabled scale-position="none" value="50"></jqx-slider></td>
+                        <td><jqx-slider class="animation material-dark" disabled scale-position="none" value="100"></jqx-slider></td>
+                    </tr>
+                </table>
+                <p>Dark theme</p>
+            </div>
+        </section>
+
+        <section id="discreteSliders">
+            <h1>Discrete slider</h1>
+            <div class="module">
+                <p>
+                    The discrete slider thumb snaps to evenly spaced tick marks along the slider rail.
+                    Use for objective settings that require specific values for the user to make meaningful adjustments.
+                    Each tick mark should change the setting to a level that’s discernible to the user. The values are predetermined and aren’t user-editable.
+                </p>
+                <p>The thumb label can be positioned on the near of the far side of the track by setting the thumbLabelPosition property to "near" or "far". Default value is "near".</p>
+            </div>
+            <div class="module">
+                <h2>With a numeric value label</h2>
+                <p>Use for settings for which users need to know the exact value of the setting.</p>
+            </div>
+            <div class="module discreteSliderLight">
+                <table>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td><jqx-slider class="animation material" show-thumb-label scale-type="integer" scale-position="none"></jqx-slider></td>
+                        <td><jqx-slider class="animation material" show-thumb-label scale-type="integer" scale-position="none" value="50"></jqx-slider></td>
+                        <td><jqx-slider class="animation material" show-thumb-label scale-type="integer" scale-position="none" value="100"></jqx-slider></td>
+                    </tr>
+                    <tr>
+                        <td><p>Disabled</p></td>
+                        <td><jqx-slider class="animation material" show-thumb-label disabled scale-type="integer" scale-position="none"></jqx-slider></td>
+                        <td><jqx-slider class="animation material" show-thumb-label disabled scale-type="integer" scale-position="none" value="50"></jqx-slider></td>
+                        <td><jqx-slider class="animation material" show-thumb-label disabled scale-type="integer" scale-position="none" value="100"></jqx-slider></td>
+                    </tr>
+                </table>
+                <p>Light theme</p>
+            </div>
+
+            <div class="module">
+            </div>
+            <div class="module discreteSliderDark">
+                <table>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td><jqx-slider class="animation material-dark" show-thumb-label scale-type="integer" scale-position="none"></jqx-slider></td>
+                        <td><jqx-slider class="animation material-dark" show-thumb-label scale-type="integer" scale-position="none" value="50"></jqx-slider></td>
+                        <td><jqx-slider class="animation material-dark" show-thumb-label scale-type="integer" scale-position="none" value="100"></jqx-slider></td>
+                    </tr>
+                    <tr>
+                        <td><p>Disabled</p></td>
+                        <td><jqx-slider class="animation material-dark" show-thumb-label scale-type="integer" disabled scale-position="none"></jqx-slider></td>
+                        <td><jqx-slider class="animation material-dark" show-thumb-label scale-type="integer" disabled scale-position="none" value="50"></jqx-slider></td>
+                        <td><jqx-slider class="animation material-dark" show-thumb-label scale-type="integer" disabled scale-position="none" value="100"></jqx-slider></td>
+                    </tr>
+                </table>
+                <p>Dark theme</p>
+            </div>
+        </section>
+
+        <section id="scaleSliders">
+            <h1>Scales</h1>
+            <div class="module">
+                <p>Continuous jqxSlider with a scale.</p>
+            </div>
+            <div class="module continuousScaleSlider">
+                <div>
+                    <jqx-slider class="animation material" scale-type="integer" scale-position="near" ticks-position="scale" ticks-visibility="major"></jqx-slider>
+                    <jqx-slider class="animation material" scale-type="integer" ticks-position="track" ticks-visibility="major"></jqx-slider>
+                    <jqx-slider class="animation material" scale-type="integer" scale-position="far" ticks-position="scale" ticks-visibility="major"></jqx-slider>
+                </div>
+                <p>Continuous slider with scale positions: near, track and far</p>
+            </div>
+
+            <div class="module">
+                <p>Discrete jqxSlider can have a scale on the track</p>
+            </div>
+            <div class="module discreteScaleSlider">
+                <div>
+                    <jqx-slider class="animation material" show-thumb-label scale-type="integer" scale-position="none" ticks-position="track" ticks-visibility="major"></jqx-slider>
+                </div>
+                <p>Discrete slider </p>
+            </div>
+        </section>
+
+        <section id="verticalSliders">
+            <h1>Orientation</h1>
+            <div class="module">
+                <p>jqxSlider can be horizontal or vertical depending on the orientation property.</p>
+            </div>
+            <div class="module">
+                <div>
+                    <jqx-slider class="animation material" orientation="vertical" scale-position="none" value="50"></jqx-slider>
+                    <jqx-slider class="animation material" orientation="vertical" scale-position="none" value="75" inverted></jqx-slider>
+                </div>
+                <p>Vertical continuous slider / Vertical continuous slider inverted</p>
+            </div>
+            <div class="module">
+                <div>
+                    <jqx-slider class="animation material" orientation="vertical" show-thumb-label scale-type="integer" scale-position="none" value="50"></jqx-slider>
+                    <jqx-slider class="animation material" orientation="vertical" show-thumb-label scale-type="integer" scale-position="none" value="25" inverted></jqx-slider>
+                </div>
+                <p>Vertical discrete slider / Vertical discrete slider inverted</p>
+            </div>
+        </section>
+
+        <section id="demoSliders">
+            <h1>Demo</h1>
+            <div class="module">
+                <p>Sliders are controls that are used for adjusting values precisely.</p>
+            </div>
+            <div class="module media-controls">
+                <div>
+                    <h2>Volumes</h2>
+                    <div>
+                        <h3>Media volume</h3>
+                        <div id="mediaControl" class="controls">
+                            <i class="material-icons">&#xE04D;</i>
+                            <jqx-slider id="mediaSlider" class="animation material" scale-position="none" value="25"></jqx-slider>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Alarm volume</h3>
+                        <div id="alarmControl" class="controls">
+                            <i class="material-icons">&#xE855;</i>
+                            <jqx-slider id="alarmSlider" class="animation material" scale-position="none" value="50"></jqx-slider>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Ring volume</h3>
+                        <div id="ringControl" class="controls">
+                            <i class="material-icons">&#xE7F4;</i>
+                            <jqx-slider id="volumeSlider" class="animation material" scale-position="none" value="75"></jqx-slider>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module power-controls">
+                <div>
+                    <h2>Battery Saver Mode</h2>
+                    <div>
+                        <h3>Low battery alert on <b id="lowBatteryAlert">15</b> %</h3>
+                        <div id="mediaControl" class="controls">
+                            <i class="material-icons">&#xE8B2;</i>
+                            <jqx-slider id="lowBatterySlider" class="animation material" scale-position="none" value="15" scale-type="integer" show-thumb-label></jqx-slider>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Power saver mode active on <b id="powerSaver">50</b>%</h3>
+                        <div id="alarmControl" class="controls">
+                            <i class="material-icons">&#xE19C;</i>
+                            <jqx-slider id="powerSaverSlider" class="animation material" scale-position="none" value="50" scale-type="integer" show-thumb-label></jqx-slider>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+---
+layout: page_notoc
+title: Content status
+description: Status of the documentation and elements in this design system
+---
+<custom-style>
+  <style is="custom-style">
+      #container {
+        overflow-x: auto;
+        padding-bottom: 0px !important;
+      }
+      #legend{
+        margin-bottom: 10px;
+        height:24px;
+      }
+      #legend > span{
+        margin-right: 10px;
+        display: inline-block;
+        height:24px;
+      }
+      #legend span > iron-icon {
+        padding-bottom: 3px;
+        margin-right: 3px;
+      }
+      .wip{
+      color:var(--primary-color);
+      }
+      .ready{
+      color:green;
+      }
+      .queued{
+      color:var(--accent-color);
+      }
+  </style>
+</custom-style>
+{% include status-icon.html status='all' %}
+<H1>Style</H1>
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Status</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+     {% for item in site.style %}  
+        <tr is="s-tr">      
+            <td><a href="{{ item.url | prepend:site.baseurl }}">{{ item.title }}</a></td>
+            {% capture status %}{{ item.status }}{% endcapture %}
+            <td><iron-icon icon={% include status-icon.html status=status %}></iron-icon></td>
+            <td>{{ item.last_modified_at | date: '%B %d, %Y' }}</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<H1>Elements</H1>
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Status</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.elements %}  
+    <tr is="s-tr">      
+      <td><a href="{{ item.url | prepend:site.baseurl }}">{{ item.title }}</a></td>
+      {% capture status %}{{ item.status }}{% endcapture %}
+      <td><iron-icon icon={% include status-icon.html status=status %}></iron-icon></td>
+      <td>{{ item.last_modified_at | date: '%B %d, %Y' }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<H1>Patterns</H1>
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Status</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.patterns %}  
+    <tr is="s-tr">      
+      <td><a href="{{ item.url | prepend:site.baseurl }}">{{ item.title }}</a></td>
+      {% capture status %}{{ item.status }}{% endcapture %}
+      <td><iron-icon icon={% include status-icon.html status=status %}></iron-icon></td>
+      <td>{{ item.last_modified_at | date: '%B %d, %Y' }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

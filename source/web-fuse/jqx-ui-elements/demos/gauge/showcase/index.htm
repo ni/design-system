@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Gauge Showcase</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxgauge.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumerictextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcomplex.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+
+
+    <div class="sideGaugeContainer">
+        <jqx-gauge class="sideGauge"
+                   analog-display-type="needle"
+                   start-angle="60"
+                   end-angle="180"
+                   min="0"
+                   max="10"
+                   value="9"
+                   ticks-visibility="major"
+                   custom-interval
+                   custom-ticks="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+                   labels-visibility="none"
+                   show-ranges
+                   ranges='[{ "startValue": "0", "endValue": "10", "className": "borderRange" }]'
+                   draw-needle="customDrawNeedleFunction2"></jqx-gauge>
+    </div>
+    <div class="sideGaugeContainer">
+        <jqx-gauge class="sideGauge"
+                   analog-display-type="needle"
+                   start-angle="0"
+                   end-angle="120"
+                   min="0"
+                   max="10"
+                   value="1.5"
+                   inverted
+                   ticks-visibility="major"
+                   custom-interval
+                   custom-ticks="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+                   labels-visibility="none"
+                   show-ranges
+                   ranges='[{ "startValue": "0", "endValue": "10", "className": "borderRange" }]'
+                   draw-needle="customDrawNeedleFunction2"></jqx-gauge>
+    </div>
+    <div id="centralGaugeContainer">
+        <div id="firstCircle">
+            <div id="secondCircle"></div>
+        </div>
+        <jqx-gauge id="centralGauge"
+                   analog-display-type="needle"
+                   start-angle="-40"
+                   end-angle="220"
+                   min="0"
+                   max="20"
+                   value="18.5"
+                   ticks-visibility="major"
+                   labels-visibility="none"
+                   show-ranges
+                   draw-needle="customDrawNeedleFunction1"></jqx-gauge>
+    </div>
+</body>
+</html>

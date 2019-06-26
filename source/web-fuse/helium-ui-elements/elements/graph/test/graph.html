@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SystemLink Cloud | TagViewer History</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../dist/styles/root.css">
+    <link rel="stylesheet" href="../dist/styles/document.css">
+
+    <script src="../dist/js/elements/slgraph.js" defer></script>
+</head>
+<body>
+    <div id="main" style="height: 100%">
+        <sl-graph webcharts-path="../dist/deps/niwebcharts-5.4.2.js">
+            <sl-graph-plot label="CPU"></sl-graph-plot>
+            <sl-graph-plot label="Memory"></sl-graph-plot>
+        </sl-graph>
+    </div>
+
+    <script>
+        let graph = document.querySelector('sl-graph');
+        graph.data = [{Timestamp: [1, 2, 3, 4, 5], Values: [1, 2, 3, 3, 5]}, {Timestamp: [1, 2, 3, 4, 5], Values: [99, 100, 98, 90, 120]}];
+    </script>
+</body>
+</html>

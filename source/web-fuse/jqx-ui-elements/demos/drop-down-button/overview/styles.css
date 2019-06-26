@@ -1,0 +1,20 @@
+jqx-drop-down-button {
+    --jqx-drop-down-element-max-height: 300px;
+}
+
+    jqx-drop-down-button jqx-calendar,
+    jqx-drop-down-button jqx-calendar:focus {
+        border: none;
+    }
+
+    jqx-drop-down-button jqx-list-menu {
+        border: none;
+        height: 200px;
+    }
+
+#dropDownButtonContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

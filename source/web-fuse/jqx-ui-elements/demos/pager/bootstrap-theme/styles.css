@@ -1,0 +1,20 @@
+jqx-pager {
+    --jqx-color: #007bff;
+    --jqx-focus-color: #007bff;
+    color: #007bff;
+}
+
+    jqx-pager button {
+        --jqx-border-width: 0px;
+    }
+
+    jqx-pager .jqx-previous-page-button[hover],
+    jqx-pager .jqx-next-page-button[hover] {
+        background-color: #e8e9ea;
+    }
+
+    jqx-pager .jqx-selected,
+    jqx-pager .jqx-pager-page-index-selector.jqx-selected {
+        color: white;
+        background-color: #007bff;
+    }

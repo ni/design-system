@@ -1,0 +1,26 @@
+jqx-button {
+    margin-left: 200px;
+    margin-top: 150px;
+    height: 100px;
+    width: 200px;
+}
+
+#tooltip1.animation {
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+#tooltip2.animation {
+    transition-duration: 0.5s;
+    transition-delay: 0.6s;
+}
+
+#tooltip3.animation {
+    transition-duration: 0.5s;
+    transition-delay: 1s;
+}
+
+#tooltip4.animation {
+    transition-duration: 0.5s;
+    transition-delay: 1.4s;
+}

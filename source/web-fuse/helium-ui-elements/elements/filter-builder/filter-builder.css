@@ -1,0 +1,57 @@
+.sl-filter-builder-empty-option {
+    display: none;
+}
+
+.sl-filter-builder-row {
+    display: flex;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+.sl-filter-builder-remove {
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.sl-filter-builder-fieldselector {
+    width: 150px;
+    margin-left: 10px;
+}
+
+.sl-filter-builder-operation {
+    width: 70px;
+    min-width: 70px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.sl-filter-builder-select-operation {
+    width: unset;
+}
+
+.sl-filter-builder-key {
+    margin-left: 10px;
+    width: 95px;
+}
+
+.sl-filter-builder-key.error {
+    border-bottom-color: var(--mc-red-darker-2);
+}
+
+.sl-filter-builder-value {
+    margin-left: 10px;
+    width: 200px;
+}
+
+.sl-filter-builder-value-keyvalue {
+    width: 95px;
+}
+
+.sl-filter-builder-value.error {
+    border-bottom-color: var(--mc-red-darker-2);
+}
+
+.sl-filter-builder-remove-disabled {
+    pointer-events: none;
+    color: var(--mc-gray-lighter-3);
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LED Overview</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxled.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    Custom LED template<br /><br />
+    <jqx-led checked="null" indeterminate-template="indeterminateTemplate" true-template="trueTemplate" false-template="falseTemplate" indeterminate-content="||" true-content="On" false-content="Off"></jqx-led>
+
+    <template id="indeterminateTemplate">
+        <span class="jqx-indeterminate-content">{{content}}</span>
+    </template>
+    <template id="trueTemplate">
+        <span class="jqx-true-content">{{content}}</span>
+    </template>
+    <template id="falseTemplate">
+        <span class="jqx-false-content">{{content}}</span>
+    </template>
+
+    <template id="indeterminateTemplate2">
+        <span class="jqx-indeterminate-content">{{content}}!</span>
+    </template>
+    <template id="trueTemplate2">
+        <span class="jqx-true-content">{{content}}!</span>
+    </template>
+    <template id="falseTemplate2">
+        <span class="jqx-false-content">{{content}}!</span>
+    </template>
+</body>
+</html>

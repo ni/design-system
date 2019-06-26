@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Window Material</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcombobox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxprogressbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtabs.js"></script>
+    <script type="text/javascript" src="../../../source/jqxwindow.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <template id="headerTemplate">
+        <div class="headerTemplateContainer">
+            <i class="material-icons">&#xE8B8;</i> Window with an Icon inside the Header
+        </div>
+    </template>
+
+    <template id="footerTemplate">
+        <div class="footerTemplateContainer">
+            <jqx-button class="flat" theme="material">Cancel</jqx-button>
+            <jqx-button class="flat" theme="material">Ok</jqx-button>
+        </div>
+    </template>
+
+    <template id="footerTemplateLight">
+        <div class="footerTemplateContainer">
+            <jqx-button class="flat" theme="material">CANCEL</jqx-button>
+            <jqx-button class="flat" theme="material">DISCARD</jqx-button>
+        </div>
+    </template>
+
+    <template id="footerTemplateDark">
+        <div class="footerTemplateContainer">
+            <jqx-button class="flat" theme="material-dark">CANCEL</jqx-button>
+            <jqx-button class="flat" theme="material-dark">DISCARD</jqx-button>
+        </div>
+    </template>
+
+    <template id="footerTemplateAgreenmentDark">
+        <div class="footerTemplateContainer">
+            <jqx-button class="flat" theme="material-dark">DISAGREE</jqx-button>
+            <jqx-button class="flat" theme="material-dark">AGREE</jqx-button>
+        </div>
+    </template>
+
+    <template id="footerTemplateAgreenment">
+        <div class="footerTemplateContainer">
+            <jqx-button class="flat" theme="material">DISAGREE</jqx-button>
+            <jqx-button class="flat" theme="material">AGREE</jqx-button>
+        </div>
+    </template>
+
+    <div id="materialWindowContainer">
+        <section>
+            <h1>jqxWindow</h1>
+            <div>
+                <h1>Windows inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks.</h1>
+                <div class="module">
+                    <p>
+                        Windows contain text and UI controls. They retain focus until dismissed or a required action has been taken.
+                        Use windows sparingly because they are interruptive.
+                    </p>
+                    <p>Some windows types include:</p>
+                    <ul>
+                        <li><strong>Alerts </strong>are urgent interruptions that inform about a situation and require acknowledgement.</li>
+                        <li><strong>Progress</strong> windows inform about a specific task completion.</li>
+                        <li><strong>Dialogs</strong> require users to explicitly confirm a choice.</li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <h3>Behavior</h3>
+                    <p>Windows should never be obscured, either by other elements or the screen edge. Dialogs are dismissed when a required action has been taken.</p>
+
+                    <h3>Full-screen dialogs</h3>
+                    <p>Full-screen dialogs are best suited to complex tasks, or require an input method editor, as they group a series of tasks together before they can be saved.</p>
+                </div>
+
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../../images/components-windows.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#appearance">Appearance</a></li>
+                <li><a href="#behavior">Behavior</a></li>
+                <li><a href="#types">Types</a></li>
+            </ul>
+        </nav>
+
+        <section id="appearance">
+            <h1>Appearance</h1>
+            <div class="module">
+                <p>
+                    Windows consist of three main sections: Header, Content and Footer.
+                </p>
+            </div>
+            <div class="module">
+                <img alt="" src="../../images/components-windows-appearance.png">
+                <p>Window sections</p>
+            </div>
+            <div class="module">
+                <p><strong>Header</strong> section is optional. It can contain an arbitrary text or other Custom Elements.</p>
+
+                <p>By default, the header section contains the lable of the Window. The label can be changed by setting the <strong>label</strong> property.</p>
+
+                <p>
+                    The content of the Header section can be completely replaced using an HTMLTemplate. In order to do that the user has to apply the id of an HTML Template to the <strong>headerTempalte</strong> property.
+                </p>
+            </div>
+            <div class="module">
+                <jqx-window class="animation" theme="material" opened pinned header-template="headerTemplate" header-buttons='[]'>No Content Added</jqx-window>
+                <p>Window with a material icon inside the Header</p>
+            </div>
+
+            <div class="module">
+                <p><strong>Content</strong> section holds the main information presented to the user. It can contain any HTML.</p>
+                <p>When the window is collapsed the content is hidden. The only visible section if the Header.</p>
+            </div>
+            <div class="module">
+                <jqx-window class="content-window animation" theme="material" opened pinned label="Window with Content" header-buttons='[]'>
+                    <jqx-list-box theme="material">
+                        <jqx-list-item>Single line text goes here</jqx-list-item>
+                        <jqx-list-item>Two line wrapped text goes here <br /> making it wrap to next line</jqx-list-item>
+                        <jqx-list-item>Single line text goes here</jqx-list-item>
+                        <jqx-list-item>Three line wrapped text goes here <br /> making it wrap to next line and <br /> continues longer to be here</jqx-list-item>
+                    </jqx-list-box>
+                </jqx-window>
+                <p>Window with a ListBox inside.</p>
+            </div>
+
+            <div class="module">
+                <p><strong>Footer</strong> section is optional. It can contain an arbitrary text or other Custom Elements.</p>
+                <p>Usualy used to hold the Dialog interaction controls.</p>
+            </div>
+
+            <div class="module confirmation-window2">
+                <jqx-window class="content-window animation" theme="material" opened pinned label="Permissions" footer-template="footerTemplate" header-buttons='[]'>
+                    <jqx-list-box class="material" selection-mode="radioButton">
+                        <jqx-list-item selected>Danish scrollable list item</jqx-list-item>
+                        <jqx-list-item>Eggs scrollable list item</jqx-list-item>
+                    </jqx-list-box>
+                </jqx-window>
+                <p>Permissions</p>
+            </div>
+
+            <div class="module confirmation-window">
+                <jqx-window class="content-window animation" theme="material" opened pinned label="Phone ringtone" footer-template="footerTemplate" header-buttons='[]'>
+                    <jqx-list-box class="material" selection-mode="radioButton" theme="material">
+                        <jqx-list-item>None</jqx-list-item>
+                        <jqx-list-item>Callisto</jqx-list-item>
+                        <jqx-list-item>Dione</jqx-list-item>
+                        <jqx-list-item selected>Ganymede</jqx-list-item>
+                        <jqx-list-item>Hangouts Call</jqx-list-item>
+                        <jqx-list-item>Luna</jqx-list-item>
+                        <jqx-list-item>Oberon</jqx-list-item>
+                        <jqx-list-item>Phobos</jqx-list-item>
+                        <jqx-list-item>Natural</jqx-list-item>
+                        <jqx-list-item>Onward</jqx-list-item>
+                        <jqx-list-item>Organic</jqx-list-item>
+                        <jqx-list-item>Orion</jqx-list-item>
+                        <jqx-list-item>Pegasus</jqx-list-item>
+                        <jqx-list-item>Titania</jqx-list-item>
+                        <jqx-list-item>Pyxis</jqx-list-item>
+                        <jqx-list-item>Luna</jqx-list-item>
+                    </jqx-list-box>
+                </jqx-window>
+                <p>Ringtone selection window</p>
+            </div>
+
+            <div class="module window-themes">
+                <h2>Themes</h2>
+                <br />
+                <h3>Windows without header bars</h3>
+                <p>Most windows don't need headers.</p>
+                <p>They summarize a decision in a sentence or two by either:</p>
+                <ul>
+                    <li>Asking a question (e.g. "Delete this conversation?")</li>
+                    <li>Making a statement related to the action buttons</li>
+                </ul>
+            </div>
+
+            <div class="module window-themes window-themes1">
+                <jqx-window class="content-window animation" theme="material-dark" opened pinned footer-template="footerTemplateDark">
+                    <p>Discard draft ?</p>
+                </jqx-window>
+                <p>Dark theme</p>
+            </div>
+
+            <div class="module window-themes window-themes1">
+                <jqx-window class="content-window animation" theme="material" opened pinned footer-template="footerTemplateLight">
+                    <p>Discard draft ?</p>
+                </jqx-window>
+                <p>Light theme</p>
+            </div>
+
+            <div class="module window-themes">
+                <h3>Windows width header bars</h3>
+                <p>
+                    Use header bar windows only for high-risk situations, such as the potential loss of connectivity.
+                    Users should be able to understand the choices based on the header and button text alone.
+                </p>
+                <p>If a header is required:</p>
+                <ul>
+                    <li>Use a clear question or statement with an explanation in the content area, such as "Erase USB storage?"</li>
+                    <li>Avoid apologies, ambiguity, or questions, such as “Warning!” or “Are you sure?”</li>
+                </ul>
+            </div>
+
+            <div class="module window-themes window-with-header-themes1">
+                <jqx-window class="content-window animation" theme="material-dark" opened pinned label="Use Google's location service?" footer-template="footerTemplateAgreenmentDark" header-buttons='[]'>
+                    <p>Let Google help apps determine location. This means sending anonymous location data to Google, event when no apps are running.</p>
+                </jqx-window>
+                <p>Dark theme</p>
+            </div>
+
+            <div class="module window-themes window-with-header-themes2">
+                <jqx-window class="content-window animation" theme="material" opened pinned label="Use Google's location service?" footer-template="footerTemplateAgreenment" header-buttons='[]'>
+                    <p>Let Google help apps determine location. This means sending anonymous location data to Google, event when no apps are running.</p>
+                </jqx-window>
+                <p>Light theme</p>
+            </div>
+        </section>
+
+        <section id="behavior">
+            <h1>Behavior</h1>
+            <div class="module">
+                <h2>Modal</h2>
+                <p>Windows can be modal by setting the <strong>modal</strong> property.</p>
+                <p>Modal windows disable background intereaction whilte opened.</p>
+            </div>
+            <div class="module window-themes window-modal">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-window class="content-window animation" theme="material" opened pinned modal footer-template="footerTemplateLight">
+                    <p>Discard draft ?</p>
+                </jqx-window>
+            </div>
+            <div class="module"></div>
+            <div class="module">
+                <h2>Pinned</h2>
+                <p>Pinned Windows can't be dragged. They are used for alerts or dialogs. By default <strong>pinned</strong> property is not applied. The Header section of the element is the window's draggable area.</p>
+            </div>
+            <div class="module window-themes window-modal unpinned">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-window class="content-window animation" theme="material" opened label="Hi" footer-template="footerTemplateLight">
+                    <p>What's your favourite animal ?</p>
+                    <jqx-text-box class="material"></jqx-text-box>
+                </jqx-window>
+            </div>
+            <div class="module"></div>
+
+            <div class="module">
+                <h2>Resize Modes</h2>
+                <p>Resizable Windows can be resized from any direction. By default <strong>resizeMode</strong> property is set to none.</p>
+                <p>Two modes are available:</p>
+                <ul>
+                    <li>None - resizing is disabled</li>
+                    <li>Horizontal - only horizontal resizing is allowed</li>
+                    <li>Vertical - only vertical resizing is allowed</li>
+                    <li>Both - horizontal and vertical resizing is allowed</li>
+                </ul>
+            </div>
+            <div class="module window-themes window-modal scrollable-content">
+                <jqx-window class="content-window animation" theme="material" opened resize-mode="both" label="Resizable Window">
+                    <div>
+                        <h4>Scrollable content exception</h4>
+                        <p>Some dialog content requires scrolling, such as lists of ringtones. </p>
+                        <ul>
+                            <li>For scrollable lists of options, the dialog title remains pinned to the top. This ensures that a selected item remains visible with the title, regardless of the item’s position in the list. </li>
+                            <li>Otherwise, the title scrolls off with the content. Actions always remain in place when content scrolls.</li>
+                        </ul>
+                        <p>Dialogs are separate from the underlying parent material and do not scroll with it.</p>
+
+                        <h4>Displaying additional content</h4>
+                        <p>To disclose additional content in a dialog, do so using inline expansion within the content area. Or consider alternative components that are optimized for large amounts of content.</p>
+                        <h4>Dismissing dialogs</h4>
+                        <p>Dialogs may be dismissed either by tapping outside of the dialog, or tapping the system back button (on Android). Alternatively, the user’s ability to dismiss a dialog may be disabled, so that one of the actions must be chosen before proceeding.</p>
+                    </div>
+                </jqx-window>
+            </div>
+
+            <div class="module">
+                <h2>Header Controls</h2>
+                <p>The header section of the Window element contains the control buttons used to do operations like maximizing, minimizing, closing, collapsing and etc. </p>
+                <p>Those operations can be executed programatically as well by calling the appropriate method.</p>
+            </div>
+            <div class="module window-themes window-modal header-controls">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-window class="content-window animation" theme="material" opened resize-mode="both" label="Albums">
+                    <img src="../../images/albums_pop.png" />
+                </jqx-window>
+            </div>
+            <div class="module window-themes window-modal header-controls dark">
+                <jqx-button class="open-window-button" theme="material-dark">Open</jqx-button>
+                <jqx-window class="content-window animation" theme="material-dark" opened resize-mode="both" maximized label="Albums">
+                    <jqx-tabs class="animation padding" theme="material-dark">
+                        <jqx-tab-item label="Pop">
+                            <img src="../../images/albums_pop.png" />
+                        </jqx-tab-item>
+                        <jqx-tab-item label="Alternative">
+                            <img src="../../images/albums_alternative.png" />
+                        </jqx-tab-item>
+                        <jqx-tab-item label="Rock">
+                            <img src="../../images/albums_rock.png" />
+                        </jqx-tab-item>
+                        <jqx-tab-item label="R & B">
+                            <img src="../../images/albums_rnb.png" />
+                        </jqx-tab-item>
+                    </jqx-tabs>
+                </jqx-window>
+            </div>
+        </section>
+
+        <section id="types">
+            <h1>Types</h1>
+            <div class="module">
+                <h2>Dialog Window</h2>
+                <p>Dialog Windows are modal windows that require user interaction.</p>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-dialog-window class="flat animation" theme="material" opened label="Dialog">
+                    Continue ?
+                </jqx-dialog-window>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-dialog-window class="flat animation" theme="material-dark" opened label="Dialog">
+                    Continue ?
+                </jqx-dialog-window>
+            </div>
+
+            <div class="module">
+                <h2>Alert Window</h2>
+                <p>Alert Windows are modal windows used to inform the user for something that has happened.</p>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-alert-window class="flat animation" theme="material" opened label="Alert">
+                    Successfully backed up !
+                </jqx-alert-window>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-alert-window class="flat animation" theme="material-dark" opened label="Alert">
+                    Successfully backed up !
+                </jqx-alert-window>
+            </div>
+
+            <div class="module">
+                <h2>Wait Window</h2>
+                <p>Wait Windows are modal windows used to inform the user for something that has happened.</p>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-wait-window class="flat animation" theme="material" opened label="Wait"></jqx-wait-window>
+            </div>
+            <div class="module window-types">
+                <jqx-wait-window class="flat animation" theme="material" opened label="Wait"></jqx-wait-window>
+            </div>
+
+            <div class="module">
+                <h2>Progress Window</h2>
+                <p>Progress Windows are modal windows display the progress of an undergoing operation.</p>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-progress-window class="animation" theme="material" opened label="Progress" value="100" complete-label="Reload">
+                    <p>Loading files...</p>
+                </jqx-progress-window>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-progress-window class="animation" theme="material-dark" opened label="Progress" value="100" complete-label="Reload">
+                    <p>Loading files...</p>
+                </jqx-progress-window>
+            </div>
+
+            <div class="module">
+                <h2>Prompt Window</h2>
+                <p>Prompt Windows are modal windows that prompt the user for input or require a choice to be made in order to continue.</p>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-prompt-window class="animation" theme="material" opened label="Prompt" prompt-label="What's your name?"></jqx-prompt-window>
+            </div>
+            <div class="module window-types">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-prompt-window class="flat animation" theme="material-dark" opened label="Prompt" prompt-label="What's your name?"></jqx-prompt-window>
+            </div>
+
+            <div class="module">
+                <h2>Tabs Window</h2>
+                <p>Tabs Windows are an integration between Tabs and Window element. They combine both of their functionality into one.</p>
+                <p>Tabs-Window light theme</p>
+            </div>
+            <div class="module window-types tabs-window">
+                <jqx-button class="open-window-button" theme="material">Open</jqx-button>
+                <jqx-tabs-window class="animation" theme="material" opened>
+                    <jqx-tab-item label="One">
+                        <h1 class="md-display-2">Tab One</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+                    </jqx-tab-item>
+                    <jqx-tab-item label="Two">
+                        <h1 class="md-display-2">Tab Two</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+                        <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+                        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                    </jqx-tab-item>
+                    <jqx-tab-item label="Three">
+                        <h1 class="md-display-2">Tab Three</h1>
+                        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                    </jqx-tab-item>
+                </jqx-tabs-window>
+            </div>
+
+            <div class="module">
+                <p>Tabs-Window dark theme</p>
+            </div>
+            <div class="module window-types tabs-window">
+                <jqx-button class="open-window-button" theme="material-dark">Open</jqx-button>
+                <jqx-tabs-window class="flat animation" theme="material-dark" opened>
+                    <jqx-tab-item label="One">
+                        <h1 class="md-display-2">Tab One</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+                    </jqx-tab-item>
+                    <jqx-tab-item label="Two">
+                        <h1 class="md-display-2">Tab Two</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+                        <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+                        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                    </jqx-tab-item>
+                    <jqx-tab-item label="Three">
+                        <h1 class="md-display-2">Tab Three</h1>
+                        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                    </jqx-tab-item>
+                </jqx-tabs-window>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

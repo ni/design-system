@@ -1,0 +1,27 @@
+/* Color Item Size */
+
+jqx-color-picker.item-size-small {
+    --jqx-color-picker-grid-mode-item-size: 10px;
+}
+
+jqx-color-picker.item-size-medium {
+    --jqx-color-picker-grid-mode-item-size: 20px;
+}
+
+jqx-color-picker.item-size-large {
+    --jqx-color-picker-grid-mode-item-size: 30px;
+}
+
+/* Column Gap */
+
+jqx-color-picker.column-gap-small {
+    --jqx-color-picker-grid-mode-columns-gap: 1px;
+}
+
+jqx-color-picker.column-gap-medium {
+    --jqx-color-picker-grid-mode-columns-gap: 2.5px;
+}
+
+jqx-color-picker.column-gap-large {
+    --jqx-color-picker-grid-mode-columns-gap: 5px;
+}

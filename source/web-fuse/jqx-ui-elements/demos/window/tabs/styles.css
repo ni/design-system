@@ -1,0 +1,63 @@
+#tabs {
+    border-color: #878787;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+    #tabs .jqx-tab-strip {
+        background-color: #E0E0E0;
+    }
+
+    #tabs .jqx-tab-label-container {
+        border-top-width: 2px;
+        border-top-style: solid;
+        border-top-color: transparent;
+    }
+
+        #tabs .jqx-tab-label-container.jqx-tab-selected {
+            background-color: #F2F2F2;
+        }
+
+        #tabs .jqx-tab-label-container.jqx-tab-hovered {
+            background-color: #E5E5E5;
+            color: black;
+        }
+
+        #tabs .jqx-tab-label-container:nth-child(1).jqx-tab-selected {
+            border-color: #5cb85c;
+        }
+
+        #tabs .jqx-tab-label-container:nth-child(1).jqx-tab-hovered {
+            border-color: #7DD17D;
+        }
+
+        #tabs .jqx-tab-label-container:nth-child(2).jqx-tab-selected {
+            border-color: #5bc0de;
+        }
+
+        #tabs .jqx-tab-label-container:nth-child(2).jqx-tab-hovered {
+            border-color: #7EDDF7;
+        }
+
+        #tabs .jqx-tab-label-container:nth-child(3).jqx-tab-selected {
+            border-color: #d9534f;
+        }
+
+        #tabs .jqx-tab-label-container:nth-child(3).jqx-tab-hovered {
+            border-color: #F27371;
+        }
+
+jqx-list-box.mailList {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+#tabs .jqx-list-item-container {
+    width: 100%;
+}
+
+jqx-list-item.date {
+    float: right;
+}

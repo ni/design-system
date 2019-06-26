@@ -1,0 +1,16 @@
+html {
+    background: var(--mc-white);
+    color: var(--mc-gray-base);
+    font-family: var(--mc-body-font);
+    font-size: var(--mc-size-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}

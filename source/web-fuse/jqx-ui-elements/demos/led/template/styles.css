@@ -1,0 +1,20 @@
+.jqx-indeterminate-content,
+.jqx-true-content,
+.jqx-false-content {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 10px;
+}
+
+.jqx-indeterminate-content {
+    background-color: blue;
+}
+
+.jqx-true-content {
+    background-color: green;
+}
+
+.jqx-false-content {
+    background-color: red;
+}

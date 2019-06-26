@@ -1,0 +1,17 @@
+#tree {
+    height: auto;
+}
+
+input {
+    height: 30px;
+    font-family: var(--jqx-font-family);
+    font-size: var(--jqx-font-size);
+}
+
+jqx-button {
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+    font-family: 'jqx-icons';
+}

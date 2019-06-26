@@ -1,0 +1,99 @@
+---
+layout: page
+title: jqxAccordion
+category: elements
+tags:
+status: ready
+description: jqxAccordion element represents a custom element with expandable items
+
+---
+
+**jqxAccordion** Each item contains header and content part. Click on the header toggles the content part.
+
+### Live examples
+[Accordion – codesandbox](codesandbox://jqx-ui-elements/demos/accordion/animated/index.htm,jqx-ui-elements/demos/accordion/animated/index.js,jqx-ui-elements/demos/accordion/animated/styles.css)
+
+### Required files
+The jqxAccordion element requires the following file references to be placed on a web page in order for the custom element to be successfully registered and properly working:
+* **jqxelement.js** -- this is the base file that defines the common architecture of all jqx custom elements. It is part of the repository **ni-kismet/jqx-element**.
+* **jqxaccordion.js** -- this file defines the functionality of the jqxAccordion custom element.
+
+jqxAccordion also requires the following style sheets in order to be displayed correctly.
+* **jqx.base.css** -- the base style sheet file.
+
+### Initialization
+To create an instance of a jqxAccordion custom element, ypu can use one of the following HTML structures:
+```html
+<jqx-accordion>
+	<jqx-accordion-item label="Item 1" content="Content 1" expanded></jqx-accordion-item>
+	<jqx-accordion-item label="Item 2" content="Content 2"></jqx-accordion-item>
+	<jqx-accordion-item label="Item 3" content="Content 3"></jqx-accordion-item>  
+</jqx-accordion>
+```
+or
+```html
+<jqx-accordion>
+	<jqx-accordion-item label="Item 1" expanded>Content</jqx-accordion-item>
+	<jqx-accordion-item label="Item 2">Content</jqx-accordion-item>
+	<jqx-accordion-item label="Item 3">Content</jqx-accordion-item>  
+</jqx-accordion>
+```
+
+### Getting and setting properties dynamically
+Before accessing the custom element's API in JavaScript, the custom element's instance has to be retrieved:
+```javascript
+let customElement = document.querySelector('jqx-accordion');
+```
+Properties are represented as members of the custom element's instance object and can be accessed as such.
+
+Here is an example showing how to get a property dynamically:
+```javascript
+let expandedIndexes = customElement.expandedIndexes;
+```
+
+Here is an example showing how to set a property dynamically:
+```javascript
+customElement.expandedIndexes = [0];
+```
+
+### Calling methods
+Before accessing the custom element's API in JavaScript, the custom element's instance has to be retrieved:
+```javascript
+let customElement = document.querySelector('jqx-accordion');
+```
+Methods are represented as members of the custom element's instance object and can be accessed as such.
+
+Here is an example showing how to call a method:
+```javascript
+customElement.remove(0);
+```
+
+### Animations
+By default the animation for the jqxAccordion is disabled. It can be enabled by adding the CSS class called "animation" to the element, like so:
+```html
+<jqx-accordion class="animation">
+	<jqx-accordion-item label="Item 1" expanded>Content</jqx-accordion-item>
+	<jqx-accordion-item label="Item 2">Content</jqx-accordion-item>
+	<jqx-accordion-item label="Item 3">Content</jqx-accordion-item>  
+</jqx-accordion>
+```
+
+### Styling (CSS API)
+
+#### CSS selectors
+The following CSS selectors can be used to style jqxAccordion:
+* `jqx-accordion` - the element itself. Can be used to set width and height for the whole element.
+  * `.jqx-container` - the container that holds all of the internals of the element. Shoudn't be used for styling.
+    * `jqx-accordion-item` - jqxAccordionItem custom element. All of the accordion's content is represented as jqx-accordion-item blocks
+      * `.jqx-container` - the container that holds all of the internals of the accordion item. Shoudn't be used for styling.
+        * `.jqx-accordion-item-header` - used as an item's header container.
+          * `.jqx-arrow` - an HTML Span element used as an item's arrow'.
+          * `.jqx-label` - an HTML Span element used as an item's label'.
+        * `.jqx-accordion-item-content` - used as an item's content part.
+          * `.jqx-content-container` - used as an item's content container part.
+    
+#### CSS variables
+jqxAccordion uses the following CSS variables:
+ * `--jqx-accordion-default-width` - used to set the default width of the element. Default value is 200px.
+ * `--jqx-accordion-default-height` - used to set the default height of the element. Default value is 200px.
+ * `--jqx-accordion-animation-duration` - used to set the time to expand/collapse an item. Default value is 350ms.

@@ -1,0 +1,44 @@
+body, body.metro-light {
+    background-color: #F2F2F2;
+}
+
+    body.metro-blue {
+        background-color: #1B1464;
+    }
+
+    body.metro-red {
+        background-color: #FF1D25;
+    }
+
+    body.metro-dark {
+        background-color: #1A1A1A;
+    }
+
+        body.metro-blue h3,
+        body.metro-dark h3,
+        body.metro-blue jqx-radio-button .jqx-label,
+        body.metro-dark jqx-radio-button .jqx-label,
+        body.metro-red jqx-radio-button .jqx-label,
+        body.metro-blue jqx-accordion-item .jqx-arrow:after,
+        body.metro-dark jqx-accordion-item .jqx-arrow:after,
+        body.metro-blue jqx-accordion-item .jqx-accordion-item-header,
+        body.metro-dark jqx-accordion-item .jqx-accordion-item-header,
+        body.metro-blue jqx-accordion-item .jqx-accordion-item-content,
+        body.metro-dark jqx-accordion-item .jqx-accordion-item-content {
+            color: white;
+        }
+
+        body.metro-blue jqx-accordion-item.hovered .jqx-accordion-item-header,
+        body.metro-dark jqx-accordion-item.hovered .jqx-accordion-item-header {
+            color: #FFBB00;
+        }
+
+        body.metro-blue jqx-accordion-item .jqx-container,
+        body.metro-dark jqx-accordion-item .jqx-container {
+            border-color: white;
+        }
+
+jqx-accordion {
+    width: 250px;
+    height: 350px;
+}

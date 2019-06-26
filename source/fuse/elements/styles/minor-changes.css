@@ -1,0 +1,24 @@
+  /* DO/DO NOT image exmamples */
+
+  .do p {
+    color: var(--good);
+  }
+
+  .dont p {
+    color: var(--bad);
+  }
+
+  .do img {
+    padding-bottom: 4px;
+    border-bottom: 8px solid var(--good);
+    color: var(--good);
+    background-color: rgba(106, 162, 57, 0.18);
+    padding: 8px;
+  }
+
+  .dont img {
+    padding-bottom: 4px;
+    border-bottom: 8px solid var(--bad);
+    background-color: rgba(240, 78, 35, .18);
+    padding: 8px;
+  }

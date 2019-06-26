@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tree Items with Tooltips</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmenu.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtree.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtooltip.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <jqx-tree id="tree">
+        <jqx-tree-item>Home</jqx-tree-item>
+        <jqx-tree-items-group expanded selected>
+            Solutions
+            <jqx-tree-item>Education</jqx-tree-item>
+            <jqx-tree-item>Financial services</jqx-tree-item>
+            <jqx-tree-item>Government</jqx-tree-item>
+            <jqx-tree-item>Manufacturing</jqx-tree-item>
+            <jqx-tree-items-group>
+                Solutions
+                <jqx-tree-item>Consumer photo and video</jqx-tree-item>
+                <jqx-tree-item>Mobile</jqx-tree-item>
+                <jqx-tree-item>Rich Internet applications</jqx-tree-item>
+                <jqx-tree-item>Technical communication</jqx-tree-item>
+                <jqx-tree-item>Training and eLearning</jqx-tree-item>
+                <jqx-tree-item>Web conferencing</jqx-tree-item>
+            </jqx-tree-items-group>
+            <jqx-tree-item>All industries and solutions</jqx-tree-item>
+        </jqx-tree-items-group>
+        <jqx-tree-items-group expanded>
+            Products
+            <jqx-tree-item>PC products</jqx-tree-item>
+            <jqx-tree-item selected>Mobile products</jqx-tree-item>
+            <jqx-tree-item selected>All products</jqx-tree-item>
+        </jqx-tree-items-group>
+        <jqx-tree-items-group>
+            Support
+            <jqx-tree-item>Support home</jqx-tree-item>
+            <jqx-tree-item>Customer Service</jqx-tree-item>
+            <jqx-tree-item>Knowledge base</jqx-tree-item>
+            <jqx-tree-item>Books</jqx-tree-item>
+            <jqx-tree-item>Training and certification</jqx-tree-item>
+            <jqx-tree-item>Support programs</jqx-tree-item>
+            <jqx-tree-item>Forums</jqx-tree-item>
+            <jqx-tree-item>Documentation</jqx-tree-item>
+            <jqx-tree-item>Updates</jqx-tree-item>
+        </jqx-tree-items-group>
+        <jqx-tree-items-group>
+            Communities
+            <jqx-tree-item>Designers</jqx-tree-item>
+            <jqx-tree-item>Developers</jqx-tree-item>
+            <jqx-tree-item>Educators and students</jqx-tree-item>
+            <jqx-tree-item>Partners</jqx-tree-item>
+            <jqx-tree-items-group>
+                By resource
+                <jqx-tree-item>Labs</jqx-tree-item>
+                <jqx-tree-item>TV</jqx-tree-item>
+                <jqx-tree-item>Forums</jqx-tree-item>
+                <jqx-tree-item>Exchange</jqx-tree-item>
+                <jqx-tree-item>Blogs</jqx-tree-item>
+                <jqx-tree-item>Experience Design</jqx-tree-item>
+            </jqx-tree-items-group>
+        </jqx-tree-items-group>
+        <jqx-tree-items-group>
+            Company
+            <jqx-tree-item>About Us</jqx-tree-item>
+            <jqx-tree-item>Press</jqx-tree-item>
+            <jqx-tree-item>Investor Relations</jqx-tree-item>
+            <jqx-tree-item>Corporate Affairs</jqx-tree-item>
+            <jqx-tree-item>Careers</jqx-tree-item>
+            <jqx-tree-item>Showcase</jqx-tree-item>
+            <jqx-tree-item>Events</jqx-tree-item>
+            <jqx-tree-item>Contact Us</jqx-tree-item>
+            <jqx-tree-item>Become an affiliate</jqx-tree-item>
+        </jqx-tree-items-group>
+    </jqx-tree>
+</body>
+</html>

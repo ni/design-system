@@ -1,0 +1,33 @@
+jqx-carousel {
+    width: 1000px;
+    height: 500px;
+    border-color: transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    jqx-carousel:focus,
+    jqx-carousel:active {
+        border-color: transparent;
+    }
+
+    jqx-carousel .jqx-carousel-html-content {
+        padding-left: 35px;
+        padding-right: 20px;
+    }
+
+jqx-card {
+    height: 450px;
+}
+
+    jqx-card h3,
+    jqx-card p,
+    jqx-card a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    jqx-card h3 {
+        font-size: 20px;
+    }

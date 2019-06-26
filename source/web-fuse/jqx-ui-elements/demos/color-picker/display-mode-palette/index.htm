@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Color Panel displayMode "palette"</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.default.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcolorpanel.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcolorpicker.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Display Mode "palette"</h1>
+
+    <jqx-color-picker edit-alpha-channel display-mode="palette"></jqx-color-picker>
+
+    <div class="options">
+        <div class="option">
+            <h3>ApplyValueMode</h3>
+            <jqx-radio-button group-name="applyValueMode" checked>instantly</jqx-radio-button>
+            <jqx-radio-button group-name="applyValueMode">useButtons</jqx-radio-button>
+        </div>
+        <div class="option">
+            <h3>Color Editors</h3>
+            <jqx-check-box id="hidePreviewContainer">Hide Preview Container</jqx-check-box>
+            <jqx-check-box id="hideRGBEditor">Hide RGB Editor</jqx-check-box>
+            <jqx-check-box id="hideHEXEditor">Hide HEX Editor</jqx-check-box>
+            <jqx-check-box id="hideAlphaEditor">Hide Alpha Editor</jqx-check-box>
+        </div>
+    </div>
+</body>
+</html>

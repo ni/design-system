@@ -1,0 +1,10 @@
+jqx-file-upload .jqx-upload-all-button,
+jqx-file-upload .jqx-cancel-all-button,
+jqx-file-upload .jqx-pause-all-button {
+    width: 120px;
+    height: 35px;
+}
+
+jqx-file-upload {
+    width: 380px;
+}

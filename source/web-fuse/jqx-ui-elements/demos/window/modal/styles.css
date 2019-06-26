@@ -1,0 +1,45 @@
+#formWindow > .jqx-container > .jqx-content {
+    flex-direction: column;
+}
+
+#formWindow {
+    --jqx-window-default-width: 50%;
+    --jqx-window-default-height: 75%;
+    --jqx-window-footer-height: 50px;
+}
+
+#modal {
+    --jqx-window-default-width: 35%;
+    --jqx-window-default-height: 25%;
+    --jqx-window-footer-height: 40px;
+}
+
+    #modal > .jqx-container > .jqx-content {
+        justify-content: center;
+    }
+
+
+#formWindow #article {
+    overflow-y: auto;
+    width: 100%;
+}
+
+jqx-window > .jqx-container > .jqx-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+    jqx-window > .jqx-container > .jqx-footer jqx-button {
+        width: 100px;
+        height: 100%;
+        margin-left: 10px;
+    }
+
+#modal > .jqx-container > .jqx-footer {
+    justify-content: center;
+}
+
+#contentHolder {
+    width: 100%;
+    height: 100%;
+}

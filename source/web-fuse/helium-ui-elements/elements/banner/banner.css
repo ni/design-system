@@ -1,0 +1,42 @@
+.mc-banner-visible {
+    display: flex;
+}
+
+.mc-banner-hidden {
+    display: none;
+}
+
+.mc-banner-modal {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    z-index: 100001;
+    width: 100%;
+    min-width: 400px;
+    height: 95px;
+    background-color: var(--mc-color-modal-background-dark);
+    transition: opacity var(--mc-duration-base) var(--mc-deceleration);
+}
+
+.mc-banner-content {
+    margin: 0px;
+    padding: 10px 0;
+    padding-right: 90px;
+    padding-left: 20px;
+    border: 0;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto 90px;
+}
+
+.mc-banner-message {
+    margin-bottom: 5px;
+    font-family: var(--mc-headline-font);
+    font-size: var(--mc-size-base);
+    color: var(--mc-gray-lighter-9);
+    font-weight: 300;
+    line-height: normal;
+    word-break: break-word;
+}

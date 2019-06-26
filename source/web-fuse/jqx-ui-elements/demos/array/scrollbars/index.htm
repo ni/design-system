@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Array Scrollbars</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxarray.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumerictextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcomplex.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcombobox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxswitchbutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <p style="font-family: Verdana;">
+        Visible items:
+    </p>
+    <jqx-check-box id="enableIndexDisplay" checked>
+        Index Display
+    </jqx-check-box>
+    <jqx-check-box id="enableVerticalScrollbar" checked>
+        Vertical Scrollbar
+    </jqx-check-box>
+    <jqx-check-box id="enableHorizontalScrollbar" checked>
+        Horizontal Scrollbar
+    </jqx-check-box>
+    <br />
+    <br />
+    <jqx-array id="jqxArray"
+               type="string"
+               value='[["A", "a", "α"], ["B", "b", "β"], ["C", "c", "κ"], ["D", "d", "δ"], ["E", "e", "ε"]]'
+               dimensions="2"
+               rows="2"
+               columns="2"
+               show-index-display
+               show-vertical-scrollbar
+               show-horizontal-scrollbar>
+    </jqx-array>
+    <br />
+    <div id="log">
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Time Picker API</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtimepicker.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div>
+        <jqx-time-picker id="timePicker" format="24-hour"></jqx-time-picker>
+    </div>
+    <div class="container">
+        <p>Selection</p>
+        <jqx-radio-button checked group-name="selection">Hours</jqx-radio-button>
+        <jqx-radio-button group-name="selection">Minutes</jqx-radio-button>
+    </div>
+    <div class="container">
+        <p>Minute interval</p>
+        <jqx-radio-button checked group-name="minuteInterval">1</jqx-radio-button>
+        <jqx-radio-button group-name="minuteInterval">5</jqx-radio-button>
+        <jqx-radio-button group-name="minuteInterval">15</jqx-radio-button>
+    </div>
+    <br />
+    <jqx-button id="setHours" class="demoButton">Set hours to 20</jqx-button>
+    <jqx-button id="setMinutes" class="demoButton">Set minutes to 12</jqx-button>
+    <jqx-button id="setNow" class="demoButton">Set to now</jqx-button>
+    <br />
+    <br />
+    <div>
+        Current value: <strong id="valueLog"></strong>
+    </div>
+</body>
+</html>

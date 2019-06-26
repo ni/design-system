@@ -1,0 +1,16 @@
+jqx-multi-split-button {
+    width: 300px;
+}
+
+jqx-multi-split-button,
+.container {
+    margin: 10px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+    .container jqx-button {
+        width: 150px;
+    }

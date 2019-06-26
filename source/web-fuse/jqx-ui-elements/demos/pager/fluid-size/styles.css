@@ -1,0 +1,7 @@
+jqx-pager {
+    width: 100%;
+}
+
+    jqx-pager .jqx-last-button {
+        border-right: solid 1px lightgray;
+    }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Drop Down Button Position</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="container">
+        <jqx-drop-down-button drop-down-width="auto">
+            <jqx-tank id="tank" class="animation" max="100" scale-type="integer" value="75" interval="10"></jqx-tank>
+        </jqx-drop-down-button>
+
+        <div id="controlPanel">
+            <div>
+                <h3>Button Position:</h3>
+                <jqx-radio-button>Left</jqx-radio-button>
+                <jqx-radio-button checked>Right</jqx-radio-button>
+                <jqx-radio-button>Top</jqx-radio-button>
+                <jqx-radio-button>Bottom</jqx-radio-button>
+            </div>
+            <br /><br />
+            <div>
+                <h3>Open Mode:</h3>
+                <jqx-radio-button checked>Default</jqx-radio-button>
+                <jqx-radio-button>DropDownButton</jqx-radio-button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

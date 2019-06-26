@@ -1,0 +1,8 @@
+html, body {
+    background-color: #F2F2F2;
+}
+
+jqx-gauge {
+    width: 350px;
+    height: 350px;
+}

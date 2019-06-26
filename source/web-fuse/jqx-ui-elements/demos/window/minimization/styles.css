@@ -1,0 +1,11 @@
+jqx-window > .jqx-container > .jqx-content {
+    align-items: initial;
+}
+
+jqx-window {
+    --jqx-window-default-height: 250px;
+}
+
+    jqx-window:nth-of-type(1) {
+        left: calc(25% - var(--jqx-window-default-width) / 2);
+    }

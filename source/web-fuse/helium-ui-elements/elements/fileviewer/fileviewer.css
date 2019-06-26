@@ -1,0 +1,56 @@
+.sl-fileviewer-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    line-height: 25px;
+}
+
+.sl-fileviewer-form-label {
+    width: 160px;
+}
+
+.sl-fileviewer-form-input {
+    width: 200px;
+}
+
+.sl-fileviewer-hidden {
+    display: none;
+}
+
+.sl-fileviewer-toolbar {
+    display: flex;
+    background-color: var(--mc-gray-lighter-8);
+}
+
+.sl-fileviewer-action {
+    flex: auto;
+}
+
+.sl-fileviewer-filter {
+    width: 100px;
+}
+
+.sl-fileviewer-search {
+    width: 250px;
+    margin-top: 12px;
+}
+
+.sl-fileviewer-search-input {
+    background-color: var(--mc-gray-lighter-8);
+}
+
+.sl-fileviewer-filter-builder {
+    margin: 10px;
+}
+
+.sl-fileviewer-filter-builder-hidden {
+    display: none;
+}
+
+.sl-fileviewer-filter-builder-show {
+    display: block;
+}
+
+sl-list-editor {
+    width: 300px;
+}

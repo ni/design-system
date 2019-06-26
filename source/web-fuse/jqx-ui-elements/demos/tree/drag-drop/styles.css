@@ -1,0 +1,14 @@
+jqx-tree, jqx-multiline-text-box {
+    margin-right: 50px;
+    float: left;
+}
+
+jqx-multiline-text-box {
+    width: 200px;
+    height: 100px;
+}
+
+#dragInnerContainer {
+    width: 120px;
+    text-align:center;
+}

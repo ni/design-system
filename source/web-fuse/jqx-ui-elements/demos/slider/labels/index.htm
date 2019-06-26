@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slider Labels</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxslider.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div style="height: 150px;">
+        <div class="container">
+            <p>Labels</p>
+            <input type="radio" id="all" name="labelsVisibility" checked /><label for="all">All</label><br />
+            <input type="radio" id="endPoints" name="labelsVisibility" /><label for="endPoints">Endpoints</label><br />
+            <input type="radio" id="none" name="labelsVisibility" /><label for="none">None</label><br />
+        </div>
+        <div class="container">
+            <p>Tick Marks</p>
+            <input type="radio" id="major" name="ticksVisibility" /><label for="major">Major</label><br />
+            <input type="radio" id="minor" name="ticksVisibility" checked /><label for="minor">Minor</label><br />
+            <input type="radio" id="noTicks" name="ticksVisibility" /><label for="noTicks">None</label><br />
+        </div>
+    </div>
+
+    <jqx-slider id="horizontalSlider" show-tooltip min="17" max="769" value="172" scale-position="both"></jqx-slider>
+    <br />
+    <jqx-slider id="verticalSlider" show-tooltip orientation="vertical" inverted min="-100" max="0" value="-4" scale-position="both"></jqx-slider>
+</body>
+</html>

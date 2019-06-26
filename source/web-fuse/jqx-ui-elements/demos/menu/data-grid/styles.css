@@ -1,0 +1,63 @@
+#columnHeader {
+    border: 1px solid #808080;
+    width: 150px;
+    height: 30px;
+    display: flex;
+}
+
+#columnText, #columnMenuButton {
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#columnText {
+    border-right: 1px solid #808080;
+    width: 85%;
+    padding-left: 10px;
+    font-family: Verdana;
+    font-size: 14px;
+}
+
+#columnMenuButton {
+    position: relative;
+    width: 15%;
+    background-image: url('https://www.jqwidgets.com/jquery-widgets-demo/jqwidgets/styles/images/icon-menu-small.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#filterMenu {
+    width: 200px;
+    height: 375px;
+}
+
+    #filterMenu img {
+        margin-right: 5px;
+    }
+
+#templateContainer {
+    width: 100%;
+}
+
+jqx-drop-down-list, jqx-text-box {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#andOrSelection {
+    --jqx-drop-down-element-height: auto;
+    width: 70px;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jqx-drop-down-repositioned {
+    z-index: 10001;
+}

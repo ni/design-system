@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tabs Label Settings</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtabs.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <jqx-tabs id="tabs" class="demoTabs" selected-index="3" tab-position="left" selectionMode="click" tab-text-orientation="vertical" overflow="scroll">
+        <jqx-tab-item label="New York"><div id="map-canvas-0"></div></jqx-tab-item>
+        <jqx-tab-item label="Hong Kong"><div id="map-canvas-1"></div></jqx-tab-item>
+        <jqx-tab-item label="Troyan"><div id="map-canvas-2"></div></jqx-tab-item>
+        <jqx-tab-item label="Bali"><div id="map-canvas-3"></div></jqx-tab-item>
+    </jqx-tabs>
+    <div>
+        <p>Tab position</p>
+        <jqx-radio-button id="top" group-name="tabPosition">top</jqx-radio-button>
+        <jqx-radio-button id="bottom" group-name="tabPosition">bottom</jqx-radio-button>
+        <jqx-radio-button id="left" group-name="tabPosition" checked>left</jqx-radio-button>
+        <jqx-radio-button id="right" group-name="tabPosition">right</jqx-radio-button>
+    </div>
+    <div>
+        <p>Selection mode</p>
+        <jqx-radio-button id="click" group-name="selectionMode" checked>click</jqx-radio-button>
+        <jqx-radio-button id="dblclick" group-name="selectionMode">dblclick</jqx-radio-button>
+        <jqx-radio-button id="mouseenter" group-name="selectionMode">mouseenter</jqx-radio-button>
+        <jqx-radio-button id="none" group-name="selectionMode">none</jqx-radio-button>
+    </div>
+    <div>
+        <p>Tab text orientation</p>
+        <jqx-radio-button id="horizontal" group-name="tabTextOrientation">horizontal</jqx-radio-button>
+        <jqx-radio-button id="vertical" group-name="tabTextOrientation" checked>vertical</jqx-radio-button>
+    </div>
+    <script type="text/javascript">
+        function initializeMaps() {
+            new google.maps.Map(document.getElementById('map-canvas-3'), {
+                center: new google.maps.LatLng(-10.516768, 119.680272),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+        }
+    </script>
+</body>
+</html>

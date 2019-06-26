@@ -1,0 +1,9 @@
+jqx-button,
+jqx-text-box {
+    display: block;
+}
+
+jqx-button {
+    margin-top: 10px;
+    width: 100px;
+}

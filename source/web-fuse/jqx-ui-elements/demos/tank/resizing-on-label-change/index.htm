@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tank Resizing on Label Change</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Tank scale/track resisizng demo</h1>
+    <div id="tankContainer">
+        <jqx-tank id="tank" orientation="vertical" min="-20" max="20"></jqx-tank>
+    </div>
+    <div id="controlPanel">
+        <h3>Set Max:</h3>
+        <jqx-radio-button group-name="max" id="maxTwoMln">2 000 000</jqx-radio-button>
+        <jqx-radio-button group-name="max" id="maxTwoThousand">2 000</jqx-radio-button>
+        <jqx-radio-button group-name="max" id="maxTwenty" checked>20</jqx-radio-button>
+        <h3>Set Min:</h3>
+        <jqx-radio-button group-name="min" id="minTwoMln">-2 000 000</jqx-radio-button>
+        <jqx-radio-button group-name="min" id="minTwoThousand">-2 000</jqx-radio-button>
+        <jqx-radio-button group-name="min" id="minTwenty" checked>-20</jqx-radio-button>
+        <h3>Set Scale Position:</h3>
+        <jqx-radio-button group-name="scalePosition" id="scaleNear" checked>Near</jqx-radio-button>
+        <jqx-radio-button group-name="scalePosition" id="scaleFar">Far</jqx-radio-button>
+        <jqx-radio-button group-name="scalePosition" id="scaleBoth">Both</jqx-radio-button>
+        <jqx-radio-button group-name="scalePosition" id="scaleNone">None</jqx-radio-button>
+        <h3>Change orientation:</h3>
+        <jqx-radio-button group-name="orientation" id="horizontalOrientation">Horizontal</jqx-radio-button>
+        <jqx-radio-button group-name="orientation" id="verticalOrientation" checked>Vertical</jqx-radio-button>
+        <h3>Show labels:</h3>
+        <jqx-radio-button group-name="labelVisibility" id="turnLabelsOn" checked>On</jqx-radio-button>
+        <jqx-radio-button group-name="labelVisibility" id="turnLabelsOff">Off</jqx-radio-button>
+    </div>
+    <div id="log">
+        <h2>Logger</h2>
+        <b>Scale width: </b><div id="scaleWidth"></div>
+        <br />
+        <b>Scale height: </b><div id="scaleHeight"></div>
+        <br />
+        <br />
+        <b>Track width: </b><div id="trackWidth"></div>
+        <br />
+        <b>Track height: </b><div id="trackHeight"></div>
+    </div>
+</body>
+</html>

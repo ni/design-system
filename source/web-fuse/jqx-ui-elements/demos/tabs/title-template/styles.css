@@ -1,0 +1,35 @@
+html, body {
+    background-color: black;
+}
+
+#tabs {
+    border-color: #366D93;
+    width: 500px;
+    height: 200px;
+    color: #F2F2F2;
+}
+
+    #tabs .jqx-tab-strip {
+        background-color: #366D93;
+    }
+
+    #tabs .jqx-tab-label-container {
+        border: 1px solid transparent;
+    }
+
+    #tabs .jqx-tab-label-text-container {
+        display: flex;
+        align-items: center;
+    }
+
+    #tabs .jqx-tab-label-container.jqx-tab-selected {
+        border-color: #4384B7 #4384B7 black #4384B7;
+        background-color: black;
+        color: white;
+    }
+
+    #tabs .jqx-tab-label-container.jqx-tab-hovered {
+        border-color: #4384B7;
+        background-color: #2D5B7A;
+        color: #F2F2F2;
+    }

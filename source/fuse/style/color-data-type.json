@@ -1,0 +1,62 @@
+[
+    {
+       "name": "FloatAndDoubleNumericTypeColor",
+       "type": "Number Double",
+       "primary": "#F59433",
+       "secondary": "#FBE4CF"
+    },
+    {
+       "name": "IntegerNumericTypeColor",
+       "type": "Number Integer",
+       "primary": "#4192F6",
+       "secondary": "#D0E3FB"
+    },
+    {
+       "name": "FixedPointNumericTypeColor",
+       "type": "Number Fixed Point",
+       "primary": "#614CCB",
+       "secondary": "#D7D3F1"
+    },
+    {
+       "name": "ErrorClusterTypeColor",
+       "type": "Error",
+       "primary": "#A0A017",
+       "secondary": "#D0D094"
+    },
+    {
+       "name": "BuiltInClusterTypeColor",
+       "type": "Timestamp, Waveform, Numeric Cluster",
+       "primary": "#77381A",
+       "secondary": "#DDCDC5"
+    },
+    {
+       "name": "BooleanTypeColor",
+       "type": "Boolean",
+       "primary": "#0D770D",
+       "secondary": "#C4DCC5"
+    },
+    {
+       "name": "ReferenceAndPathTypeColor",
+       "type": "Reference, Path",
+       "primary": "#0EC0C2",
+       "secondary": "#C8EFEF"
+    },
+    {
+       "name": "IONameControlTypeColor",
+       "type": "IO Name Control",
+       "primary": "#AD1CB6",
+       "secondary": "#E9C9EB"
+    },
+    {
+       "name": "ClusterAndStringTypeColor",
+       "type": "String, Cluster",
+       "primary": "#F017F0",
+       "secondary": "#FACBFA"
+    },
+    {
+       "name": "LabVIEWObjectTypeColor",
+       "type": "LabVIEW Object",
+       "primary": "#E33067",
+       "secondary": "#F097B2"
+    }
+ ]

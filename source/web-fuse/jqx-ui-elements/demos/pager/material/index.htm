@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pager Material Theme</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxpager.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="materialPagerContainer">
+        <section>
+            <h1>jqxPager</h1>
+            <div>
+                <div class="module">
+                    <p>jqxPager provides navigation for paged information, typically used with a grid or table.</p>
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../../images/components-buttons.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#style">Style</a></li>
+                <li><a href="#mobile">Mobile</a></li>
+            </ul>
+        </nav>
+
+        <section id="usage">
+            <h1>Usage</h1>
+            <div class="module">
+                <p>
+                    Pager with default settings allows the user to navigate between 3 items. This range can be changed by setting:
+                </p>
+                <ul>
+                    <li><b>items</b> : total number of items </li>
+                    <li><b>itemsPerPage</b> : the number of items displayed on single page</li>
+                </ul>
+                <br />
+                <h2>Navigation</h2>
+                <p>
+                    User can navigate between pages and/or items via built-in optional buttons.
+                </p>
+            </div>
+            <div class="module  dropDownListLightTheme" style="width:700px;">
+                <table>
+                    <tr>
+                        <td>Default</td>
+                        <td>
+                            <jqx-pager items="50" class="animation material" id="pager1a"></jqx-pager>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Navigation
+                        </td>
+                        <td>
+                            <jqx-pager items="50" prev-next-buttons class="animation material" id="pager1b"></jqx-pager>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Wide range
+                        </td>
+                        <td>
+                            <jqx-pager items="50" items-per-page="10" class="animation material" id="pager1c"></jqx-pager>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            First/last item navigation
+                        </td>
+                        <td>
+                            <jqx-pager items="50" items-per-page="10" first-last-buttons class="animation material" id="pager1d"></jqx-pager>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ellipsis
+                        </td>
+                        <td>
+                            <jqx-pager items="50" items-per-page="10" prev-next-buttons ellipsis class="animation material" id="pager1e"></jqx-pager>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </section>
+
+        <section id="style">
+            <h1>Style</h1>
+            <div class="module">
+                <h2>Light</h2>
+                <p>
+                    Action button: Transparent<br />
+                    Drop down button: Transparent
+                </p>
+                <p>
+                    Action button (pressed): #FAFAFA<br />
+                    Drop down button (pressed): #FAFAFA
+                </p>
+                <p>Disabled: #000000, Opacity 20%</p>
+            </div>
+            <div class="module dropDownListLightTheme">
+                <table>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td>
+                            <jqx-pager items="50" hide-items prev-next-page-buttons show-range show-rows-count rows-count-options="[5,10,15]" class="animation material" id="pager2a"></jqx-pager>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Disabled</p></td>
+                        <td>
+                            <jqx-pager items="50" hide-items prev-next-page-buttons show-range show-rows-count rows-count-options="[5,10,15]" class="animation material" id="pager2b" disabled></jqx-pager>
+                        </td>
+
+                    </tr>
+                </table>
+                <p>Light theme</p>
+            </div>
+
+            <div class="module">
+                <h2>Dark</h2>
+                <p>
+                    Action button: Transparent<br />
+                    Drop down button: Transparent
+                </p>
+                <p>
+                    Action button (pressed): #0078D7<br />
+                    Drop down button (pressed): #0078D7
+                </p>
+                <p>Disabled: #000000, Opacity 20%</p>
+            </div>
+            <div class="module dropDownListDarkTheme">
+                <table>
+                    <tr>
+                        <td><p>Normal</p></td>
+                        <td>
+                            <jqx-pager items="50" hide-items prev-next-page-buttons show-range show-rows-count rows-count-options="[5,10,15]" class="animation material-dark" id="pager3a"></jqx-pager>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Disabled</p></td>
+                        <td>
+                            <jqx-pager items="50" hide-items prev-next-page-buttons show-range show-rows-count rows-count-options="[5,10,15]" class="animation material-dark" id="pager3b" disabled></jqx-pager>
+                        </td>
+
+                    </tr>
+                </table>
+                <p>Dark theme</p>
+            </div>
+        </section>
+
+        <section id="pager-mobile">
+            <h1>Mobile</h1>
+
+            <div class="module">
+            </div>
+
+            <div class="module">
+                <div id="pager-mobile-container" style="position:relative;">
+                    <div id="imageContainer">
+                        <div id="content" class="img0">
+                            <img src="../../images/albums_pop.png" />
+                            <img src="../../images/albums_alternative.png" />
+                            <img src="../../images/albums_rock.png" />
+                        </div>
+                    </div>
+                    <jqx-pager id="mobile" class="material-dark" items="3" item-template="mobileTemplate"></jqx-pager>
+                    <template id="mobileTemplate">
+                    </template>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

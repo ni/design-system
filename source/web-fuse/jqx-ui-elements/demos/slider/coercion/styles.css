@@ -1,0 +1,13 @@
+jqx-toggle-button .jqx-button, jqx-button .jqx-button {
+    padding: 3px;
+}
+
+#interval {
+    width: 250px;
+    height: 30px;
+}
+
+#horizontalSlider {
+    width: 570px;
+    height: 100px;
+}

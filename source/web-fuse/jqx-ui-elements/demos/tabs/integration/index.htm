@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tabs Integration</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcomplex.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtabs.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtank.js"></script>
+    <script type="text/javascript" src="../../../source/jqxgauge.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdraw.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumeric.js"></script>
+    <script type="text/javascript" src="../../../source/jqxmath.js"></script>
+    <script type="text/javascript" src="../../../source/jqxtickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../../source/jqxnumerictextbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxswitchbutton.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <jqx-tabs animation="none" selected-index="1">
+        <jqx-tab-item label="Gauge">
+            <jqx-gauge analog-display-type="fill" digital-display start-angle="-30" end-angle="210" min="0" max="100" value="30"></jqx-gauge>
+        </jqx-tab-item>
+        <jqx-tab-item label="ListBox">
+            <jqx-list-box>
+                <jqx-list-items-group label="Swedish Cars">
+                    <jqx-list-item selected value="volvo">Volvo</jqx-list-item>
+                    <jqx-list-item value="saab">Saab</jqx-list-item>
+                    <jqx-list-item value="saab">Scania</jqx-list-item>
+                </jqx-list-items-group>
+                <jqx-list-items-group label="German Cars">
+                    <jqx-list-item value="mercedes">Mercedes</jqx-list-item>
+                    <jqx-list-item value="vw">VW</jqx-list-item>
+                    <jqx-list-item value="audi">Audi</jqx-list-item>
+                    <jqx-list-item value="porsche">Porsche</jqx-list-item>
+                </jqx-list-items-group>
+                <jqx-list-items-group label="Japanese Cars">
+                    <jqx-list-item value="mazda">Mazda</jqx-list-item>
+                    <jqx-list-item value="honda">Honda</jqx-list-item>
+                    <jqx-list-item value="infinity">Infinity</jqx-list-item>
+                    <jqx-list-item value="mitsubishi">Mitsubishi</jqx-list-item>
+                    <jqx-list-item value="toyota">Toyota</jqx-list-item>
+                </jqx-list-items-group>
+            </jqx-list-box>
+        </jqx-tab-item>
+        <jqx-tab-item label="Tank">
+            <jqx-tank id="tank" orientation="vertical" value="90"></jqx-tank>
+        </jqx-tab-item>
+        <jqx-tab-item label="SwitchButton">
+            <jqx-switch-button checked></jqx-switch-button>
+            <br />
+            <jqx-switch-button></jqx-switch-button>
+        </jqx-tab-item>
+    </jqx-tabs>
+</body>
+</html>

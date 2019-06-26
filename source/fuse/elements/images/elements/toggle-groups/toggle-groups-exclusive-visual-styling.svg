@@ -1,0 +1,93 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="24" viewBox="0 0 70 24">
+  <defs>
+    <linearGradient id="linear-gradient" x1="35" y1="0.69" x2="35" y2="23.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ebe9ec"/>
+      <stop offset="0.28" stop-color="#e5e6e9"/>
+      <stop offset="1" stop-color="#dadfe2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="58" y1="0.69" x2="58" y2="23.25" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-path">
+      <polygon points="5.17 4.84 7.24 4.84 8.68 7.04 14.85 7.04 16.06 4.84 18.29 4.84 18.29 20.52 5.17 20.52 5.17 4.84" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect x="-64" y="-921" width="1001" height="1393" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <polygon points="5.17 2.67 18.29 2.67 18.29 3.67 14.9 3.67 13.75 5.73 9.75 5.73 8.44 3.67 5.17 3.67 5.17 2.67" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect x="-64" y="-925" width="1001" height="1393" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <polygon points="28.03 2.67 41.03 2.67 41.03 3.67 37.67 3.67 36.53 5.73 32.57 5.73 31.27 3.67 28.03 3.67 28.03 2.67" fill="#4d4d4d" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <rect x="-40.5" y="-925" width="991.72" height="1393" fill="#4d4d4d"/>
+    </clipPath>
+    <clipPath id="clip-path-7">
+      <polygon points="27.97 4.99 30.04 4.99 31.48 7.18 37.65 7.18 38.86 4.99 41.09 4.99 41.09 14.06 27.97 14.06 27.97 4.99" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-8">
+      <polygon points="51.31 2.67 64.31 2.67 64.31 3.67 60.95 3.67 59.8 5.73 55.85 5.73 54.54 3.67 51.31 3.67 51.31 2.67" fill="#4d4d4d" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-9">
+      <rect x="-17.22" y="-925" width="991.72" height="1393" fill="#4d4d4d"/>
+    </clipPath>
+    <clipPath id="clip-path-10">
+      <polygon points="51.25 4.99 53.31 4.99 54.76 7.18 60.93 7.18 62.13 4.99 64.37 4.99 64.37 9.53 51.25 9.53 51.25 4.99" fill="#4d4d4d" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <title>toggle-groups-exclusive-visual-styling</title>
+  <rect width="24" height="24" fill="#4384b7"/>
+  <g>
+    <rect x="23.5" y="0.5" width="23" height="23" fill="url(#linear-gradient)"/>
+    <path d="M46,1V23H24V1H46m1-1H23V24H47V0Z" fill="#a8abae"/>
+  </g>
+  <g>
+    <rect x="46.5" y="0.5" width="23" height="23" fill="url(#linear-gradient-2)"/>
+    <path d="M69,1V23H47V1H69m1-1H46V24H70V0Z" fill="#a8abae"/>
+  </g>
+  <g>
+    <g clip-path="url(#clip-path)">
+      <g clip-path="url(#clip-path-2)">
+        <rect x="0.17" y="-0.16" width="23.12" height="25.68" fill="#fff"/>
+      </g>
+    </g>
+    <g clip-path="url(#clip-path-3)">
+      <g clip-path="url(#clip-path-4)">
+        <rect x="0.17" y="-6.33" width="23.12" height="13.06" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+  <g>
+    <polygon points="28.03 2.67 41.03 2.67 41.03 3.67 37.67 3.67 36.53 5.73 32.57 5.73 31.27 3.67 28.03 3.67 28.03 2.67" fill="#4d4d4d" fill-rule="evenodd"/>
+    <g clip-path="url(#clip-path-5)">
+      <g>
+        <rect x="-40.5" y="-925" width="991.72" height="1393" fill="#4d4d4d"/>
+        <g clip-path="url(#clip-path-6)">
+          <rect x="23.08" y="-6.33" width="22.91" height="13.06" fill="#4d4d4d"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g clip-path="url(#clip-path-7)">
+    <rect x="22.97" y="-0.01" width="23.12" height="14.01" fill="#4d4d4d"/>
+  </g>
+  <g>
+    <polygon points="51.31 2.67 64.31 2.67 64.31 3.67 60.95 3.67 59.8 5.73 55.85 5.73 54.54 3.67 51.31 3.67 51.31 2.67" fill="#4d4d4d" fill-rule="evenodd"/>
+    <g clip-path="url(#clip-path-8)">
+      <g>
+        <rect x="-17.22" y="-925" width="991.72" height="1393" fill="#4d4d4d"/>
+        <g clip-path="url(#clip-path-9)">
+          <rect x="46.35" y="-6.33" width="22.91" height="13.06" fill="#4d4d4d"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <polygon points="51.25 4.99 53.31 4.99 54.76 7.18 60.93 7.18 62.13 4.99 64.37 4.99 64.37 9.53 51.25 9.53 51.25 4.99" fill="#4d4d4d" fill-rule="evenodd"/>
+    <g clip-path="url(#clip-path-10)">
+      <rect x="46.25" y="-0.01" width="23.12" height="14.54" fill="#4d4d4d"/>
+    </g>
+  </g>
+</svg>

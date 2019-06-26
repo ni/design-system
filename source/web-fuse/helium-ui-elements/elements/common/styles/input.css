@@ -1,0 +1,17 @@
+.mc-input {
+    font-size: var(--mc-size-base);
+    margin-top: 5px;
+    margin-left: 0px;
+    text-overflow: ellipsis;
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: var(--mc-gray-base);
+    border-bottom-width: 2px;
+    outline: none;
+}
+
+.mc-input.error {
+    border-bottom-color: var(--mc-red-darker-2);
+}

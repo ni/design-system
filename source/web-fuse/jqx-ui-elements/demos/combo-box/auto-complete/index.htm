@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Combo Box Auto Complete</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="text/javascript" src="../../../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script type="text/javascript" src="../../../source/jqxbutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxradiobutton.js"></script>
+    <script type="text/javascript" src="../../../source/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../source/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../../source/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../../source/jqxcombobox.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="container">
+        <jqx-combo-box class="drop-down-list-modes-demo" auto-complete="manual" min-length="1" label="Please Enter:" selection-mode="zeroOrOne"></jqx-combo-box>
+        <div id="controlPanel">
+            <h3>ComboBox's autoComplete modes:</h3>
+            <jqx-radio-button>None</jqx-radio-button>
+            <jqx-radio-button>Auto</jqx-radio-button>
+            <jqx-radio-button>Inline</jqx-radio-button>
+            <jqx-radio-button checked>Manual</jqx-radio-button>
+        </div>
+    </div>
+</body>
+</html>

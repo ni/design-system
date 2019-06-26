@@ -1,0 +1,23 @@
+jqx-window > .jqx-container > .jqx-content {
+    /*overflow-y: auto;*/
+    flex-direction: column;
+}
+
+jqx-window #article {
+    overflow-y: auto;
+}
+
+#window1 {
+    top: calc(50% - var(--jqx-window-default-height));
+    left: calc(50% - var(--jqx-window-default-width));
+}
+
+#window2 {
+    top: calc(50% - var(--jqx-window-default-height) / 1.5);
+    left: calc(50% - var(--jqx-window-default-width) / 1.5);
+}
+
+#window3 {
+    top: calc(50% - var(--jqx-window-default-height) / 3);
+    left: calc(50% - var(--jqx-window-default-width) / 3);
+}

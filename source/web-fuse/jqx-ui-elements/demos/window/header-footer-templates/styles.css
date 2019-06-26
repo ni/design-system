@@ -1,0 +1,30 @@
+jqx-window {
+    --jqx-window-header-height: 50px;
+}
+
+jqx-window section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+jqx-window > .jqx-container > .jqx-content {
+    overflow-y: auto;
+}
+
+jqx-window jqx-gauge {
+    height: 100%;
+    width: 100%;
+}
+
+jqx-window .jqx-header,
+jqx-window .jqx-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    jqx-window .jqx-header label {
+        margin-left: 5px;
+    }
