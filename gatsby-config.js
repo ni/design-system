@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/fuse',
+  pathPrefix: '/',
   __experimentalThemes: [
     {
       resolve: 'gatsby-theme-ni-docs',
@@ -10,13 +10,13 @@ module.exports = {
         githubRepo: 'ni/design-system',
         sidebarCategories: {
           null: [
-            'fuse/index',
+            'index',
             'fuse/design-tenets',
             // 'content-status',
           ],
           Style: [
             'fuse/style/colors',
-            'fuse/style/icons',
+            // 'fuse/style/icons',
             'fuse/style/text-capitalization',
             'fuse/style/typography',
           ],

@@ -19,19 +19,19 @@ Use title-style capitalization for window titles; sentence-style capitalization 
 ### Dialog
 Outside of the title of the dialog, itself, all items should be sentence-style capitalization.
 
-![Alt text](../images/style/capitalization/capitalization-dialog-example.svg) 
+![Alt text](images/capitalization/capitalization-dialog-example.svg) 
 
 ### Context menu
 All items in the context menu should follow sentence-style
 capitalization.  
 
 <div class="do" markdown="1">
-![Alt text](../images/style/capitalization/capitalization-context-menu-do.svg)  
+![Alt text](images/capitalization/capitalization-context-menu-do.svg)  
 
 Do
 </div>
 <div class="dont" markdown="1">
-![Alt text](../images/style/capitalization/capitalization-context-menu-dont.svg)  
+![Alt text](images/capitalization/capitalization-context-menu-dont.svg)  
 
 Don't
 </div>
@@ -42,12 +42,12 @@ All items in the configuration pane should follow sentence-style
 capitalization.
 
 <div class="do" markdown="1">
-![Alt text](../images/style/capitalization/capitalization-configuration-pane-do.svg)  
+![Alt text](images/capitalization/capitalization-configuration-pane-do.svg)  
 
 Do
 </div>
 <div class="dont" markdown="1">
-![Alt text](../images/style/capitalization/capitalization-configuration-pane-dont.svg)  
+![Alt text](images/capitalization/capitalization-configuration-pane-dont.svg)  
 
 Don't
 </div>

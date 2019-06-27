@@ -1,0 +1,71 @@
+---
+layout: page_notoc
+title: Icons
+category: style
+tags:
+  - images
+  - iconography
+  - image
+status: ready
+---
+
+The Fuse Design System provides a consolidated set of iconography for use throughout NI software products.
+
+## XAML Code Snippet
+To reference an icon from this library in XAML, use the pack URI scheme of the icon.
+
+```xml
+<Image Source="pack://application:,,,/NationalInstruments.PlatformFramework;component/ProjectExplorer/Images/AddPullDown_16x16.png"/>
+```
+import iconGroups from './icons.json'
+const iconGroups2 = [
+   {
+   "path": "Resources",
+   "icons": [{
+         "icon": "AddFolder_16x16.png"
+      },
+      {
+         "icon": "BoldFontStyle_16x16.png"
+      }
+   ]
+},
+{
+   "path": "Shell/Images",
+   "icons": [{
+         "icon": "ChooseSaveLocation_16x16.png"
+      },
+      {
+         "icon": "ErrorPane_16X16.png"
+      }
+   ]
+},
+{
+   "path": "HelpCommon/Images",
+   "icons": [{
+         "icon": "OverlayHelpButtonOff_16x16.png"
+      },
+      {
+         "icon": "OverlayHelpButtonOn_16x16.png"
+      }
+   ]
+}] 
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Example</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+  { iconGroups.map(group => {
+    return (
+    <tr>
+      <td> { group.path } </td>
+    </tr> )
+    }
+  )}
+  </tbody>
+</table>

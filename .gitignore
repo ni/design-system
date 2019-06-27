@@ -10,3 +10,5 @@ npm-debug.log
 /excluded-posts
 .DS_Store
 .vscode
+.cache/
+public/
