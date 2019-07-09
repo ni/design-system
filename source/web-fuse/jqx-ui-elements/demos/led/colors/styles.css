@@ -1,8 +1,0 @@
-jqx-led {
-    width: 200px;
-    height: 200px;
-}
-
-    jqx-led .jqx-true-content-container {
-        background-color: lightblue;
-    }

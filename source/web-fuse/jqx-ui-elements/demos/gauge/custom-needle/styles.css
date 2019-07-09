@@ -1,9 +1,0 @@
-html, body {
-    background-color: #F2F2F2;
-}
-
-#gauge .jqx-needle-central-circle,
-#gauge .arrow-head,
-#gauge .arrow-body {
-    fill: black;
-}

@@ -1,8 +1,0 @@
-jqx-window > .jqx-container > .jqx-content {
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-#controlSnapping {
-    width: 120px;
-}
