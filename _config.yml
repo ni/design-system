@@ -52,6 +52,10 @@ collections:
     output: true
     values:
       layout: page
+  patterns:
+    output: true
+    values:
+      layout: page
   resources:
     output: true
     values:
@@ -74,9 +78,16 @@ defaults:
   -
     scope:
       path: ""
+      type: "patterns" # a collection in your site, in plural form
+    values:
+      status: queued
+  -
+    scope:
+      path: ""
       type: "resources" # a collection in your site, in plural form
     values:
       status: queued
+  
 
 #Lunr Search
 lunr_search:

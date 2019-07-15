@@ -132,7 +132,7 @@
                     <ul>
                     <li><a class="{% if page.url == '/' %}active{% endif %}"href="{{ site.baseurl }}/">Introduction</a></li>
                      <li><a class="{% if page.url == '/design-tenets/' %}active{% endif %}"href="{{ site.baseurl }}/design-tenets/">Design tenets</a></li> 
-                    <li><a class="{% if page.url == '/whats-new/' %}active{% endif %}"href="{{ site.baseurl }}/whats-new/">What's new</a></li>
+                    <!-- <li><a class="{% if page.url == '/whats-new/' %}active{% endif %}"href="{{ site.baseurl }}/whats-new/">What's new</a></li> -->
                     <li><a class="{% if page.url == '/content-status/' %}active{% endif %}"href="{{ site.baseurl }}/content-status/">Content status</a></li>   
                   </ul>  
               </div>
@@ -182,14 +182,43 @@
                     {% endfor %}
                     </ul>  
                 </div>
-              </iron-collapse>  
-          <a class="heading" tabindex="-1" onclick="toggle('#collapse3')">                  
+              </iron-collapse>
+              <a class="heading" tabindex="-1" onclick="toggle('#collapse3')">                  
+                <paper-item-body><span>Patterns</span></paper-item-body>
+                  <paper-icon-button noink icon="arrow-drop-down">
+                  </paper-icon-button>
+                </a>
+              {% raw %}
+                <iron-collapse class="headeriron" id="collapse3" tabindex="0" opened={{opened3}} >
+              {% endraw %}                   
+                  <div class="collapse-content">
+                      <ul>
+                      {% for item in site.patterns %}  
+                      <li>
+                        {% capture status %}{{ item.status }}{% endcapture %}
+                        <a 
+                        id="{{item.title | remove: " "}}"
+                        href="{{ item.url | prepend:site.baseurl }}"                        
+                            {% if page.url == item.url %}class="active"{% endif %}>                          
+                            {{ item.title }}
+                            {% if item.status == nil or item.status == 'queued' %}
+                              <iron-icon icon={% include status-icon.html status=status %}></iron-icon>
+                              <paper-tooltip for="{{item.title | remove: " "}}">This topic is queued for production</paper-tooltip>                            
+                            {% endif %}
+                          </a>
+                          
+                      </li>
+                      {% endfor %}
+                      </ul>  
+                  </div>
+                </iron-collapse>    
+          <a class="heading" tabindex="-1" onclick="toggle('#collapse4')">                  
             <paper-item-body><span>Resources</span></paper-item-body>
               <paper-icon-button noink icon="arrow-drop-down">
               </paper-icon-button>
             </a>
             {% raw %}
-            <iron-collapse class="headeriron" id="collapse3" tabindex="0" opened="{{opened3}}">
+            <iron-collapse class="headeriron" id="collapse4" tabindex="0" opened="{{opened4}}">
             {% endraw %}   
               <div class="collapse-content">
                   <ul>
