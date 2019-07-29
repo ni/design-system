@@ -38,7 +38,7 @@ The command button is one of the most common and ubiquitous types of buttons. Th
     Padding="10,0,10,1" />
 {% endhighlight %}
 
-#### Layout and Sizing
+### Layout and spacing
 **General layout**  
 ![Alt text](../../images/elements/buttons/button-layout.svg)  
 **Minimum width**  
