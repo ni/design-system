@@ -39,7 +39,7 @@ Document notification are displayed within the space of a document. Only one not
 
 ## Toast notifications
 
-**Codename:** `ToastNotification` – NationalInstruments.Shell
+**Codename:** `ToastNotification` – NationalInstruments.Shell  
 A toast notification is a small popup used to display brief windows of important information to the user. Toasts are non-modal and do not prevent the user from viewing and interacting with their current window. Typically, toasts disappear automatically after a timeout but they can also persist, much like alarms toasts in FlexLogger. While document header notifications are typically scoped within the context of the document, toasts can be used to display system information.
 
 ### Behavior
@@ -48,7 +48,7 @@ Toast notifications animate into the top-right corner of the application window 
 
 ### Usage Examples
 
-**Alarm Toasts in FlexLogger** 
+**Alarm Toasts in FlexLogger**  
 During the alarm configuration process in FlexLogger, the user specifies critical and warning conditions. When the test is running, the alarms will be triggered based on the user’s defined thresholds. In FlexLogger, alarm toasts do not time out and clicking on the toast navigates the user to the Alarm History Pane.
 
 ![Toast notification cleared exmaple](../../images/elements/notifications/toast-cleared.svg) 
