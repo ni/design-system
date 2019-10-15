@@ -15,7 +15,7 @@ Notifications are used to provide feedback brief system messages to the users fr
 
 **Codename:** `DocumentHeaderControl` - NationalInstruments.Design
 
-Document notification are displayed within the space of a document. Only one notification should be displayed at a time. Every aspect of a document, such as panel and diagram for LabVIEW VIs, already contains a placeholder `DocumentHeaderControl` to display document notifications.
+Document notifications are displayed within the space of a document. Only one notification should be displayed at a time. Every aspect of a document, such as panel and diagram for LabVIEW VIs, already contains a placeholder `DocumentHeaderControl` to display document notifications.
 
 
 
