@@ -21,6 +21,10 @@ Document notifications are displayed within the space of a document. Only one no
 
 
 ### Examples
+#### Information notification
+
+![Information notification example](../../images/elements/notifications/notifications-document-info.svg)
+
 #### Error notification
 
 ![Error notification example](../../images/elements/notifications/notifications-document-error.svg)
