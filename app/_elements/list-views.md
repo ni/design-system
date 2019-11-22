@@ -29,7 +29,7 @@ If the data set you intend to display requires multiple columns per row and woul
 Don't
 </div>
 
-## Layout spacing and color
+## Layout, spacing, and color
 
 ![Alt text](../../images/elements/listviews/listview_layout_spacing_color.svg) 
 
