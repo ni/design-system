@@ -21,9 +21,9 @@ When the user wants to compare information.
 
 ## Is there an alternative control to consider using?
 
-An alternative control to consider using is a list box or the Scalable Configuration Table (SCT).
+An alternative control to consider using is a [List view](../list-views/) or the Scalable Configuration Table (SCT).
 
-If there is only one column of information to display, use a list box.
+If there is only one column of information to display, consider a [List view](../list-views/) instead.
 
 If your users needs a table with the ability to select rows, sort, filter, or edit cells in place, use the SCT.
 
@@ -60,4 +60,4 @@ Don't
 
 #### Sub-item Grouping
 
-![Alt text](../../images/elements/tables/sub-item-grouping.svg)  
+![Alt text](../../images/elements/tables/sub-item-grouping.svg)
