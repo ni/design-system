@@ -9,7 +9,7 @@ before_install:
 
 install: 
   - npm install -g bower
-  - gem install bundler
+  - gem install bundler -v 1.16.6
   - bower install
   - bundle install
 
