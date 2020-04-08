@@ -30,3 +30,8 @@ Set `IsEditable=false` to disable typing in the control.
 
 #### Mixed state
 If the user has selected objects with different values, this control will be blank to represent a mixed state.
+
+#### Dynamic dropdowns
+In some situations, dropdown lists are populated dynamically and may have 1 or multiple options depending on the situation. In these cases, if the dynamic dropdown only has one option available at a given time, disable the control. If it has multiple options available, enable the control.
+
+If the dropdown **always** has 1 item in it, consider a different control like a [text block](.../text-blocks/). 

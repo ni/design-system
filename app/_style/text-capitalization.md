@@ -61,4 +61,4 @@ Don't
 1. When referencing a terminal name, follow the capitalization of that terminal.
 1. When referencing a Dialog Title, follow the capitalization of that dialog (Title case).
 * For example, referencing "Context Help" in the application menu (Help > Context Help) should use Title Case as it is the name of the dialog.
-1.File types are proper nouns and should be Title Case (Web VI, Resource Collection, Shared Library Interface, etc.)
+1. File types are proper nouns and should be Title Case (Web VI, Resource Collection, Shared Library Interface, etc.)

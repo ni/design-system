@@ -24,8 +24,7 @@ The application menu is a collection of menu items contained within a menu bar a
 **Codename:** `ApplicationMenuItem` - NationalInstruments.Controls
 
 #### Basic usage
-Menus are a collection of menu items 
-Menu items provide a single line of text to communicate the action that will be taken if selected. Other items like checkmarks, shortcuts and icons (rarely used) are also presented in a menu item.
+Menus are a collection of menu items. Menu items provide a single line of text to communicate the action that will be taken if selected. Other items like checkmarks, shortcuts and icons (rarely used) are also presented in a menu item.
 
 In general, limit the menu hierarchy to two levels, the main level and one submenu level. Creating more levels makes the menu difficult to navigate. While in some cases, it is necessary to add an additional level it should be a rarity throughout the application.
 
@@ -81,7 +80,7 @@ The NI product you are working may have similar types of commands where it is al
 
 **Access keys** are keys or combination of keys used for accessibility to interact with menu items using the keyboard. Windows indicates access keys by underlining the access key. Windows hides access key underlines by default and shows them only when the user presses the Alt key. Unlike shortcut keys, access keys are not meant to be memorized. Access keys are localized.
 
-![Alt text](../../images/elements/menus/menus-access_shortcut.svg)
+![Menu with access keys](../../images/elements/menus/menus-access_shortcut.svg)
 
 #### Assigning access keys
 
@@ -116,6 +115,11 @@ It is not necessary to provide ellipses to a command just because another window
 | Clicking a command shows a dialog but doesn't require interaction.      | "Calculate dependencies" in the project dependencies document. Once the user clicks on this command, dependencies begin calculating but the user can cancel the operation.        | **No**. The command immediately executes. While the user can perform another operation in the dialog that is displayed (Cancel), they are not required to in order for the command to execute....the command has already begun. |
 | Clicking a command opens a window.                                      | "Preferences" command in menu. "Data capture settings" in the menu.| **No**. The command is to open the dialog. That is performed immediately and does not require further information from the user. |
 | Command requires confirmation                                           | Deleting a file from the Project Files         | **No**. Since this is just a simple confirmation to ensure the user wants to proceed, an ellipsis is unneccessary. |
+
+**Note:** If an icon button (such as the "Import" button) requires additional action from the user, the infotip for that button should include an ellipsis.
+
+![Infotip showing ellipsis](../../images/elements/menus/menus-infotip-ellipsis.svg)
+
 
 
  
