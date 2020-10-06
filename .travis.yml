@@ -18,8 +18,6 @@ script: jekyll build ./_site
 sudo: false # route your build to the container-based infrastructure for a faster build
 
 deploy:
-  edge:
-    branch: v1.8.47
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
