@@ -18,9 +18,10 @@ script: jekyll build ./_site
 sudo: false # route your build to the container-based infrastructure for a faster build
 
 deploy:
-  provider: pages
-  skip_cleanup: true
+- provider: pages
+  skip_cleanup: true 
   github_token: $GH_TOKEN
-  on:
-    branch: master
-  local_dir: app/_site  
+  local_dir: app/_site
+  target_branch: gh-pages
+  keep_history: true
+  verbose: true
