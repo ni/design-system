@@ -1,0 +1,925 @@
+<!doctype html>
+<html>
+
+<head>
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','/design-system/scripts/g-analyt.js','ga');
+		
+		ga('create', 'UA-100964937-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WPWCVV2');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Fuse Design System" />
+
+    <title>Truncation</title>
+    <meta name="description" content="Ellipses should be used when shortening text that cannot fit in a specific space. For example, if a filename name is longer than the space available in the P...">
+
+    <link rel="canonical" href="/design-system/patterns/truncation/">
+    <link rel="alternate" type="application/rss+xml" title="Fuse Design System" href='/design-system/feed.xml' />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Chrome for Android theme color -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="theme-color" content="#607D8B">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="/design-system/manifest.json">
+
+    <!-- Tile color for Win8 -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="msapplication-TileColor" content="#FF5722">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Fuse Design System">
+    <link rel="icon" sizes="192x192" href="/design-system/images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Fuse Design System">
+    <link rel="apple-touch-icon" href="/design-system/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="/design-system/images/touch/ms-touch-icon-144x144-precomposed.png">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/design-system/styles/main.css">
+    <!-- endbuild-->
+
+    <!-- build:css styles/code-highlight.css -->
+    <!-- <link rel="stylesheet" href="/design-system/styles/code-highlight.css"> -->
+    <!-- endbuild-->
+
+    <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+    <script src="/design-system/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="/design-system/js/toc.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- will be replaced with custom-elements/elements.vulcanized.html -->
+    <link rel="import" href="/design-system/custom-elements/elements.html">
+    <!-- endreplace-->
+
+    <!-- For shared styles, shared-styles.html import in elements.html -->
+    <style is="custom-style" include="shared-styles"></style>
+</head>
+  <custom-style>
+    <style is="custom-style">
+    body {
+      margin: 0;      
+    }
+
+    app-header{
+      background-color: var(--light-accent-color);
+      border-bottom: 1px var(--primary-color) solid;
+    }
+
+    app-header paper-icon-button {
+      --paper-icon-button-ink-color: #fff;
+    }
+
+    app-drawer {
+      --app-drawer-content-container: {
+      }
+    }
+
+    app-drawer-layout:not([narrow]) [drawer-toggle] {
+    display: none;
+    }
+
+    .nav-header{
+      overflow: hidden;
+    }
+
+    
+    #searchButton:hover,#closeSearchButton:hover{
+      color: var(--primary-background-color); 
+      background-color: var(--primary-color);
+    }
+
+    iron-collapse{
+      --iron-collapse-transition-duration: 300ms;
+    }
+
+    #input{
+        top:0;
+        right:0;
+        border:0;
+        outline:0;
+        width:100%;
+        margin:0;
+        height:40px;
+        padding-left:16px;
+        padding-top:0px;
+        @apply(--paper-font-body1);
+        font-size: 16px;
+        
+    }
+
+    .searchbox.active{
+        width:100%;
+        border: 1px var(--primary-color) solid;
+    }
+
+    .searchbox{
+        position:relative;
+        min-width:40px;
+        height:40px;
+        padding: 0px;
+        width:0%;
+        float:right;
+        overflow:hidden;
+        -webkit-transition: width 0.3s;
+        -moz-transition: width 0.3s;
+        -ms-transition: width 0.3s;
+        -o-transition: width 0.3s;
+        transition: width 0.3s;
+    }
+
+    .searchbox-submit{
+      display:block;
+      height:40px;
+      width:40px;
+      position:absolute;
+      top:0;
+      right:0;
+      border-radius: 0px;
+      background-color: var(--light-accent-color);
+    }
+
+    .search-form{
+      width: 40px;
+    }
+
+    .search-form .active{
+      width: 300px;
+    }
+    .collapse-content iron-icon {
+      width:12px;
+      height:12px;
+      margin-right: 0px;
+      margin-left: 5px;
+    }
+    </style>
+  </custom-style>
+<body unresolved class="fullbleed layout vertical">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPWCVV2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">  
+  <app-drawer-layout fullbleed>      
+    <app-drawer id="drawer" slot="drawer">            
+      <app-header-layout has-scrolling-region>          
+        <app-header class="nav-header" slot="header" fixed>
+          <a href="/design-system/">
+            <div class="title">Fuse</div>
+            <div class="subtitle">Design System</div> 
+          </a>         
+        </app-header>            
+        <!-- Drawer Content -->       
+        <template is="dom-bind">
+          <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect" id="menu">            
+          <a class="heading" tabindex="-1" onclick="toggle('#collapse0')">                  
+              <paper-item-body><span>Overview</span></paper-item-body>
+                <paper-icon-button noink icon="arrow-drop-down">
+                </paper-icon-button>
+              </a>   
+            
+            <iron-collapse class="headeriron" id="collapse0" tabindex="0" opened="{{opened0}}">               
+               
+              <div class="collapse-content">
+                    <ul>
+                    <li><a class=""href="/design-system/">Introduction</a></li>
+                     <li><a class=""href="/design-system/design-tenets/">Design tenets</a></li> 
+                    <!-- <li><a class=""href="/design-system/whats-new/">What's new</a></li> -->
+                    <li><a class=""href="/design-system/content-status/">Content status</a></li>   
+                  </ul>  
+              </div>
+            </iron-collapse>
+            <a class="heading" tabindex="-1" onclick="toggle('#collapse1')">                  
+              <paper-item-body><span>Style</span></paper-item-body>
+                <paper-icon-button noink icon="arrow-drop-down">
+                </paper-icon-button>
+              </a>
+            
+            <iron-collapse class="headeriron" id="collapse1" tabindex="0" opened="{{opened1}}">               
+             
+              <div class="collapse-content">
+                    <ul>
+                    
+                    <li><a href="/design-system/style/colors/" >Colors</a></li>
+                    
+                    <li><a href="/design-system/style/icons/" >Icons</a></li>
+                    
+                    <li><a href="/design-system/style/text-capitalization/" >Text capitalization</a></li>
+                    
+                    <li><a href="/design-system/style/typography/" >Typography</a></li>
+                    
+                  </ul>  
+              </div>
+            </iron-collapse>
+          
+          <a class="heading" tabindex="-1" onclick="toggle('#collapse2')">                  
+              <paper-item-body><span>Elements</span></paper-item-body>
+                <paper-icon-button noink icon="arrow-drop-down">
+                </paper-icon-button>
+              </a>
+            
+              <iron-collapse class="headeriron" id="collapse2" tabindex="0" opened={{opened2}} >
+                               
+                <div class="collapse-content">
+                    <ul>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Applicationwindow"
+                      href="/design-system/elements/application-window/"                        
+                          >                          
+                          Application window
+                          
+                            <iron-icon icon=
+
+
+
+
+
+
+        "radio-button-unchecked" class="queued"
+    
+></iron-icon>
+                            <paper-tooltip for="Applicationwindow">This topic is queued for production</paper-tooltip>                            
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Buttons"
+                      href="/design-system/elements/buttons/"                        
+                          >                          
+                          Buttons
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Checkboxes"
+                      href="/design-system/elements/checkboxes/"                        
+                          >                          
+                          Checkboxes
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Colorpicker"
+                      href="/design-system/elements/color-picker/"                        
+                          >                          
+                          Color picker
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Comboboxes"
+                      href="/design-system/elements/combo-boxes/"                        
+                          >                          
+                          Combo boxes
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Dialogs"
+                      href="/design-system/elements/dialogs/"                        
+                          >                          
+                          Dialogs
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Documents"
+                      href="/design-system/elements/documents/"                        
+                          >                          
+                          Documents
+                          
+                            <iron-icon icon=
+
+
+
+
+
+
+        "radio-button-unchecked" class="queued"
+    
+></iron-icon>
+                            <paper-tooltip for="Documents">This topic is queued for production</paper-tooltip>                            
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Dropdowns"
+                      href="/design-system/elements/dropdowns/"                        
+                          >                          
+                          Dropdowns
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Filtertreeview"
+                      href="/design-system/elements/filter-tree-view/"                        
+                          >                          
+                          Filter tree view
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Groupboxes"
+                      href="/design-system/elements/group-boxes/"                        
+                          >                          
+                          Group boxes
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="HTMLeditor"
+                      href="/design-system/elements/html-editor/"                        
+                          >                          
+                          HTML editor
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Links"
+                      href="/design-system/elements/links/"                        
+                          >                          
+                          Links
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Listviews"
+                      href="/design-system/elements/list-views/"                        
+                          >                          
+                          List views
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Menus"
+                      href="/design-system/elements/menus/"                        
+                          >                          
+                          Menus
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Notifications"
+                      href="/design-system/elements/notifications/"                        
+                          >                          
+                          Notifications
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Overlays"
+                      href="/design-system/elements/overlay/"                        
+                          >                          
+                          Overlays
+                          
+                            <iron-icon icon=
+
+
+
+
+
+
+        "radio-button-unchecked" class="queued"
+    
+></iron-icon>
+                            <paper-tooltip for="Overlays">This topic is queued for production</paper-tooltip>                            
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Panes"
+                      href="/design-system/elements/panes/"                        
+                          >                          
+                          Panes
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Progressindicators"
+                      href="/design-system/elements/progress-indicators/"                        
+                          >                          
+                          Progress indicators
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Radiobuttons"
+                      href="/design-system/elements/radio-buttons/"                        
+                          >                          
+                          Radio buttons
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Tables"
+                      href="/design-system/elements/tables/"                        
+                          >                          
+                          Tables
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Tabs"
+                      href="/design-system/elements/tabs/"                        
+                          >                          
+                          Tabs
+                          
+                            <iron-icon icon=
+
+
+
+
+
+
+        "radio-button-unchecked" class="queued"
+    
+></iron-icon>
+                            <paper-tooltip for="Tabs">This topic is queued for production</paper-tooltip>                            
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Textblocks"
+                      href="/design-system/elements/text-blocks/"                        
+                          >                          
+                          Text blocks
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Textboxes"
+                      href="/design-system/elements/text-boxes/"                        
+                          >                          
+                          Text boxes
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Timestamp"
+                      href="/design-system/elements/timestamp/"                        
+                          >                          
+                          Timestamp
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Tips"
+                      href="/design-system/elements/tips/"                        
+                          >                          
+                          Tips
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Togglegroups"
+                      href="/design-system/elements/toggle-groups/"                        
+                          >                          
+                          Toggle groups
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Toolbars"
+                      href="/design-system/elements/toolbars/"                        
+                          >                          
+                          Toolbars
+                          
+                        </a>
+                        
+                    </li>
+                      
+                    <li>
+                      
+                      <a 
+                      id="Trees"
+                      href="/design-system/elements/trees/"                        
+                          >                          
+                          Trees
+                          
+                        </a>
+                        
+                    </li>
+                    
+                    </ul>  
+                </div>
+              </iron-collapse>
+              <a class="heading" tabindex="-1" onclick="toggle('#collapse3')">                  
+                <paper-item-body><span>Patterns</span></paper-item-body>
+                  <paper-icon-button noink icon="arrow-drop-down">
+                  </paper-icon-button>
+                </a>
+              
+                <iron-collapse class="headeriron" id="collapse3" tabindex="0" opened={{opened3}} >
+                                 
+                  <div class="collapse-content">
+                      <ul>
+                        
+                      <li>
+                        
+                        <a 
+                        id="Confirmation"
+                        href="/design-system/patterns/confirmations/"                        
+                            >                          
+                            Confirmation
+                            
+                          </a>
+                          
+                      </li>
+                        
+                      <li>
+                        
+                        <a 
+                        id="Emptystates"
+                        href="/design-system/patterns/empty-states/"                        
+                            >                          
+                            Empty states
+                            
+                              <iron-icon icon=
+
+
+
+
+
+
+        "radio-button-unchecked" class="queued"
+    
+></iron-icon>
+                              <paper-tooltip for="Emptystates">This topic is queued for production</paper-tooltip>                            
+                            
+                          </a>
+                          
+                      </li>
+                        
+                      <li>
+                        
+                        <a 
+                        id="Errors"
+                        href="/design-system/patterns/errors/"                        
+                            >                          
+                            Errors
+                            
+                              <iron-icon icon=
+
+
+
+
+
+
+        "radio-button-unchecked" class="queued"
+    
+></iron-icon>
+                              <paper-tooltip for="Errors">This topic is queued for production</paper-tooltip>                            
+                            
+                          </a>
+                          
+                      </li>
+                        
+                      <li>
+                        
+                        <a 
+                        id="Truncation"
+                        href="/design-system/patterns/truncation/"                        
+                            class="active">                          
+                            Truncation
+                            
+                          </a>
+                          
+                      </li>
+                      
+                      </ul>  
+                  </div>
+                </iron-collapse>    
+          <a class="heading" tabindex="-1" onclick="toggle('#collapse4')">                  
+            <paper-item-body><span>Resources</span></paper-item-body>
+              <paper-icon-button noink icon="arrow-drop-down">
+              </paper-icon-button>
+            </a>
+            
+            <iron-collapse class="headeriron" id="collapse4" tabindex="0" opened="{{opened4}}">
+               
+              <div class="collapse-content">
+                  <ul>
+                    
+                    <li><a href="/design-system/resources/code-samples/" >Code samples</a></li>
+                    <li><a href="/design-system/resources/fonts/" >Fonts</a></li>
+                  </ul>  
+              </div>
+            </iron-collapse>
+
+          
+          </paper-menu>
+        </template>
+        <footer>
+          <div id="copyright-info">
+          <p style="font-size: 14px; margin-bottom: 0px; font-weight:500">See an issue?</p>
+          <a style="font-size: 14px; font-weight:500;" href="https://github.com/ni/design-system/issues" target="_blank">Let us know</a><br /><br />
+          &copy; 2020 National Instruments</div></footer>
+      </app-header-layout>
+    </app-drawer>
+
+    <!-- Main Area -->  
+    <app-header-layout>  
+      <app-header slot="header" fixed>
+        <!-- Main Toolbar -->
+        <app-toolbar style="height:71px">
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <div main-title>Truncation</div> 
+          <div id="search" class="search-form">            
+              <form action="/design-system/search/" method="get" class="searchbox" id="search-box">              
+                <input type="text" placeholder="Search" id="input" name="q">
+                <paper-icon-button icon="search" id="searchButton" onclick="toggleSearch()" class="searchbox-submit" noink></paper-icon-button>                
+              </form>
+            </div>          
+        </app-toolbar>
+      </app-header>
+      <!-- Main Content -->
+      <div class="content">
+<div id="post">
+    
+    <div id="post-content">
+        <div id="tocTitle">Contents</div>
+        <div id="toc">
+        
+        <ul id="tocList"></ul>
+        </div><p>Ellipses should be used when shortening text that cannot fit in a specific space. For example, if a filename name is longer than the space available in the Project Files pane, truncate it and use an ellipsis to signify its truncation. There are three techniques (middle, front, end) for shortening text with an ellipsis:</p>
+
+<h2 id="middle-truncation">Middle truncation</h2>
+<p>When the end of the text is important or distinctive, truncate the text in the middle and replace the truncated text with an ellipsis.</p>
+
+<p>If you’re unsure, it’s best to use middle truncation, as it keeps both the beginning and end of the string intact</p>
+
+<h2 id="other-cases">Other cases</h2>
+
+<p>If the important or distinctive text is at the beginning of the string, truncate at the end.</p>
+
+<p>If all of the beginning text of items in a list is the same, but the important or distinctive text is always at the end of the string, truncate it at the beginning.</p>
+
+<h2 id="special-cases">Special cases</h2>
+<p>When the entire file extension must be shown, still consider the 3 guidelines above in relation to the string before the file extension. Apply the guidelines as best as you see fit.  If delimiters are in the string, always truncate between the delimiters and eat the entire identifier before truncating a delimiter and moving into the next identifier, this prevents creating the appearance of false or misleading namespaces.</p>
+
+<h4 id="examples">Examples</h4>
+
+<p>End truncation with file extension: File_na….gcomp</p>
+
+<p>Middle truncation with file extension: Fil…ame.gcomp</p>
+
+<p><strong>Note:</strong> Be sure to use the ellipsis character and not three consecutive periods. 
+Unicode Encoding: C/C++/Java source code <code class="highlighter-rouge">\u2026</code></p>
+
+<h4 id="usage-examples">Usage examples</h4>
+
+<p>Middle truncation increases the likelihood the differentiating character is visible to the user.</p>
+<div class="do">
+  <p><img src="../../images/patterns/truncation/Do.svg" alt="Alt text" /></p>
+
+  <p>Do</p>
+</div>
+
+<p>In this example, end truncation hides the unique identifying character in this example of the files pane.</p>
+
+<div class="dont">
+  <p><img src="../../images/patterns/truncation/Dont.svg" alt="Alt text" /></p>
+
+  <p>Don’t</p>
+</div>
+
+<p>Truncating long strings with delimiters</p>
+
+<p>When using middle truncation on strings with delimiters, truncate between the delimiters to minimize the appearance of non-existent namespaces.</p>
+<div class="do">
+  <p><img src="../../images/patterns/truncation/yes1.svg" alt="Alt text" /></p>
+
+  <p>Do</p>
+</div>
+
+<p>Hiding the delimiters before all of the characters of an identifier can create confusion.</p>
+<div class="dont">
+  <p><img src="../../images/patterns/truncation/no1.svg" alt="Alt text" /></p>
+
+  <p>Don’t</p>
+</div>
+
+</div>
+    <p>Last updated on <span id="dateModified">July 29, 2019</span></p>
+    <paper-tooltip for="dateModified">July 29, 2019,  8:45:19 AM CDT</paper-tooltip>
+</div>
+
+   
+<script>
+    buildTOC();
+</script>
+ 
+</div>
+    </app-header-layout>
+  </app-drawer-layout>
+</template>
+<!-- build:js scripts/app.js -->
+<script src="/design-system/scripts/app.js"></script>
+<!-- endbuild-->
+
+
+
+<script>
+  function toggle(selector) {
+    var item =  document.querySelector(selector);
+    // if it is open, hide it. If not, open it.
+    if (item.opened){
+      hide(item);
+    }else{
+      show(item);
+    }
+  }
+  function show(item){
+    item.show();
+    icon = item.previousElementSibling.getElementsByTagName('paper-icon-button')[0];
+    icon.setAttribute("icon", "arrow-drop-up");
+    
+  }
+  function hide(item){
+    item.hide();
+    icon = item.previousElementSibling.getElementsByTagName('paper-icon-button')[0];
+    icon.setAttribute("icon", "arrow-drop-down");
+  }
+
+  function toggleSearch() {
+    var searchContainer = document.getElementById("search");
+    var form = document.getElementById("search-box");
+    var input = document.getElementById("input");
+
+    if (form.classList.contains('active')){
+      if(input.value.trim() ==''){
+        form.classList.remove('active');
+        searchContainer.classList.remove('active');
+      }else{
+        form.submit();
+      }
+    }else{
+      searchContainer.className += " active";
+      form.className += " active";
+      input.focus();
+    }
+  }
+
+  document.querySelector('template[is=dom-bind]').isExpanded = function(opened) {
+    return String(opened);
+  };
+  //Make sure the parent categoy of the 'active' page is opened.
+  window.addEventListener('WebComponentsReady', function(e){
+    
+    //tries to find the "active" page in the left nav. 
+    var activeElements = document.querySelectorAll('app-drawer .active');
+    
+    // There should only be 1 or 0 (for the search page or other pages not shown in left nav....which for now is only search).
+    // As long as it isn't 0, find the iron-collapse parent, which has a class of 'headeriron' and make it perform the 'show' method.
+    // If it is 0, hide all the sections.
+    if (activeElements.length > 0){
+      var currentElement = activeElements[0].parentElement;
+      while (currentElement.classList.contains('headeriron') === false){
+        currentElement=currentElement.parentElement;
+      } 
+      show(currentElement);     
+    }else{
+      var sections = document.querySelectorAll('iron-collapse');
+      for (i=0; i< sections.length; i++){
+        hide(sections[i]);
+      }
+    }
+  });
+  </script>
+</body>
+</html>
